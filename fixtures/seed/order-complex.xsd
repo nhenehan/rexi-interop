@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:interop:order"
+           xmlns="urn:interop:order"
+           elementFormDefault="qualified">
+
+  <xs:complexType name="LineType">
+    <xs:sequence>
+      <xs:element name="sku" type="xs:string"/>
+      <xs:element name="qty" type="xs:int"/>
+      <xs:element name="price" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OrderType">
+    <xs:sequence>
+      <xs:element name="orderId" type="xs:string"/>
+      <xs:element name="customerId" type="xs:string"/>
+      <xs:element name="line" type="LineType" maxOccurs="unbounded"/>
+      <xs:element name="priority" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Order" type="OrderType"/>
+</xs:schema>

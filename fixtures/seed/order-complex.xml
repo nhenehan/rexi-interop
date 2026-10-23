@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order xmlns="urn:interop:order">
+  <orderId>ORD-2026-0007</orderId>
+  <customerId>CUST-42</customerId>
+  <line>
+    <sku>VALVE-9A</sku>
+    <qty>3</qty>
+    <price>24.95</price>
+  </line>
+  <line>
+    <sku>SEAL-2B</sku>
+    <qty>7</qty>
+    <price>3.10</price>
+  </line>
+  <priority>normal</priority>
+</Order>

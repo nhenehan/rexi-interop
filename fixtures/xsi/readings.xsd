@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xsi:nil: nillable simple and complex elements, with and without attributes. -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:interop:nil"
+           xmlns="urn:interop:nil" elementFormDefault="qualified">
+  <xs:complexType name="Probe">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="Value" type="xs:double" nillable="true"/>
+      <xs:element name="Count" type="xs:int" nillable="true"/>
+      <xs:element name="Note" type="xs:string" nillable="true" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="channel" type="xs:int" use="required"/>
+  </xs:complexType>
+  <xs:element name="Readings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Probe" type="Probe" nillable="true" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IncidentReport xmlns="urn:interop:incident" xmlns:cmn="urn:interop:common">
+  <incidentId>INC-2026-0109</incidentId>
+  <site>
+    <cmn:siteId>plant-7</cmn:siteId>
+    <cmn:operatorId>operator-12</cmn:operatorId>
+  </site>
+  <severity>high</severity>
+  <summary>Cooling loop pressure excursion</summary>
+</IncidentReport>

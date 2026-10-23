@@ -1,0 +1,15 @@
+id	dir	xml	main_xsd	import_xsds	origin
+S1	seed	order-complex.xml	order-complex.xsd		exip interop-tests
+S2	seed	telemetry-complex.xml	telemetry-complex.xsd		exip interop-tests
+S3	seed	inheritance-extension.xml	inheritance-extension.xsd		exip interop-tests
+S4	seed	cross-schema-main.xml	cross-schema-main.xsd	cross-schema-common.xsd	exip interop-tests
+S5	seed	polymorphic-choice.xml	polymorphic-choice.xsd		exip interop-tests
+R1	rexi	order-complex.xml	order-complex.xsd		rexi fixtures
+R2	rexi	telemetry-complex.xml	telemetry-complex.xsd		rexi fixtures
+R3	rexi	inheritance-extension.xml	inheritance-extension.xsd		rexi fixtures
+R4	rexi	cross-schema-main.xml	cross-schema-main.xsd	cross-schema-common.xsd	rexi fixtures
+R5	rexi	polymorphic-choice.xml	polymorphic-choice.xsd		rexi fixtures
+X1	xsi	shapes.xml	shapes.xsd		xsi:type casts (rexi-interop)
+X2	xsi	readings.xml	readings.xsd		xsi:nil (rexi-interop)
+U1	utf8	multilingual.xml	multilingual.xsd		multilingual UTF-8 (rexi-interop)
+B1	binary	binary-types.xml	binary-types.xsd		hexBinary / base64Binary (rexi-interop)

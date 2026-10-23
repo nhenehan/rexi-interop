@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Drawing xmlns="urn:interop:shapes" xmlns:s="urn:interop:shapes"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="floor plan">
+  <Shape xsi:type="s:Circle" id="1">
+    <Label>column</Label>
+    <Radius>0.25</Radius>
+  </Shape>
+  <Shape id="2">
+    <Label>marker</Label>
+  </Shape>
+  <Shape xsi:type="s:Rect" id="3">
+    <Label>room</Label>
+    <Width>4.50</Width>
+    <Height>3.20</Height>
+  </Shape>
+  <Shape xsi:type="s:Shape" id="4">
+    <Label>explicit base</Label>
+  </Shape>
+</Drawing>

@@ -1,0 +1,17 @@
+# Upstream sources of the Java implementations, for reading and debugging only:
+# the harness runs the packaged builds (EXIficient from Maven Central, Nagasena's
+# jar from the W3C exi-testsuite, both pinned in harness/pom.xml / third-party.lock).
+# Fetched only by scripts/fetch-third-party.sh --sources, into
+# ${REXI_INTEROP_THIRD_PARTY}/sources/<name>, never into this working tree.
+#
+# Each line: <name> <git|svn> <url> <commit or revision> [path]
+# Each pin is the source of the packaged build in use:
+#   exificient*:  the v1.0.7 release tags (Maven Central 1.0.7).
+#   nagasena:     trunk r1206 is Nagasena 0000.0002.0073.0 (build.xml), the version
+#                 in the manifest of exi-testsuite's nagasena.jar (built 2018-01-22,
+#                 the day of r1206). OpenEXI is only on SourceForge, in Subversion.
+
+exificient-core git https://github.com/EXIficient/exificient-core.git 9d853cb456a9d5557fa9d4544917a894c576ab96
+exificient-grammars git https://github.com/EXIficient/exificient-grammars.git 9baa044237f649a65ae4190aed75081c75c86a16
+exificient git https://github.com/EXIficient/exificient.git 6a5ce3123ced4cb78789816ca0c429549382c414
+nagasena svn https://svn.code.sf.net/p/openexi/code 1206 trunk/nagasena

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TelemetryPacket xmlns="urn:interop:telemetry">
+  <deviceId>sensor-hub-11</deviceId>
+  <timestamp>2026-05-01T10:15:00Z</timestamp>
+  <reading>
+    <name>temperature</name>
+    <value>19.40</value>
+    <unit>C</unit>
+  </reading>
+  <reading>
+    <name>pressure</name>
+    <value>101.22</value>
+    <unit>kPa</unit>
+  </reading>
+</TelemetryPacket>

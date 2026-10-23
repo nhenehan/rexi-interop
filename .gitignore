@@ -1,0 +1,6 @@
+/build/
+/harness/target/
+/reports/work/
+nb-configuration.xml
+/reports/w3c-work/
+/reports/w3c-declared.md

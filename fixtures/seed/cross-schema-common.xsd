@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:interop:common"
+           xmlns="urn:interop:common"
+           elementFormDefault="qualified">
+
+  <xs:complexType name="SiteRefType">
+    <xs:sequence>
+      <xs:element name="siteId" type="xs:string"/>
+      <xs:element name="operatorId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="SeverityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="low"/>
+      <xs:enumeration value="medium"/>
+      <xs:enumeration value="high"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

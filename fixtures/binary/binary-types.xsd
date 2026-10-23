@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Binary values: xs:hexBinary and xs:base64Binary are coded alike. exip reports
+  which one a value is (VALUE_TYPE_HEX_BINARY / VALUE_TYPE_BINARY), for the built-ins and
+  for types derived from them (Hex4, B64), as attributes and as element content.
+  Strict, bit-packed, no options in the header; EXIficient 1.0.7 and rexi agree.
+  Namespace urn:n:
+    <r b="AAEC" h="0A0B"><hx>CAFE</hx><b6>AQID</b6><dh>BEEF</dh><db>BAUG</db></r>
+        80006000204020a0b01657f00c04080c0afbbc0c101418
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:n" xmlns="urn:n" elementFormDefault="qualified">
+  <xs:simpleType name="Hex4"><xs:restriction base="xs:hexBinary"><xs:maxLength value="4"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="B64"><xs:restriction base="xs:base64Binary"><xs:maxLength value="8"/></xs:restriction></xs:simpleType>
+  <xs:element name="r">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hx" type="xs:hexBinary"/>
+        <xs:element name="b6" type="xs:base64Binary"/>
+        <xs:element name="dh" type="Hex4"/>
+        <xs:element name="db" type="B64"/>
+      </xs:sequence>
+      <xs:attribute name="h" type="xs:hexBinary"/>
+      <xs:attribute name="b" type="xs:base64Binary"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

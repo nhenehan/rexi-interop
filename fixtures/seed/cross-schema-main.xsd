@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:interop:incident"
+           xmlns="urn:interop:incident"
+           xmlns:cmn="urn:interop:common"
+           elementFormDefault="qualified">
+
+  <xs:import namespace="urn:interop:common" schemaLocation="cross-schema-common.xsd"/>
+
+  <xs:complexType name="IncidentReportType">
+    <xs:sequence>
+      <xs:element name="incidentId" type="xs:string"/>
+      <xs:element name="site" type="cmn:SiteRefType"/>
+      <xs:element name="severity" type="cmn:SeverityType"/>
+      <xs:element name="summary" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="IncidentReport" type="IncidentReportType"/>
+</xs:schema>

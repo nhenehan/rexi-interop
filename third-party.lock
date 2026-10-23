@@ -1,0 +1,22 @@
+# Implementations and data under test, fetched by scripts/fetch-third-party.sh
+# into ${REXI_INTEROP_THIRD_PARTY:-${XDG_CACHE_HOME:-~/.cache}/rexi-interop/third_party}
+# (never into this working tree). Pins move only through --update NAME.
+#
+# Each line: <name> <git url or path relative to this repo> <40-char commit> [sparse path]
+# A sparse path checks out only that directory (blobs fetched on demand).
+#
+# exip:          C implementation (libexip for the exip driver; exipd).
+# exi-testsuite: W3C EXI test suite; only Nagasena's jar is used.
+# rexi:          the Rust implementation (rexi CLI with `rexi bench`).
+# jexi:          the Julia implementation (bin/jexi, `jexi bench` with rexi's
+#                command line). Needs julia.
+# nagasenacs:    Nagasena for .NET, the C# port of OpenEXI (Subversion only, on
+#                SourceForge). r1188 is its last change, version 0000.0002.0056.1.
+#                drivers/nagasena-cs builds it with the .NET SDK.
+# EXIficient 1.0.7 comes from Maven Central (harness/pom.xml).
+
+exip https://github.com/nhenehan/exip.git b2870c106f0cc88fd199208f724ce575df150444
+exi-testsuite https://github.com/w3c/exi-testsuite.git 23d5f587ba3ec281f1a6a8182c1450cb870b469e candidates/openexi/lib
+rexi https://github.com/nhenehan/rexi.git ba2c7313e03e1aa4bb881b4e9d0910121519de85
+jexi https://github.com/nhenehan/jexi.git a2473c18ff34ece0aa565e13294eb39e6239faa3
+nagasenacs svn:https://svn.code.sf.net/p/openexi/code 1188 trunk/nagasenacs

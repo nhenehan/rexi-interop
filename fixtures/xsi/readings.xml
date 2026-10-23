@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Readings xmlns="urn:interop:nil" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Probe channel="1">
+    <Name>inlet</Name>
+    <Value>21.5</Value>
+    <Count>3</Count>
+  </Probe>
+  <Probe channel="2">
+    <Name>outlet</Name>
+    <Value xsi:nil="true"/>
+    <Count xsi:nil="true"/>
+    <Note xsi:nil="true"/>
+  </Probe>
+  <Probe channel="3" xsi:nil="true"/>
+  <Probe channel="4">
+    <Name>bypass</Name>
+    <Value>-0.75</Value>
+    <Count xsi:nil="false">0</Count>
+    <Note>recalibrated</Note>
+  </Probe>
+</Readings>
