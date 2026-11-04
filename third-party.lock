@@ -17,6 +17,6 @@
 
 exip https://github.com/nhenehan/exip.git b2870c106f0cc88fd199208f724ce575df150444
 exi-testsuite https://github.com/w3c/exi-testsuite.git 23d5f587ba3ec281f1a6a8182c1450cb870b469e candidates/openexi/lib
-rexi https://github.com/nhenehan/rexi.git ba2c7313e03e1aa4bb881b4e9d0910121519de85
-jexi https://github.com/nhenehan/jexi.git a2473c18ff34ece0aa565e13294eb39e6239faa3
+rexi https://github.com/nhenehan/rexi.git 91e5d3ccb2338b5c25093e4aac3bd961423d2ede
+jexi https://github.com/nhenehan/jexi.git e336de8b408ef9fb4cfab564c9760ace7afd3327
 nagasenacs svn:https://svn.code.sf.net/p/openexi/code 1188 trunk/nagasenacs
