@@ -1,13 +1,13 @@
 {
-  "generated" : "2026-11-04T05:02:43Z",
+  "generated" : "2026-11-05T04:11:13Z",
   "cpu" : "AMD Ryzen 7 7840U w/ Radeon 780M Graphics",
   "java" : "25.0.4.1",
   "meta" : {
-    "rexi-interop" : "78672553f301 (with local changes)",
+    "rexi-interop" : "15e1c1551263 (with local changes)",
     "EXIficient" : "1.0.7 (Maven Central), in-process",
     "Nagasena" : "W3C exi-testsuite 23d5f587ba3e candidates/openexi/lib, in-process",
     "exip" : "nhenehan/exip b2870c106f0c, Release build, drivers/exip (cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0)",
-    "rexi" : "91e5d3ccb233, release build, rexi bench (rustc 1.99.0 (b940084d7 2026-09-28))",
+    "rexi" : "b2ab2a8eb4bc, release build, rexi bench (rustc 1.99.0 (b940084d7 2026-09-28))",
     "Nagasena.NET" : "OpenEXI svn r1188 trunk/nagasenacs, drivers/nagasena-cs (.NET 10.0.402), schemas compiled by Java Nagasena",
     "jexi" : "e336de8b408e, bin/jexi (julia version 1.12.7)"
   },
@@ -177,114 +177,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1785044,
-      "median_us" : 12.573,
-      "p10_us" : 12.042,
-      "p90_us" : 13.825
+      "setup_ns" : 1736503,
+      "median_us" : 108.647,
+      "p10_us" : 12.984,
+      "p90_us" : 121.24
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1786527,
-      "median_us" : 1.182,
-      "p10_us" : 1.132,
-      "p90_us" : 1.232
+      "setup_ns" : 10082125,
+      "median_us" : 1.062,
+      "p10_us" : 1.032,
+      "p90_us" : 1.102
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 3065603,
-      "median_us" : 5.891,
-      "p10_us" : 5.169,
-      "p90_us" : 6.061
+      "setup_ns" : 2734281,
+      "median_us" : 5.18,
+      "p10_us" : 5.03,
+      "p90_us" : 5.4
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 2114520,
-      "median_us" : 0.841,
-      "p10_us" : 0.831,
-      "p90_us" : 0.852
+      "setup_ns" : 2693637,
+      "median_us" : 0.782,
+      "p10_us" : 0.741,
+      "p90_us" : 1.323
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 26625200,
-      "median_us" : 6.3,
-      "p10_us" : 6.0,
-      "p90_us" : 6.6
+      "setup_ns" : 22927800,
+      "median_us" : 5.1,
+      "p10_us" : 4.9,
+      "p90_us" : 5.4
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 23866400,
+      "setup_ns" : 21692600,
       "median_us" : 0.8,
-      "p10_us" : 0.8,
-      "p90_us" : 1.3
+      "p10_us" : 0.7,
+      "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 263247,
-      "median_us" : 5.26,
-      "p10_us" : 5.229,
-      "p90_us" : 5.309
+      "setup_ns" : 248430,
+      "median_us" : 4.538,
+      "p10_us" : 4.498,
+      "p90_us" : 4.578
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 273606,
-      "median_us" : 1.603,
-      "p10_us" : 1.592,
-      "p90_us" : 1.623
+      "setup_ns" : 276120,
+      "median_us" : 1.413,
+      "p10_us" : 1.383,
+      "p90_us" : 1.433
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 218896,
-      "median_us" : 3.196,
-      "p10_us" : 3.126,
+      "setup_ns" : 210862,
+      "median_us" : 3.186,
+      "p10_us" : 3.125,
       "p90_us" : 3.286
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 203048,
-      "median_us" : 1.834,
-      "p10_us" : 1.793,
-      "p90_us" : 1.894
+      "setup_ns" : 214588,
+      "median_us" : 1.773,
+      "p10_us" : 1.703,
+      "p90_us" : 1.833
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 207857,
-      "median_us" : 7.734,
-      "p10_us" : 0.962,
-      "p90_us" : 8.124
+      "setup_ns" : 197127,
+      "median_us" : 0.822,
+      "p10_us" : 0.801,
+      "p90_us" : 0.861
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 142051619,
-      "median_us" : 4.769,
-      "p10_us" : 4.619,
-      "p90_us" : 5.05
+      "setup_ns" : 126692495,
+      "median_us" : 4.828,
+      "p10_us" : 4.658,
+      "p90_us" : 5.089
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 165379709,
-      "median_us" : 3.276,
-      "p10_us" : 3.195,
-      "p90_us" : 3.456
+      "setup_ns" : 125391621,
+      "median_us" : 2.885,
+      "p10_us" : 2.795,
+      "p90_us" : 3.066
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 161249407,
-      "median_us" : 0.992,
-      "p10_us" : 0.952,
-      "p90_us" : 1.142
+      "setup_ns" : 126721348,
+      "median_us" : 0.901,
+      "p10_us" : 0.861,
+      "p90_us" : 1.052
     } ]
   }, {
     "case" : "S2",
@@ -449,114 +449,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1774265,
-      "median_us" : 13.394,
-      "p10_us" : 13.113,
-      "p90_us" : 13.855
+      "setup_ns" : 1397451,
+      "median_us" : 11.581,
+      "p10_us" : 11.35,
+      "p90_us" : 11.972
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1852196,
-      "median_us" : 1.072,
-      "p10_us" : 1.052,
-      "p90_us" : 1.112
+      "setup_ns" : 1716999,
+      "median_us" : 0.972,
+      "p10_us" : 0.952,
+      "p90_us" : 1.012
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2711161,
-      "median_us" : 5.26,
-      "p10_us" : 5.12,
-      "p90_us" : 5.46
+      "setup_ns" : 2989673,
+      "median_us" : 5.21,
+      "p10_us" : 5.09,
+      "p90_us" : 5.38
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1857174,
-      "median_us" : 0.751,
-      "p10_us" : 0.721,
-      "p90_us" : 0.772
+      "setup_ns" : 2021520,
+      "median_us" : 0.752,
+      "p10_us" : 0.741,
+      "p90_us" : 0.781
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 26009100,
-      "median_us" : 6.0,
-      "p10_us" : 5.7,
-      "p90_us" : 6.6
+      "setup_ns" : 22518900,
+      "median_us" : 5.2,
+      "p10_us" : 4.9,
+      "p90_us" : 5.5
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 24798700,
-      "median_us" : 0.7,
+      "setup_ns" : 21841500,
+      "median_us" : 0.8,
       "p10_us" : 0.7,
-      "p90_us" : 1.8
+      "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 274838,
-      "median_us" : 5.4,
-      "p10_us" : 5.36,
-      "p90_us" : 5.46
+      "setup_ns" : 275869,
+      "median_us" : 4.648,
+      "p10_us" : 4.608,
+      "p90_us" : 4.688
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 262555,
-      "median_us" : 1.633,
-      "p10_us" : 1.613,
-      "p90_us" : 1.653
+      "setup_ns" : 176540,
+      "median_us" : 1.402,
+      "p10_us" : 1.382,
+      "p90_us" : 1.423
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 218256,
-      "median_us" : 3.015,
-      "p10_us" : 2.915,
-      "p90_us" : 3.135
+      "setup_ns" : 305984,
+      "median_us" : 3.136,
+      "p10_us" : 3.075,
+      "p90_us" : 3.215
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 231920,
-      "median_us" : 1.984,
-      "p10_us" : 1.943,
-      "p90_us" : 2.044
+      "setup_ns" : 186127,
+      "median_us" : 1.733,
+      "p10_us" : 1.693,
+      "p90_us" : 1.784
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 213386,
-      "median_us" : 0.912,
-      "p10_us" : 0.891,
-      "p90_us" : 0.942
+      "setup_ns" : 309660,
+      "median_us" : 0.801,
+      "p10_us" : 0.771,
+      "p90_us" : 0.831
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 133890008,
-      "median_us" : 5.921,
-      "p10_us" : 5.14,
-      "p90_us" : 6.262
+      "setup_ns" : 125121341,
+      "median_us" : 5.23,
+      "p10_us" : 5.069,
+      "p90_us" : 5.5
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 148121501,
-      "median_us" : 3.156,
-      "p10_us" : 3.035,
-      "p90_us" : 3.386
+      "setup_ns" : 124627777,
+      "median_us" : 3.075,
+      "p10_us" : 2.965,
+      "p90_us" : 3.266
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 138836931,
-      "median_us" : 0.871,
-      "p10_us" : 0.831,
-      "p90_us" : 1.112
+      "setup_ns" : 124580441,
+      "median_us" : 0.832,
+      "p10_us" : 0.802,
+      "p90_us" : 0.982
     } ]
   }, {
     "case" : "S3",
@@ -721,114 +721,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1450317,
-      "median_us" : 11.972,
-      "p10_us" : 11.731,
-      "p90_us" : 12.293
+      "setup_ns" : 1270350,
+      "median_us" : 10.529,
+      "p10_us" : 10.259,
+      "p90_us" : 10.95
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1318519,
-      "median_us" : 0.791,
-      "p10_us" : 0.771,
-      "p90_us" : 0.822
+      "setup_ns" : 1205022,
+      "median_us" : 0.701,
+      "p10_us" : 0.681,
+      "p90_us" : 0.741
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2429151,
-      "median_us" : 4.919,
-      "p10_us" : 4.809,
-      "p90_us" : 5.6
+      "setup_ns" : 2321825,
+      "median_us" : 4.328,
+      "p10_us" : 4.177,
+      "p90_us" : 4.598
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1682759,
-      "median_us" : 0.541,
-      "p10_us" : 0.531,
-      "p90_us" : 0.551
+      "setup_ns" : 1626906,
+      "median_us" : 0.531,
+      "p10_us" : 0.521,
+      "p90_us" : 0.541
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 29988900,
-      "median_us" : 4.2,
-      "p10_us" : 3.9,
-      "p90_us" : 6.3
+      "setup_ns" : 22929100,
+      "median_us" : 3.5,
+      "p10_us" : 3.3,
+      "p90_us" : 3.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 23229000,
-      "median_us" : 0.8,
+      "setup_ns" : 20956100,
+      "median_us" : 0.7,
       "p10_us" : 0.5,
-      "p90_us" : 1.1
+      "p90_us" : 0.8
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 193400,
-      "median_us" : 4.608,
-      "p10_us" : 4.568,
-      "p90_us" : 6.081
+      "setup_ns" : 244563,
+      "median_us" : 3.967,
+      "p10_us" : 3.947,
+      "p90_us" : 3.997
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 211854,
-      "median_us" : 1.062,
-      "p10_us" : 1.062,
-      "p90_us" : 1.072
+      "setup_ns" : 169707,
+      "median_us" : 0.942,
+      "p10_us" : 0.932,
+      "p90_us" : 0.972
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 295715,
-      "median_us" : 2.074,
-      "p10_us" : 2.014,
-      "p90_us" : 2.143
+      "setup_ns" : 210861,
+      "median_us" : 1.864,
+      "p10_us" : 1.823,
+      "p90_us" : 1.923
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 222252,
-      "median_us" : 1.132,
-      "p10_us" : 1.102,
-      "p90_us" : 1.172
+      "setup_ns" : 318797,
+      "median_us" : 0.991,
+      "p10_us" : 0.952,
+      "p90_us" : 1.041
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 265511,
-      "median_us" : 0.601,
-      "p10_us" : 0.591,
-      "p90_us" : 0.622
+      "setup_ns" : 298781,
+      "median_us" : 0.521,
+      "p10_us" : 0.511,
+      "p90_us" : 0.541
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 138898081,
-      "median_us" : 2.936,
-      "p10_us" : 2.785,
-      "p90_us" : 3.246
+      "setup_ns" : 124877149,
+      "median_us" : 2.855,
+      "p10_us" : 2.715,
+      "p90_us" : 3.075
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 136893399,
-      "median_us" : 16.831,
-      "p10_us" : 1.864,
-      "p90_us" : 27.64
+      "setup_ns" : 124987999,
+      "median_us" : 1.623,
+      "p10_us" : 1.553,
+      "p90_us" : 1.793
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 175098836,
-      "median_us" : 0.601,
-      "p10_us" : 0.571,
-      "p90_us" : 0.732
+      "setup_ns" : 126760428,
+      "median_us" : 0.641,
+      "p10_us" : 0.601,
+      "p90_us" : 0.781
     } ]
   }, {
     "case" : "S4",
@@ -993,47 +993,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1434509,
-      "median_us" : 11.131,
-      "p10_us" : 10.88,
-      "p90_us" : 11.521
+      "setup_ns" : 1502340,
+      "median_us" : 11.301,
+      "p10_us" : 11.03,
+      "p90_us" : 11.701
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1290157,
-      "median_us" : 0.841,
-      "p10_us" : 0.822,
-      "p90_us" : 0.871
+      "setup_ns" : 1357718,
+      "median_us" : 0.862,
+      "p10_us" : 0.842,
+      "p90_us" : 0.892
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2510628,
-      "median_us" : 5.009,
-      "p10_us" : 4.889,
-      "p90_us" : 5.199
+      "setup_ns" : 2523269,
+      "median_us" : 4.889,
+      "p10_us" : 4.808,
+      "p90_us" : 5.049
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1722300,
-      "median_us" : 0.701,
-      "p10_us" : 0.691,
-      "p90_us" : 0.712
+      "setup_ns" : 1669392,
+      "median_us" : 0.622,
+      "p10_us" : 0.621,
+      "p90_us" : 0.641
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24403700,
-      "median_us" : 4.9,
-      "p10_us" : 4.6,
-      "p90_us" : 5.6
+      "setup_ns" : 23402200,
+      "median_us" : 4.4,
+      "p10_us" : 4.1,
+      "p90_us" : 4.7
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22958200,
+      "setup_ns" : 21215400,
       "median_us" : 0.8,
       "p10_us" : 0.6,
       "p90_us" : 0.9
@@ -1041,66 +1041,66 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 422616,
-      "median_us" : 4.859,
-      "p10_us" : 4.178,
-      "p90_us" : 4.889
+      "setup_ns" : 305754,
+      "median_us" : 4.197,
+      "p10_us" : 4.168,
+      "p90_us" : 4.227
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 459813,
-      "median_us" : 1.142,
-      "p10_us" : 1.132,
-      "p90_us" : 1.152
+      "setup_ns" : 296787,
+      "median_us" : 1.022,
+      "p10_us" : 1.012,
+      "p90_us" : 1.052
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 302077,
-      "median_us" : 2.825,
-      "p10_us" : 2.745,
-      "p90_us" : 3.045
+      "setup_ns" : 246847,
+      "median_us" : 2.424,
+      "p10_us" : 2.375,
+      "p90_us" : 2.475
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 294053,
-      "median_us" : 1.353,
-      "p10_us" : 1.312,
-      "p90_us" : 1.402
+      "setup_ns" : 238051,
+      "median_us" : 1.343,
+      "p10_us" : 1.302,
+      "p90_us" : 1.393
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 283093,
-      "median_us" : 0.631,
-      "p10_us" : 0.611,
-      "p90_us" : 0.652
+      "setup_ns" : 336639,
+      "median_us" : 0.581,
+      "p10_us" : 0.561,
+      "p90_us" : 0.601
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 273258872,
-      "median_us" : 3.587,
-      "p10_us" : 3.447,
-      "p90_us" : 3.847
+      "setup_ns" : 259477011,
+      "median_us" : 3.256,
+      "p10_us" : 3.135,
+      "p90_us" : 3.466
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 273868887,
-      "median_us" : 2.154,
-      "p10_us" : 2.044,
-      "p90_us" : 2.885
+      "setup_ns" : 265685289,
+      "median_us" : 1.803,
+      "p10_us" : 1.713,
+      "p90_us" : 1.974
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 280848492,
-      "median_us" : 0.611,
-      "p10_us" : 0.581,
-      "p90_us" : 0.782
+      "setup_ns" : 259910352,
+      "median_us" : 0.621,
+      "p10_us" : 0.591,
+      "p90_us" : 0.761
     } ]
   }, {
     "case" : "S5",
@@ -1265,114 +1265,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1320713,
-      "median_us" : 11.902,
-      "p10_us" : 11.561,
-      "p90_us" : 12.413
+      "setup_ns" : 1295626,
+      "median_us" : 11.851,
+      "p10_us" : 11.531,
+      "p90_us" : 12.282
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1177693,
-      "median_us" : 1.092,
-      "p10_us" : 1.072,
-      "p90_us" : 1.132
+      "setup_ns" : 1217635,
+      "median_us" : 1.062,
+      "p10_us" : 1.042,
+      "p90_us" : 1.102
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2275522,
-      "median_us" : 6.151,
-      "p10_us" : 6.011,
-      "p90_us" : 6.913
+      "setup_ns" : 2315302,
+      "median_us" : 5.32,
+      "p10_us" : 5.189,
+      "p90_us" : 5.56
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1654548,
-      "median_us" : 0.812,
-      "p10_us" : 0.811,
-      "p90_us" : 0.822
+      "setup_ns" : 1456657,
+      "median_us" : 0.802,
+      "p10_us" : 0.791,
+      "p90_us" : 0.812
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 28324000,
-      "median_us" : 5.5,
-      "p10_us" : 5.2,
-      "p90_us" : 5.8
+      "setup_ns" : 22741600,
+      "median_us" : 4.9,
+      "p10_us" : 4.7,
+      "p90_us" : 5.2
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22661400,
-      "median_us" : 0.8,
-      "p10_us" : 0.8,
-      "p90_us" : 1.4
+      "setup_ns" : 21831000,
+      "median_us" : 0.9,
+      "p10_us" : 0.7,
+      "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 264480,
-      "median_us" : 5.41,
-      "p10_us" : 5.37,
-      "p90_us" : 5.45
+      "setup_ns" : 194863,
+      "median_us" : 4.638,
+      "p10_us" : 4.608,
+      "p90_us" : 4.668
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 286409,
-      "median_us" : 1.503,
-      "p10_us" : 1.493,
-      "p90_us" : 1.503
+      "setup_ns" : 253860,
+      "median_us" : 1.313,
+      "p10_us" : 1.302,
+      "p90_us" : 1.343
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 240365,
-      "median_us" : 3.195,
-      "p10_us" : 3.116,
-      "p90_us" : 3.286
+      "setup_ns" : 213777,
+      "median_us" : 2.735,
+      "p10_us" : 2.665,
+      "p90_us" : 2.815
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 235487,
-      "median_us" : 1.633,
-      "p10_us" : 1.593,
-      "p90_us" : 1.683
+      "setup_ns" : 289143,
+      "median_us" : 1.573,
+      "p10_us" : 1.533,
+      "p90_us" : 1.623
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 378546,
-      "median_us" : 0.781,
-      "p10_us" : 0.761,
-      "p90_us" : 0.822
+      "setup_ns" : 210291,
+      "median_us" : 0.702,
+      "p10_us" : 0.691,
+      "p90_us" : 0.741
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 140398249,
-      "median_us" : 4.829,
-      "p10_us" : 4.678,
-      "p90_us" : 5.169
+      "setup_ns" : 125269963,
+      "median_us" : 4.208,
+      "p10_us" : 4.068,
+      "p90_us" : 4.478
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 133722465,
-      "median_us" : 2.354,
-      "p10_us" : 2.265,
-      "p90_us" : 2.555
+      "setup_ns" : 127064702,
+      "median_us" : 2.314,
+      "p10_us" : 2.204,
+      "p90_us" : 2.515
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 137307340,
-      "median_us" : 0.792,
-      "p10_us" : 0.761,
-      "p90_us" : 0.952
+      "setup_ns" : 130752260,
+      "median_us" : 0.821,
+      "p10_us" : 0.781,
+      "p90_us" : 0.972
     } ]
   }, {
     "case" : "R1",
@@ -1537,114 +1537,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1327204,
-      "median_us" : 14.366,
-      "p10_us" : 14.066,
-      "p90_us" : 14.787
+      "setup_ns" : 1266443,
+      "median_us" : 14.446,
+      "p10_us" : 14.145,
+      "p90_us" : 14.907
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1259372,
+      "setup_ns" : 1324267,
       "median_us" : 1.643,
-      "p10_us" : 1.603,
+      "p10_us" : 1.623,
       "p90_us" : 1.693
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2273609,
-      "median_us" : 6.973,
-      "p10_us" : 6.862,
-      "p90_us" : 7.173
+      "setup_ns" : 2363129,
+      "median_us" : 7.093,
+      "p10_us" : 6.942,
+      "p90_us" : 7.393
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1467949,
-      "median_us" : 1.353,
-      "p10_us" : 1.342,
-      "p90_us" : 1.393
+      "setup_ns" : 1571205,
+      "median_us" : 1.372,
+      "p10_us" : 1.332,
+      "p90_us" : 1.422
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23803300,
-      "median_us" : 7.1,
-      "p10_us" : 6.8,
+      "setup_ns" : 22478800,
+      "median_us" : 7.0,
+      "p10_us" : 6.7,
       "p90_us" : 7.4
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21236200,
+      "setup_ns" : 21632900,
       "median_us" : 1.4,
-      "p10_us" : 1.4,
+      "p10_us" : 1.3,
       "p90_us" : 2.0
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 271983,
+      "setup_ns" : 189664,
       "median_us" : 5.65,
-      "p10_us" : 5.59,
-      "p90_us" : 5.72
+      "p10_us" : 5.58,
+      "p90_us" : 5.76
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 185686,
-      "median_us" : 2.164,
-      "p10_us" : 2.124,
-      "p90_us" : 2.244
+      "setup_ns" : 200624,
+      "median_us" : 2.214,
+      "p10_us" : 2.184,
+      "p90_us" : 2.254
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 216903,
-      "median_us" : 4.649,
-      "p10_us" : 4.548,
-      "p90_us" : 4.769
+      "setup_ns" : 219738,
+      "median_us" : 4.688,
+      "p10_us" : 4.568,
+      "p90_us" : 4.839
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 206815,
-      "median_us" : 2.876,
-      "p10_us" : 2.815,
-      "p90_us" : 2.946
+      "setup_ns" : 303069,
+      "median_us" : 2.805,
+      "p10_us" : 2.755,
+      "p90_us" : 2.876
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 332703,
-      "median_us" : 1.433,
-      "p10_us" : 1.393,
-      "p90_us" : 1.493
+      "setup_ns" : 214168,
+      "median_us" : 1.192,
+      "p10_us" : 1.162,
+      "p90_us" : 1.222
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 137685986,
+      "setup_ns" : 125109152,
       "median_us" : 6.462,
-      "p10_us" : 6.302,
-      "p90_us" : 6.772
+      "p10_us" : 6.271,
+      "p90_us" : 6.762
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 131890976,
-      "median_us" : 4.909,
-      "p10_us" : 4.248,
-      "p90_us" : 5.14
+      "setup_ns" : 125517892,
+      "median_us" : 4.308,
+      "p10_us" : 4.178,
+      "p90_us" : 4.549
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 128104917,
-      "median_us" : 1.292,
-      "p10_us" : 1.242,
-      "p90_us" : 1.453
+      "setup_ns" : 126030660,
+      "median_us" : 1.263,
+      "p10_us" : 1.222,
+      "p90_us" : 1.432
     } ]
   }, {
     "case" : "R2",
@@ -1809,114 +1809,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1178936,
-      "median_us" : 155.262,
-      "p10_us" : 150.412,
-      "p90_us" : 194.643
+      "setup_ns" : 1276772,
+      "median_us" : 16.791,
+      "p10_us" : 16.45,
+      "p90_us" : 17.381
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 9757227,
-      "median_us" : 2.084,
-      "p10_us" : 2.054,
-      "p90_us" : 2.134
+      "setup_ns" : 1601109,
+      "median_us" : 2.093,
+      "p10_us" : 2.044,
+      "p90_us" : 2.154
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2224169,
-      "median_us" : 8.756,
-      "p10_us" : 8.625,
-      "p90_us" : 8.986
+      "setup_ns" : 2558202,
+      "median_us" : 8.556,
+      "p10_us" : 8.395,
+      "p90_us" : 8.826
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 2307661,
-      "median_us" : 2.044,
-      "p10_us" : 2.014,
-      "p90_us" : 2.084
+      "setup_ns" : 2201967,
+      "median_us" : 1.853,
+      "p10_us" : 1.783,
+      "p90_us" : 1.913
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22771700,
-      "median_us" : 9.2,
-      "p10_us" : 8.8,
-      "p90_us" : 12.9
+      "setup_ns" : 22858900,
+      "median_us" : 9.3,
+      "p10_us" : 9.0,
+      "p90_us" : 9.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 25154300,
-      "median_us" : 1.7,
-      "p10_us" : 1.7,
-      "p90_us" : 2.5
+      "setup_ns" : 21114800,
+      "median_us" : 1.5,
+      "p10_us" : 1.5,
+      "p90_us" : 2.3
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 226250,
-      "median_us" : 6.401,
-      "p10_us" : 6.311,
-      "p90_us" : 6.502
+      "setup_ns" : 192228,
+      "median_us" : 6.462,
+      "p10_us" : 6.351,
+      "p90_us" : 6.592
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 226932,
-      "median_us" : 2.795,
-      "p10_us" : 2.765,
-      "p90_us" : 2.835
+      "setup_ns" : 293381,
+      "median_us" : 2.705,
+      "p10_us" : 2.674,
+      "p90_us" : 2.745
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 222994,
-      "median_us" : 6.702,
-      "p10_us" : 6.592,
-      "p90_us" : 6.823
+      "setup_ns" : 237920,
+      "median_us" : 6.561,
+      "p10_us" : 6.422,
+      "p90_us" : 6.722
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 260993,
-      "median_us" : 4.227,
-      "p10_us" : 4.157,
-      "p90_us" : 4.308
+      "setup_ns" : 227692,
+      "median_us" : 3.937,
+      "p10_us" : 3.867,
+      "p90_us" : 4.017
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 345325,
-      "median_us" : 1.723,
-      "p10_us" : 1.683,
-      "p90_us" : 1.764
+      "setup_ns" : 300464,
+      "median_us" : 1.553,
+      "p10_us" : 1.523,
+      "p90_us" : 1.593
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 131208965,
-      "median_us" : 9.177,
-      "p10_us" : 8.916,
-      "p90_us" : 9.568
+      "setup_ns" : 125396923,
+      "median_us" : 9.117,
+      "p10_us" : 8.856,
+      "p90_us" : 9.537
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 127146515,
-      "median_us" : 6.131,
-      "p10_us" : 5.961,
-      "p90_us" : 6.372
+      "setup_ns" : 124794191,
+      "median_us" : 5.871,
+      "p10_us" : 5.651,
+      "p90_us" : 6.191
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 125128589,
-      "median_us" : 1.854,
-      "p10_us" : 1.723,
-      "p90_us" : 2.094
+      "setup_ns" : 124896427,
+      "median_us" : 1.793,
+      "p10_us" : 1.663,
+      "p90_us" : 1.994
     } ]
   }, {
     "case" : "R3",
@@ -2081,114 +2081,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1015089,
-      "median_us" : 12.312,
-      "p10_us" : 12.002,
-      "p90_us" : 12.793
+      "setup_ns" : 1071120,
+      "median_us" : 12.132,
+      "p10_us" : 11.771,
+      "p90_us" : 12.583
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1094012,
-      "median_us" : 1.223,
-      "p10_us" : 1.202,
-      "p90_us" : 1.272
+      "setup_ns" : 1133613,
+      "median_us" : 1.232,
+      "p10_us" : 1.212,
+      "p90_us" : 1.282
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1893090,
-      "median_us" : 5.47,
-      "p10_us" : 5.35,
-      "p90_us" : 5.651
+      "setup_ns" : 2051895,
+      "median_us" : 5.4,
+      "p10_us" : 5.26,
+      "p90_us" : 5.591
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1425703,
-      "median_us" : 0.992,
-      "p10_us" : 0.972,
-      "p90_us" : 1.012
+      "setup_ns" : 1402659,
+      "median_us" : 9.067,
+      "p10_us" : 1.002,
+      "p90_us" : 16.189
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22647000,
-      "median_us" : 5.0,
-      "p10_us" : 4.8,
-      "p90_us" : 5.4
+      "setup_ns" : 199958000,
+      "median_us" : 4.9,
+      "p10_us" : 4.7,
+      "p90_us" : 5.2
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21192600,
-      "median_us" : 1.1,
+      "setup_ns" : 21303500,
+      "median_us" : 1.0,
       "p10_us" : 0.9,
       "p90_us" : 1.3
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 282943,
-      "median_us" : 4.859,
-      "p10_us" : 4.799,
-      "p90_us" : 4.949
+      "setup_ns" : 301847,
+      "median_us" : 4.908,
+      "p10_us" : 4.849,
+      "p90_us" : 4.979
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 305934,
-      "median_us" : 1.963,
-      "p10_us" : 1.933,
-      "p90_us" : 1.994
+      "setup_ns" : 183462,
+      "median_us" : 1.663,
+      "p10_us" : 1.633,
+      "p90_us" : 1.683
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 226561,
-      "median_us" : 2.925,
-      "p10_us" : 2.855,
-      "p90_us" : 3.045
+      "setup_ns" : 220149,
+      "median_us" : 3.356,
+      "p10_us" : 3.195,
+      "p90_us" : 4.478
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 218797,
-      "median_us" : 1.754,
-      "p10_us" : 1.713,
-      "p90_us" : 1.804
+      "setup_ns" : 245414,
+      "median_us" : 1.723,
+      "p10_us" : 1.673,
+      "p90_us" : 1.773
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 221361,
-      "median_us" : 0.912,
-      "p10_us" : 0.881,
-      "p90_us" : 0.942
+      "setup_ns" : 255242,
+      "median_us" : 0.851,
+      "p10_us" : 0.822,
+      "p90_us" : 0.881
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 127043879,
-      "median_us" : 4.017,
-      "p10_us" : 3.877,
-      "p90_us" : 4.328
+      "setup_ns" : 126491125,
+      "median_us" : 4.027,
+      "p10_us" : 3.887,
+      "p90_us" : 4.318
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 125511312,
-      "median_us" : 3.987,
-      "p10_us" : 2.625,
-      "p90_us" : 5.791
+      "setup_ns" : 125950636,
+      "median_us" : 2.685,
+      "p10_us" : 2.575,
+      "p90_us" : 2.905
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 128119498,
-      "median_us" : 0.941,
-      "p10_us" : 0.902,
-      "p90_us" : 1.112
+      "setup_ns" : 123986460,
+      "median_us" : 0.952,
+      "p10_us" : 0.912,
+      "p90_us" : 1.102
     } ]
   }, {
     "case" : "R4",
@@ -2353,15 +2353,15 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1314702,
-      "median_us" : 12.983,
-      "p10_us" : 12.653,
-      "p90_us" : 13.514
+      "setup_ns" : 1432394,
+      "median_us" : 12.743,
+      "p10_us" : 12.432,
+      "p90_us" : 13.234
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1388415,
+      "setup_ns" : 1326171,
       "median_us" : 1.032,
       "p10_us" : 1.012,
       "p90_us" : 1.072
@@ -2369,98 +2369,98 @@
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2012346,
-      "median_us" : 5.76,
-      "p10_us" : 5.62,
-      "p90_us" : 5.981
+      "setup_ns" : 2243803,
+      "median_us" : 5.641,
+      "p10_us" : 5.52,
+      "p90_us" : 5.851
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1560728,
-      "median_us" : 0.782,
-      "p10_us" : 0.772,
-      "p90_us" : 0.812
+      "setup_ns" : 1456307,
+      "median_us" : 0.771,
+      "p10_us" : 0.762,
+      "p90_us" : 0.782
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22755400,
-      "median_us" : 5.5,
-      "p10_us" : 5.2,
-      "p90_us" : 5.7
+      "setup_ns" : 22471900,
+      "median_us" : 5.4,
+      "p10_us" : 5.1,
+      "p90_us" : 5.6
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21492800,
-      "median_us" : 0.9,
+      "setup_ns" : 21299300,
+      "median_us" : 1.0,
       "p10_us" : 0.7,
-      "p90_us" : 1.0
+      "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 312386,
-      "median_us" : 4.448,
-      "p10_us" : 4.407,
+      "setup_ns" : 294995,
+      "median_us" : 4.458,
+      "p10_us" : 4.418,
       "p90_us" : 4.498
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 394856,
+      "setup_ns" : 295525,
       "median_us" : 1.182,
       "p10_us" : 1.132,
-      "p90_us" : 1.212
+      "p90_us" : 1.193
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 421363,
-      "median_us" : 2.976,
-      "p10_us" : 2.905,
-      "p90_us" : 3.056
+      "setup_ns" : 256144,
+      "median_us" : 3.416,
+      "p10_us" : 3.346,
+      "p90_us" : 3.497
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 258308,
-      "median_us" : 1.673,
-      "p10_us" : 1.633,
-      "p90_us" : 1.723
+      "setup_ns" : 241357,
+      "median_us" : 1.623,
+      "p10_us" : 1.582,
+      "p90_us" : 1.683
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 291057,
-      "median_us" : 0.751,
-      "p10_us" : 0.731,
-      "p90_us" : 0.781
+      "setup_ns" : 278865,
+      "median_us" : 0.681,
+      "p10_us" : 0.662,
+      "p90_us" : 0.711
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 264709332,
-      "median_us" : 4.438,
+      "setup_ns" : 266356484,
+      "median_us" : 4.448,
       "p10_us" : 4.288,
-      "p90_us" : 4.698
+      "p90_us" : 4.809
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 741605569,
-      "median_us" : 2.715,
+      "setup_ns" : 261057079,
+      "median_us" : 2.705,
       "p10_us" : 2.575,
-      "p90_us" : 2.925
+      "p90_us" : 2.905
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 261290718,
-      "median_us" : 0.741,
-      "p10_us" : 0.711,
-      "p90_us" : 0.891
+      "setup_ns" : 260662575,
+      "median_us" : 0.762,
+      "p10_us" : 0.731,
+      "p90_us" : 0.912
     } ]
   }, {
     "case" : "R5",
@@ -2625,114 +2625,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1245256,
-      "median_us" : 14.547,
-      "p10_us" : 14.286,
-      "p90_us" : 15.107
+      "setup_ns" : 1345246,
+      "median_us" : 14.646,
+      "p10_us" : 14.326,
+      "p90_us" : 15.117
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1132922,
-      "median_us" : 1.573,
-      "p10_us" : 1.543,
-      "p90_us" : 1.613
+      "setup_ns" : 1122923,
+      "median_us" : 1.593,
+      "p10_us" : 1.563,
+      "p90_us" : 1.643
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2099934,
-      "median_us" : 8.205,
-      "p10_us" : 8.104,
-      "p90_us" : 8.385
+      "setup_ns" : 2112655,
+      "median_us" : 6.993,
+      "p10_us" : 6.852,
+      "p90_us" : 7.243
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1443365,
-      "median_us" : 1.342,
-      "p10_us" : 1.322,
-      "p90_us" : 1.382
+      "setup_ns" : 1370020,
+      "median_us" : 1.323,
+      "p10_us" : 1.302,
+      "p90_us" : 1.362
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22709900,
-      "median_us" : 7.1,
-      "p10_us" : 6.8,
-      "p90_us" : 7.5
+      "setup_ns" : 23223700,
+      "median_us" : 7.2,
+      "p10_us" : 6.9,
+      "p90_us" : 9.0
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21390600,
-      "median_us" : 1.2,
+      "setup_ns" : 21040600,
+      "median_us" : 1.3,
       "p10_us" : 1.1,
-      "p90_us" : 1.8
+      "p90_us" : 1.7
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 190375,
-      "median_us" : 5.561,
-      "p10_us" : 5.51,
-      "p90_us" : 5.63
+      "setup_ns" : 212275,
+      "median_us" : 5.52,
+      "p10_us" : 5.48,
+      "p90_us" : 5.581
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 320421,
-      "median_us" : 2.013,
-      "p10_us" : 1.974,
-      "p90_us" : 2.064
+      "setup_ns" : 204600,
+      "median_us" : 2.003,
+      "p10_us" : 1.943,
+      "p90_us" : 2.044
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 226951,
-      "median_us" : 4.568,
-      "p10_us" : 4.468,
-      "p90_us" : 4.669
+      "setup_ns" : 228423,
+      "median_us" : 4.518,
+      "p10_us" : 4.439,
+      "p90_us" : 4.599
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 219879,
-      "median_us" : 2.925,
-      "p10_us" : 2.845,
-      "p90_us" : 3.016
+      "setup_ns" : 224546,
+      "median_us" : 2.805,
+      "p10_us" : 2.715,
+      "p90_us" : 2.925
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 223996,
-      "median_us" : 1.322,
-      "p10_us" : 1.252,
-      "p90_us" : 1.382
+      "setup_ns" : 224306,
+      "median_us" : 1.092,
+      "p10_us" : 1.061,
+      "p90_us" : 1.142
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 125366440,
-      "median_us" : 6.432,
-      "p10_us" : 6.202,
-      "p90_us" : 6.782
+      "setup_ns" : 128717976,
+      "median_us" : 6.452,
+      "p10_us" : 6.222,
+      "p90_us" : 6.802
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 130061006,
-      "median_us" : 4.248,
-      "p10_us" : 4.057,
-      "p90_us" : 4.518
+      "setup_ns" : 124760481,
+      "median_us" : 4.027,
+      "p10_us" : 3.837,
+      "p90_us" : 4.277
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 124917417,
-      "median_us" : 1.382,
-      "p10_us" : 1.252,
-      "p90_us" : 1.592
+      "setup_ns" : 128373983,
+      "median_us" : 1.362,
+      "p10_us" : 1.242,
+      "p90_us" : 1.543
     } ]
   }, {
     "case" : "X1",
@@ -2897,114 +2897,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1039202,
-      "median_us" : 136.638,
-      "p10_us" : 18.303,
-      "p90_us" : 192.969
+      "setup_ns" : 1180397,
+      "median_us" : 14.917,
+      "p10_us" : 14.606,
+      "p90_us" : 15.388
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 4219124,
-      "median_us" : 1.383,
-      "p10_us" : 1.363,
-      "p90_us" : 1.423
+      "setup_ns" : 1092789,
+      "median_us" : 1.392,
+      "p10_us" : 1.372,
+      "p90_us" : 1.422
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2098421,
-      "median_us" : 7.413,
-      "p10_us" : 7.313,
-      "p90_us" : 7.594
+      "setup_ns" : 1923724,
+      "median_us" : 7.283,
+      "p10_us" : 7.183,
+      "p90_us" : 7.444
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1269981,
-      "median_us" : 1.312,
-      "p10_us" : 1.252,
-      "p90_us" : 1.343
+      "setup_ns" : 1272624,
+      "median_us" : 1.252,
+      "p10_us" : 1.223,
+      "p90_us" : 1.283
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23612000,
-      "median_us" : 7.4,
-      "p10_us" : 7.1,
-      "p90_us" : 7.7
+      "setup_ns" : 22954700,
+      "median_us" : 7.5,
+      "p10_us" : 7.2,
+      "p90_us" : 7.8
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21187200,
-      "median_us" : 0.9,
+      "setup_ns" : 21378300,
+      "median_us" : 1.0,
       "p10_us" : 0.9,
-      "p90_us" : 1.8
+      "p90_us" : 1.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 188060,
-      "median_us" : 4.969,
-      "p10_us" : 4.919,
-      "p90_us" : 5.009
+      "setup_ns" : 181729,
+      "median_us" : 4.949,
+      "p10_us" : 4.898,
+      "p90_us" : 4.999
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 192339,
-      "median_us" : 1.743,
-      "p10_us" : 1.723,
-      "p90_us" : 1.774
+      "setup_ns" : 192418,
+      "median_us" : 1.733,
+      "p10_us" : 1.713,
+      "p90_us" : 1.793
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 216272,
-      "median_us" : 4.799,
-      "p10_us" : 4.688,
-      "p90_us" : 4.929
+      "setup_ns" : 215220,
+      "median_us" : 4.658,
+      "p10_us" : 4.558,
+      "p90_us" : 4.758
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 206815,
-      "median_us" : 3.216,
-      "p10_us" : 3.155,
-      "p90_us" : 3.296
+      "setup_ns" : 242289,
+      "median_us" : 2.675,
+      "p10_us" : 2.614,
+      "p90_us" : 2.765
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 238883,
-      "median_us" : 1.212,
-      "p10_us" : 1.172,
-      "p90_us" : 1.263
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "xml",
-      "setup_ns" : 127084152,
-      "median_us" : 7.504,
-      "p10_us" : 7.313,
-      "p90_us" : 7.844
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 128124617,
-      "median_us" : 5.09,
-      "p10_us" : 4.929,
-      "p90_us" : 5.329
-    }, {
-      "impl" : "jexi",
-      "op" : "decode",
-      "input" : "exi",
-      "setup_ns" : 127133611,
+      "setup_ns" : 212484,
       "median_us" : 1.242,
-      "p10_us" : 1.192,
-      "p90_us" : 1.443
+      "p10_us" : 1.212,
+      "p90_us" : 1.282
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "xml",
+      "setup_ns" : 125476307,
+      "median_us" : 7.153,
+      "p10_us" : 6.932,
+      "p90_us" : 7.604
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 125590313,
+      "median_us" : 5.039,
+      "p10_us" : 4.778,
+      "p90_us" : 5.31
+    }, {
+      "impl" : "jexi",
+      "op" : "decode",
+      "input" : "exi",
+      "setup_ns" : 125874167,
+      "median_us" : 1.222,
+      "p10_us" : 1.172,
+      "p90_us" : 1.392
     } ]
   }, {
     "case" : "X2",
@@ -3175,114 +3175,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1057676,
-      "median_us" : 15.218,
-      "p10_us" : 14.877,
-      "p90_us" : 15.839
+      "setup_ns" : 1086247,
+      "median_us" : 15.197,
+      "p10_us" : 14.907,
+      "p90_us" : 15.699
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1397822,
-      "median_us" : 1.422,
-      "p10_us" : 1.393,
-      "p90_us" : 1.462
+      "setup_ns" : 1092298,
+      "median_us" : 1.433,
+      "p10_us" : 1.413,
+      "p90_us" : 1.463
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1999634,
-      "median_us" : 7.453,
-      "p10_us" : 7.344,
-      "p90_us" : 7.614
+      "setup_ns" : 2058667,
+      "median_us" : 7.413,
+      "p10_us" : 7.314,
+      "p90_us" : 7.574
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1210924,
-      "median_us" : 1.252,
-      "p10_us" : 1.223,
-      "p90_us" : 1.273
+      "setup_ns" : 1170590,
+      "median_us" : 1.262,
+      "p10_us" : 1.232,
+      "p90_us" : 1.292
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22798200,
-      "median_us" : 7.6,
-      "p10_us" : 7.3,
+      "setup_ns" : 22588300,
+      "median_us" : 7.5,
+      "p10_us" : 7.2,
       "p90_us" : 7.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21253800,
-      "median_us" : 1.0,
-      "p10_us" : 0.9,
-      "p90_us" : 1.5
+      "setup_ns" : 21159600,
+      "median_us" : 1.4,
+      "p10_us" : 1.0,
+      "p90_us" : 1.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 183903,
-      "median_us" : 5.159,
-      "p10_us" : 5.089,
-      "p90_us" : 5.259
+      "setup_ns" : 278124,
+      "median_us" : 5.069,
+      "p10_us" : 5.029,
+      "p90_us" : 5.129
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 182150,
-      "median_us" : 1.723,
-      "p10_us" : 1.693,
-      "p90_us" : 1.753
+      "setup_ns" : 174887,
+      "median_us" : 1.904,
+      "p10_us" : 1.864,
+      "p90_us" : 1.934
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 193501,
-      "median_us" : 4.689,
-      "p10_us" : 4.599,
-      "p90_us" : 4.799
+      "setup_ns" : 305533,
+      "median_us" : 4.598,
+      "p10_us" : 4.508,
+      "p90_us" : 4.708
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 214008,
-      "median_us" : 2.605,
-      "p10_us" : 2.515,
-      "p90_us" : 2.695
+      "setup_ns" : 200433,
+      "median_us" : 2.535,
+      "p10_us" : 2.464,
+      "p90_us" : 2.635
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 194893,
-      "median_us" : 1.322,
-      "p10_us" : 1.282,
-      "p90_us" : 1.382
+      "setup_ns" : 196576,
+      "median_us" : 1.122,
+      "p10_us" : 1.092,
+      "p90_us" : 1.152
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 127270068,
-      "median_us" : 7.423,
-      "p10_us" : 7.193,
-      "p90_us" : 7.754
+      "setup_ns" : 126339479,
+      "median_us" : 7.674,
+      "p10_us" : 7.474,
+      "p90_us" : 8.205
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 129829707,
-      "median_us" : 4.919,
-      "p10_us" : 4.749,
-      "p90_us" : 5.169
+      "setup_ns" : 125977734,
+      "median_us" : 4.809,
+      "p10_us" : 4.648,
+      "p90_us" : 5.039
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 126068942,
-      "median_us" : 1.102,
-      "p10_us" : 1.062,
-      "p90_us" : 1.253
+      "setup_ns" : 126143514,
+      "median_us" : 1.092,
+      "p10_us" : 1.052,
+      "p90_us" : 1.242
     } ]
   }, {
     "case" : "U1",
@@ -3447,114 +3447,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1382676,
-      "median_us" : 27.449,
-      "p10_us" : 26.788,
-      "p90_us" : 28.571
+      "setup_ns" : 1247880,
+      "median_us" : 27.37,
+      "p10_us" : 26.988,
+      "p90_us" : 28.341
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1427196,
-      "median_us" : 5.801,
+      "setup_ns" : 1728920,
+      "median_us" : 5.741,
       "p10_us" : 5.69,
-      "p90_us" : 5.931
+      "p90_us" : 5.831
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2293386,
-      "median_us" : 18.133,
-      "p10_us" : 17.943,
-      "p90_us" : 18.844
+      "setup_ns" : 2369991,
+      "median_us" : 18.113,
+      "p10_us" : 17.912,
+      "p90_us" : 18.814
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1977212,
-      "median_us" : 4.658,
-      "p10_us" : 4.538,
-      "p90_us" : 4.759
+      "setup_ns" : 1516216,
+      "median_us" : 4.638,
+      "p10_us" : 4.498,
+      "p90_us" : 4.728
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22705900,
-      "median_us" : 21.8,
-      "p10_us" : 20.6,
-      "p90_us" : 34.7
+      "setup_ns" : 23209100,
+      "median_us" : 17.1,
+      "p10_us" : 16.8,
+      "p90_us" : 17.8
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 26396300,
+      "setup_ns" : 20994900,
       "median_us" : 4.7,
       "p10_us" : 4.5,
-      "p90_us" : 4.9
+      "p90_us" : 4.8
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 197007,
-      "median_us" : 13.144,
-      "p10_us" : 12.953,
-      "p90_us" : 13.414
+      "setup_ns" : 196515,
+      "median_us" : 13.194,
+      "p10_us" : 13.024,
+      "p90_us" : 13.625
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 191366,
-      "median_us" : 6.682,
-      "p10_us" : 6.602,
-      "p90_us" : 6.772
+      "setup_ns" : 192398,
+      "median_us" : 6.672,
+      "p10_us" : 6.622,
+      "p90_us" : 6.732
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 221110,
-      "median_us" : 17.592,
-      "p10_us" : 17.421,
-      "p90_us" : 17.782
+      "setup_ns" : 225599,
+      "median_us" : 14.857,
+      "p10_us" : 14.637,
+      "p90_us" : 15.208
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 248370,
-      "median_us" : 10.84,
-      "p10_us" : 10.629,
-      "p90_us" : 11.02
+      "setup_ns" : 334536,
+      "median_us" : 11.471,
+      "p10_us" : 11.331,
+      "p90_us" : 11.741
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 214328,
-      "median_us" : 4.959,
-      "p10_us" : 4.889,
-      "p90_us" : 5.049
+      "setup_ns" : 226551,
+      "median_us" : 4.368,
+      "p10_us" : 4.277,
+      "p90_us" : 4.529
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 210912004,
-      "median_us" : 20.537,
-      "p10_us" : 19.846,
-      "p90_us" : 23.933
+      "setup_ns" : 165426043,
+      "median_us" : 21.148,
+      "p10_us" : 20.547,
+      "p90_us" : 22.02
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 182769310,
-      "median_us" : 16.53,
-      "p10_us" : 15.889,
-      "p90_us" : 20.837
+      "setup_ns" : 164054519,
+      "median_us" : 14.326,
+      "p10_us" : 13.845,
+      "p90_us" : 15.038
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 190953881,
-      "median_us" : 6.612,
-      "p10_us" : 5.87,
-      "p90_us" : 7.234
+      "setup_ns" : 163528207,
+      "median_us" : 5.871,
+      "p10_us" : 5.54,
+      "p90_us" : 6.332
     } ]
   }, {
     "case" : "B1",
@@ -3719,114 +3719,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1335049,
-      "median_us" : 12.292,
-      "p10_us" : 11.692,
-      "p90_us" : 21.699
+      "setup_ns" : 4455187,
+      "median_us" : 10.429,
+      "p10_us" : 10.168,
+      "p90_us" : 10.84
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1361978,
-      "median_us" : 0.631,
-      "p10_us" : 0.611,
-      "p90_us" : 0.651
+      "setup_ns" : 1030325,
+      "median_us" : 0.561,
+      "p10_us" : 0.551,
+      "p90_us" : 0.591
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2002388,
-      "median_us" : 4.098,
-      "p10_us" : 3.997,
-      "p90_us" : 4.298
+      "setup_ns" : 1928091,
+      "median_us" : 4.017,
+      "p10_us" : 3.907,
+      "p90_us" : 4.318
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1260084,
-      "median_us" : 0.631,
-      "p10_us" : 0.621,
-      "p90_us" : 0.661
+      "setup_ns" : 1211204,
+      "median_us" : 0.521,
+      "p10_us" : 0.511,
+      "p90_us" : 0.541
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 27648600,
-      "median_us" : 4.3,
-      "p10_us" : 3.8,
-      "p90_us" : 5.9
+      "setup_ns" : 22895700,
+      "median_us" : 3.2,
+      "p10_us" : 3.1,
+      "p90_us" : 3.5
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 26442800,
-      "median_us" : 0.6,
-      "p10_us" : 0.4,
-      "p90_us" : 0.7
+      "setup_ns" : 21151100,
+      "median_us" : 0.5,
+      "p10_us" : 0.5,
+      "p90_us" : 0.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 313779,
-      "median_us" : 3.737,
-      "p10_us" : 3.717,
-      "p90_us" : 3.777
+      "setup_ns" : 254210,
+      "median_us" : 3.716,
+      "p10_us" : 3.667,
+      "p90_us" : 3.767
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 183102,
-      "median_us" : 0.671,
+      "setup_ns" : 288763,
+      "median_us" : 0.721,
       "p10_us" : 0.671,
-      "p90_us" : 0.681
+      "p90_us" : 0.781
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 203148,
-      "median_us" : 1.723,
-      "p10_us" : 1.673,
-      "p90_us" : 1.764
+      "setup_ns" : 225138,
+      "median_us" : 1.673,
+      "p10_us" : 1.633,
+      "p90_us" : 1.723
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 265350,
-      "median_us" : 1.012,
-      "p10_us" : 0.972,
-      "p90_us" : 1.052
+      "setup_ns" : 325519,
+      "median_us" : 0.992,
+      "p10_us" : 0.951,
+      "p90_us" : 1.042
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 198711,
-      "median_us" : 0.431,
-      "p10_us" : 0.411,
-      "p90_us" : 0.46
+      "setup_ns" : 309270,
+      "median_us" : 0.371,
+      "p10_us" : 0.361,
+      "p90_us" : 0.39
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 164630804,
-      "median_us" : 3.185,
-      "p10_us" : 3.036,
-      "p90_us" : 3.446
+      "setup_ns" : 163735381,
+      "median_us" : 3.176,
+      "p10_us" : 3.045,
+      "p90_us" : 3.396
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 165616791,
-      "median_us" : 2.054,
-      "p10_us" : 1.943,
-      "p90_us" : 2.224
+      "setup_ns" : 164556999,
+      "median_us" : 2.064,
+      "p10_us" : 1.903,
+      "p90_us" : 2.555
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 163640380,
-      "median_us" : 0.471,
-      "p10_us" : 0.451,
-      "p90_us" : 0.581
+      "setup_ns" : 163521443,
+      "median_us" : 0.45,
+      "p10_us" : 0.431,
+      "p90_us" : 0.551
     } ]
   }, {
     "case" : "S1",
@@ -4004,47 +4004,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 993240,
-      "median_us" : 12.473,
-      "p10_us" : 12.152,
-      "p90_us" : 12.903
+      "setup_ns" : 1091987,
+      "median_us" : 12.222,
+      "p10_us" : 11.932,
+      "p90_us" : 12.653
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 916300,
-      "median_us" : 1.192,
-      "p10_us" : 1.172,
-      "p90_us" : 1.232
+      "setup_ns" : 906411,
+      "median_us" : 1.152,
+      "p10_us" : 1.132,
+      "p90_us" : 1.183
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 2361980,
-      "median_us" : 5.61,
-      "p10_us" : 5.47,
-      "p90_us" : 5.79
+      "setup_ns" : 1857484,
+      "median_us" : 5.4,
+      "p10_us" : 5.309,
+      "p90_us" : 5.55
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1291199,
-      "median_us" : 0.901,
-      "p10_us" : 0.891,
-      "p90_us" : 0.912
+      "setup_ns" : 1116151,
+      "median_us" : 0.851,
+      "p10_us" : 0.841,
+      "p90_us" : 0.862
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22645700,
-      "median_us" : 5.2,
-      "p10_us" : 5.0,
-      "p90_us" : 5.5
+      "setup_ns" : 22784300,
+      "median_us" : 5.1,
+      "p10_us" : 4.9,
+      "p90_us" : 5.4
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 20942400,
+      "setup_ns" : 21381100,
       "median_us" : 0.9,
       "p10_us" : 0.8,
       "p90_us" : 1.3
@@ -4052,18 +4052,18 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 186287,
-      "median_us" : 4.548,
-      "p10_us" : 4.518,
-      "p90_us" : 4.588
+      "setup_ns" : 180587,
+      "median_us" : 4.559,
+      "p10_us" : 4.528,
+      "p90_us" : 4.599
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 174886,
-      "median_us" : 1.483,
-      "p10_us" : 1.472,
-      "p90_us" : 1.502
+      "setup_ns" : 203899,
+      "median_us" : 1.502,
+      "p10_us" : 1.483,
+      "p90_us" : 1.513
     } ]
   }, {
     "case" : "S2",
@@ -4241,66 +4241,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1043290,
-      "median_us" : 12.513,
-      "p10_us" : 12.262,
-      "p90_us" : 12.864
+      "setup_ns" : 906130,
+      "median_us" : 12.403,
+      "p10_us" : 12.112,
+      "p90_us" : 12.793
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 888651,
-      "median_us" : 1.092,
-      "p10_us" : 1.072,
-      "p90_us" : 1.132
+      "setup_ns" : 849959,
+      "median_us" : 1.072,
+      "p10_us" : 1.052,
+      "p90_us" : 1.112
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1915501,
-      "median_us" : 5.52,
-      "p10_us" : 5.41,
-      "p90_us" : 5.72
+      "setup_ns" : 1819234,
+      "median_us" : 5.37,
+      "p10_us" : 5.26,
+      "p90_us" : 5.56
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1194174,
-      "median_us" : 0.831,
-      "p10_us" : 0.821,
-      "p90_us" : 0.842
+      "setup_ns" : 1131609,
+      "median_us" : 0.811,
+      "p10_us" : 0.801,
+      "p90_us" : 0.831
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23035200,
-      "median_us" : 5.2,
-      "p10_us" : 4.9,
-      "p90_us" : 5.4
+      "setup_ns" : 23705300,
+      "median_us" : 5.0,
+      "p10_us" : 4.8,
+      "p90_us" : 5.3
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21673900,
-      "median_us" : 1.1,
-      "p10_us" : 0.8,
+      "setup_ns" : 21154100,
+      "median_us" : 1.0,
+      "p10_us" : 0.7,
       "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 179195,
-      "median_us" : 4.689,
-      "p10_us" : 4.638,
-      "p90_us" : 4.779
+      "setup_ns" : 183772,
+      "median_us" : 4.659,
+      "p10_us" : 4.618,
+      "p90_us" : 4.708
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 172794,
-      "median_us" : 1.493,
-      "p10_us" : 1.482,
-      "p90_us" : 1.503
+      "setup_ns" : 245154,
+      "median_us" : 1.473,
+      "p10_us" : 1.472,
+      "p90_us" : 1.493
     } ]
   }, {
     "case" : "S3",
@@ -4478,39 +4478,39 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 760027,
-      "median_us" : 10.76,
-      "p10_us" : 10.459,
-      "p90_us" : 11.14
+      "setup_ns" : 781785,
+      "median_us" : 10.79,
+      "p10_us" : 10.519,
+      "p90_us" : 11.191
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 877210,
-      "median_us" : 0.781,
-      "p10_us" : 0.761,
-      "p90_us" : 0.812
+      "setup_ns" : 886155,
+      "median_us" : 0.771,
+      "p10_us" : 0.741,
+      "p90_us" : 0.802
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1883453,
-      "median_us" : 4.989,
-      "p10_us" : 4.398,
-      "p90_us" : 6.572
+      "setup_ns" : 1780083,
+      "median_us" : 4.358,
+      "p10_us" : 4.267,
+      "p90_us" : 4.498
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1206616,
-      "median_us" : 0.581,
-      "p10_us" : 0.571,
-      "p90_us" : 0.591
+      "setup_ns" : 1218727,
+      "median_us" : 0.601,
+      "p10_us" : 0.591,
+      "p90_us" : 0.611
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22694800,
+      "setup_ns" : 22867600,
       "median_us" : 3.6,
       "p10_us" : 3.4,
       "p90_us" : 3.9
@@ -4518,7 +4518,7 @@
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21236300,
+      "setup_ns" : 20757100,
       "median_us" : 0.8,
       "p10_us" : 0.5,
       "p90_us" : 0.8
@@ -4526,17 +4526,17 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 285798,
+      "setup_ns" : 278254,
       "median_us" : 3.987,
-      "p10_us" : 3.958,
-      "p90_us" : 4.017
+      "p10_us" : 3.957,
+      "p90_us" : 4.018
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 168355,
-      "median_us" : 0.962,
-      "p10_us" : 0.952,
+      "setup_ns" : 185205,
+      "median_us" : 0.972,
+      "p10_us" : 0.962,
       "p90_us" : 0.982
     } ]
   }, {
@@ -4715,47 +4715,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1073074,
-      "median_us" : 11.781,
-      "p10_us" : 11.43,
-      "p90_us" : 12.233
+      "setup_ns" : 873001,
+      "median_us" : 11.701,
+      "p10_us" : 11.44,
+      "p90_us" : 12.102
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1009439,
-      "median_us" : 0.951,
-      "p10_us" : 0.922,
-      "p90_us" : 0.981
+      "setup_ns" : 1086628,
+      "median_us" : 0.912,
+      "p10_us" : 0.892,
+      "p90_us" : 0.952
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1869217,
-      "median_us" : 5.169,
-      "p10_us" : 5.049,
-      "p90_us" : 5.33
+      "setup_ns" : 1912944,
+      "median_us" : 5.049,
+      "p10_us" : 4.909,
+      "p90_us" : 5.239
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1291290,
-      "median_us" : 0.691,
-      "p10_us" : 0.682,
-      "p90_us" : 0.702
+      "setup_ns" : 1237310,
+      "median_us" : 0.701,
+      "p10_us" : 0.671,
+      "p90_us" : 0.721
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22591000,
+      "setup_ns" : 22570400,
       "median_us" : 4.3,
-      "p10_us" : 4.0,
+      "p10_us" : 4.1,
       "p90_us" : 4.6
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21702200,
+      "setup_ns" : 21317200,
       "median_us" : 0.8,
       "p10_us" : 0.6,
       "p90_us" : 0.9
@@ -4763,18 +4763,18 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 304231,
-      "median_us" : 4.228,
-      "p10_us" : 4.198,
-      "p90_us" : 4.318
+      "setup_ns" : 535429,
+      "median_us" : 4.237,
+      "p10_us" : 4.208,
+      "p90_us" : 4.258
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 308159,
-      "median_us" : 1.072,
-      "p10_us" : 1.062,
-      "p90_us" : 1.082
+      "setup_ns" : 298200,
+      "median_us" : 1.052,
+      "p10_us" : 1.042,
+      "p90_us" : 1.062
     } ]
   }, {
     "case" : "S5",
@@ -4952,66 +4952,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 953588,
-      "median_us" : 12.223,
-      "p10_us" : 11.881,
-      "p90_us" : 12.683
+      "setup_ns" : 834220,
+      "median_us" : 12.243,
+      "p10_us" : 11.971,
+      "p90_us" : 12.623
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 962213,
+      "setup_ns" : 971038,
       "median_us" : 1.202,
-      "p10_us" : 1.182,
-      "p90_us" : 1.233
+      "p10_us" : 1.162,
+      "p90_us" : 1.242
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1781889,
-      "median_us" : 5.53,
-      "p10_us" : 5.41,
-      "p90_us" : 5.731
+      "setup_ns" : 1791204,
+      "median_us" : 5.42,
+      "p10_us" : 5.289,
+      "p90_us" : 5.65
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1104842,
-      "median_us" : 0.891,
-      "p10_us" : 0.881,
-      "p90_us" : 0.902
+      "setup_ns" : 1063827,
+      "median_us" : 0.882,
+      "p10_us" : 0.872,
+      "p90_us" : 0.892
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22791400,
-      "median_us" : 4.9,
-      "p10_us" : 4.7,
-      "p90_us" : 5.2
+      "setup_ns" : 22622800,
+      "median_us" : 5.0,
+      "p10_us" : 4.8,
+      "p90_us" : 5.3
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21648200,
-      "median_us" : 0.9,
+      "setup_ns" : 21446200,
+      "median_us" : 1.0,
       "p10_us" : 0.8,
       "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 269097,
-      "median_us" : 4.939,
-      "p10_us" : 4.889,
-      "p90_us" : 5.009
+      "setup_ns" : 182170,
+      "median_us" : 4.749,
+      "p10_us" : 4.689,
+      "p90_us" : 4.799
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 282823,
-      "median_us" : 1.383,
-      "p10_us" : 1.363,
-      "p90_us" : 1.443
+      "setup_ns" : 255262,
+      "median_us" : 1.393,
+      "p10_us" : 1.392,
+      "p90_us" : 1.423
     } ]
   }, {
     "case" : "R1",
@@ -5189,39 +5189,39 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1100484,
-      "median_us" : 14.747,
-      "p10_us" : 14.406,
-      "p90_us" : 15.288
+      "setup_ns" : 1013044,
+      "median_us" : 14.857,
+      "p10_us" : 14.466,
+      "p90_us" : 15.378
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 949170,
-      "median_us" : 1.763,
-      "p10_us" : 1.713,
-      "p90_us" : 1.813
+      "setup_ns" : 1038811,
+      "median_us" : 1.733,
+      "p10_us" : 1.703,
+      "p90_us" : 1.774
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1938683,
-      "median_us" : 7.433,
-      "p10_us" : 7.263,
-      "p90_us" : 7.654
+      "setup_ns" : 1989102,
+      "median_us" : 7.153,
+      "p10_us" : 7.023,
+      "p90_us" : 7.383
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1219510,
-      "median_us" : 1.403,
-      "p10_us" : 1.373,
-      "p90_us" : 1.442
+      "setup_ns" : 1280970,
+      "median_us" : 1.373,
+      "p10_us" : 1.352,
+      "p90_us" : 1.403
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22802200,
+      "setup_ns" : 23250900,
       "median_us" : 7.2,
       "p10_us" : 6.9,
       "p90_us" : 7.6
@@ -5229,26 +5229,26 @@
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21621300,
-      "median_us" : 1.3,
+      "setup_ns" : 21687400,
+      "median_us" : 1.4,
       "p10_us" : 1.3,
       "p90_us" : 1.8
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 301266,
-      "median_us" : 5.72,
-      "p10_us" : 5.64,
-      "p90_us" : 5.85
+      "setup_ns" : 263828,
+      "median_us" : 5.641,
+      "p10_us" : 5.59,
+      "p90_us" : 5.71
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 257166,
-      "median_us" : 2.345,
-      "p10_us" : 2.314,
-      "p90_us" : 2.445
+      "setup_ns" : 183372,
+      "median_us" : 2.254,
+      "p10_us" : 2.234,
+      "p90_us" : 2.294
     } ]
   }, {
     "case" : "R2",
@@ -5426,66 +5426,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 793829,
-      "median_us" : 17.031,
-      "p10_us" : 16.68,
-      "p90_us" : 17.561
+      "setup_ns" : 931086,
+      "median_us" : 17.161,
+      "p10_us" : 16.86,
+      "p90_us" : 17.842
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 899820,
-      "median_us" : 2.254,
-      "p10_us" : 2.184,
-      "p90_us" : 2.304
+      "setup_ns" : 928842,
+      "median_us" : 2.194,
+      "p10_us" : 2.144,
+      "p90_us" : 2.264
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1964569,
-      "median_us" : 9.247,
-      "p10_us" : 8.976,
-      "p90_us" : 9.578
+      "setup_ns" : 2018635,
+      "median_us" : 9.047,
+      "p10_us" : 8.866,
+      "p90_us" : 9.297
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1122765,
-      "median_us" : 1.843,
-      "p10_us" : 1.803,
-      "p90_us" : 1.883
+      "setup_ns" : 1046985,
+      "median_us" : 1.863,
+      "p10_us" : 1.813,
+      "p90_us" : 1.903
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23429800,
-      "median_us" : 9.6,
-      "p10_us" : 9.2,
-      "p90_us" : 10.0
+      "setup_ns" : 23794900,
+      "median_us" : 9.9,
+      "p10_us" : 9.5,
+      "p90_us" : 10.4
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21951500,
+      "setup_ns" : 21705500,
       "median_us" : 1.7,
       "p10_us" : 1.6,
-      "p90_us" : 2.5
+      "p90_us" : 2.4
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 202587,
-      "median_us" : 6.411,
-      "p10_us" : 6.321,
-      "p90_us" : 6.502
+      "setup_ns" : 249181,
+      "median_us" : 6.813,
+      "p10_us" : 6.692,
+      "p90_us" : 6.993
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 202687,
-      "median_us" : 2.865,
-      "p10_us" : 2.825,
-      "p90_us" : 2.965
+      "setup_ns" : 226600,
+      "median_us" : 2.885,
+      "p10_us" : 2.845,
+      "p90_us" : 2.925
     } ]
   }, {
     "case" : "R3",
@@ -5663,66 +5663,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 916330,
-      "median_us" : 12.031,
-      "p10_us" : 11.731,
-      "p90_us" : 12.613
+      "setup_ns" : 733499,
+      "median_us" : 12.413,
+      "p10_us" : 12.121,
+      "p90_us" : 12.803
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 833470,
-      "median_us" : 1.252,
-      "p10_us" : 1.223,
-      "p90_us" : 1.283
+      "setup_ns" : 823752,
+      "median_us" : 1.212,
+      "p10_us" : 1.192,
+      "p90_us" : 1.262
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1643067,
-      "median_us" : 5.63,
-      "p10_us" : 5.53,
-      "p90_us" : 5.781
+      "setup_ns" : 1734170,
+      "median_us" : 5.61,
+      "p10_us" : 5.45,
+      "p90_us" : 5.801
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1080969,
-      "median_us" : 1.052,
+      "setup_ns" : 1056032,
+      "median_us" : 1.042,
       "p10_us" : 1.032,
       "p90_us" : 1.072
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23228900,
-      "median_us" : 5.1,
-      "p10_us" : 4.8,
-      "p90_us" : 5.5
+      "setup_ns" : 23416700,
+      "median_us" : 4.9,
+      "p10_us" : 4.7,
+      "p90_us" : 5.2
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21512300,
+      "setup_ns" : 21754100,
       "median_us" : 1.1,
-      "p10_us" : 1.0,
-      "p90_us" : 1.5
+      "p10_us" : 0.9,
+      "p90_us" : 1.4
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 202888,
-      "median_us" : 4.899,
-      "p10_us" : 4.859,
-      "p90_us" : 4.949
+      "setup_ns" : 299643,
+      "median_us" : 4.949,
+      "p10_us" : 4.899,
+      "p90_us" : 4.999
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 181629,
-      "median_us" : 1.673,
+      "setup_ns" : 184274,
+      "median_us" : 1.723,
       "p10_us" : 1.653,
-      "p90_us" : 1.693
+      "p90_us" : 1.764
     } ]
   }, {
     "case" : "R4",
@@ -5900,47 +5900,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 836205,
-      "median_us" : 13.164,
-      "p10_us" : 12.864,
-      "p90_us" : 13.675
+      "setup_ns" : 1004468,
+      "median_us" : 12.893,
+      "p10_us" : 12.593,
+      "p90_us" : 13.415
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 982190,
-      "median_us" : 1.112,
-      "p10_us" : 1.092,
-      "p90_us" : 1.143
+      "setup_ns" : 938419,
+      "median_us" : 1.072,
+      "p10_us" : 1.052,
+      "p90_us" : 1.102
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1731637,
-      "median_us" : 5.871,
-      "p10_us" : 5.72,
-      "p90_us" : 6.091
+      "setup_ns" : 1570964,
+      "median_us" : 5.85,
+      "p10_us" : 5.681,
+      "p90_us" : 6.061
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1166043,
-      "median_us" : 0.832,
-      "p10_us" : 0.812,
-      "p90_us" : 0.852
+      "setup_ns" : 1202317,
+      "median_us" : 0.831,
+      "p10_us" : 0.811,
+      "p90_us" : 0.842
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22705100,
-      "median_us" : 5.4,
+      "setup_ns" : 23250000,
+      "median_us" : 5.3,
       "p10_us" : 5.1,
-      "p90_us" : 5.7
+      "p90_us" : 5.6
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21656500,
+      "setup_ns" : 22077500,
       "median_us" : 1.0,
       "p10_us" : 0.7,
       "p90_us" : 1.1
@@ -5948,18 +5948,18 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 304071,
-      "median_us" : 4.578,
-      "p10_us" : 4.508,
-      "p90_us" : 4.658
+      "setup_ns" : 295826,
+      "median_us" : 4.508,
+      "p10_us" : 4.468,
+      "p90_us" : 4.548
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 312066,
-      "median_us" : 1.232,
-      "p10_us" : 1.202,
-      "p90_us" : 1.263
+      "setup_ns" : 335617,
+      "median_us" : 1.223,
+      "p10_us" : 1.203,
+      "p90_us" : 1.282
     } ]
   }, {
     "case" : "R5",
@@ -6137,66 +6137,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 914467,
-      "median_us" : 14.637,
-      "p10_us" : 14.296,
-      "p90_us" : 15.258
+      "setup_ns" : 924073,
+      "median_us" : 14.897,
+      "p10_us" : 14.597,
+      "p90_us" : 15.338
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 827049,
-      "median_us" : 1.663,
-      "p10_us" : 1.633,
-      "p90_us" : 1.703
+      "setup_ns" : 858945,
+      "median_us" : 1.642,
+      "p10_us" : 1.603,
+      "p90_us" : 1.693
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1671258,
-      "median_us" : 7.273,
-      "p10_us" : 7.123,
-      "p90_us" : 7.574
+      "setup_ns" : 1680643,
+      "median_us" : 7.213,
+      "p10_us" : 7.082,
+      "p90_us" : 7.453
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1018456,
-      "median_us" : 1.383,
-      "p10_us" : 1.342,
-      "p90_us" : 1.423
+      "setup_ns" : 1053978,
+      "median_us" : 1.363,
+      "p10_us" : 1.323,
+      "p90_us" : 1.412
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23426400,
+      "setup_ns" : 22867700,
       "median_us" : 7.1,
-      "p10_us" : 6.9,
+      "p10_us" : 6.8,
       "p90_us" : 7.5
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21471400,
-      "median_us" : 1.2,
-      "p10_us" : 1.1,
-      "p90_us" : 1.8
+      "setup_ns" : 21614600,
+      "median_us" : 1.3,
+      "p10_us" : 1.2,
+      "p90_us" : 1.9
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 307758,
-      "median_us" : 5.731,
-      "p10_us" : 5.61,
-      "p90_us" : 5.85
+      "setup_ns" : 309410,
+      "median_us" : 5.62,
+      "p10_us" : 5.57,
+      "p90_us" : 5.671
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 192389,
-      "median_us" : 2.114,
-      "p10_us" : 2.054,
-      "p90_us" : 2.204
+      "setup_ns" : 195494,
+      "median_us" : 2.104,
+      "p10_us" : 2.083,
+      "p90_us" : 2.144
     } ]
   }, {
     "case" : "X1",
@@ -6374,66 +6374,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 793027,
-      "median_us" : 15.107,
-      "p10_us" : 14.827,
+      "setup_ns" : 861870,
+      "median_us" : 15.027,
+      "p10_us" : 14.687,
       "p90_us" : 15.488
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 806051,
-      "median_us" : 1.462,
-      "p10_us" : 1.433,
-      "p90_us" : 1.503
+      "setup_ns" : 822690,
+      "median_us" : 1.442,
+      "p10_us" : 1.413,
+      "p90_us" : 1.473
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1654468,
-      "median_us" : 7.684,
-      "p10_us" : 7.514,
-      "p90_us" : 7.975
+      "setup_ns" : 1616897,
+      "median_us" : 7.694,
+      "p10_us" : 7.473,
+      "p90_us" : 7.924
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1130178,
-      "median_us" : 1.343,
-      "p10_us" : 1.322,
-      "p90_us" : 1.382
+      "setup_ns" : 1081288,
+      "median_us" : 1.403,
+      "p10_us" : 1.372,
+      "p90_us" : 1.453
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23400100,
-      "median_us" : 7.4,
-      "p10_us" : 7.2,
-      "p90_us" : 7.8
+      "setup_ns" : 22805000,
+      "median_us" : 7.6,
+      "p10_us" : 7.3,
+      "p90_us" : 8.0
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21480600,
+      "setup_ns" : 21294400,
       "median_us" : 1.0,
       "p10_us" : 1.0,
-      "p90_us" : 1.5
+      "p90_us" : 1.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 297289,
-      "median_us" : 5.079,
-      "p10_us" : 4.999,
-      "p90_us" : 5.19
+      "setup_ns" : 183432,
+      "median_us" : 46.905,
+      "p10_us" : 5.089,
+      "p90_us" : 76.238
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 187590,
-      "median_us" : 1.843,
-      "p10_us" : 1.803,
-      "p90_us" : 1.904
+      "setup_ns" : 2051675,
+      "median_us" : 1.824,
+      "p10_us" : 1.813,
+      "p90_us" : 1.844
     } ]
   }, {
     "case" : "X2",
@@ -6615,66 +6615,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 665366,
-      "median_us" : 15.388,
-      "p10_us" : 15.067,
-      "p90_us" : 15.888
+      "setup_ns" : 666817,
+      "median_us" : 15.137,
+      "p10_us" : 14.877,
+      "p90_us" : 15.598
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 760548,
-      "median_us" : 1.532,
-      "p10_us" : 1.503,
+      "setup_ns" : 760537,
+      "median_us" : 1.533,
+      "p10_us" : 1.493,
       "p90_us" : 1.573
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1649960,
-      "median_us" : 7.744,
-      "p10_us" : 7.574,
-      "p90_us" : 8.045
+      "setup_ns" : 1543915,
+      "median_us" : 7.573,
+      "p10_us" : 7.434,
+      "p90_us" : 7.804
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 943610,
-      "median_us" : 1.343,
-      "p10_us" : 1.322,
-      "p90_us" : 1.382
+      "setup_ns" : 904087,
+      "median_us" : 1.283,
+      "p10_us" : 1.262,
+      "p90_us" : 1.313
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23118800,
+      "setup_ns" : 23108700,
       "median_us" : 7.7,
-      "p10_us" : 7.4,
+      "p10_us" : 7.3,
       "p90_us" : 8.1
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21746900,
+      "setup_ns" : 22028900,
       "median_us" : 1.0,
       "p10_us" : 1.0,
-      "p90_us" : 1.7
+      "p90_us" : 1.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 260532,
-      "median_us" : 5.229,
+      "setup_ns" : 185256,
+      "median_us" : 5.219,
       "p10_us" : 5.159,
-      "p90_us" : 5.3
+      "p90_us" : 5.31
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 177351,
-      "median_us" : 1.783,
-      "p10_us" : 1.763,
-      "p90_us" : 1.813
+      "setup_ns" : 274768,
+      "median_us" : 1.763,
+      "p10_us" : 1.743,
+      "p90_us" : 1.774
     } ]
   }, {
     "case" : "U1",
@@ -6852,66 +6852,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 952025,
-      "median_us" : 27.65,
-      "p10_us" : 27.239,
-      "p90_us" : 28.672
+      "setup_ns" : 787556,
+      "median_us" : 27.45,
+      "p10_us" : 27.059,
+      "p90_us" : 28.531
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 837818,
-      "median_us" : 5.961,
-      "p10_us" : 5.771,
-      "p90_us" : 6.112
+      "setup_ns" : 883409,
+      "median_us" : 5.881,
+      "p10_us" : 5.821,
+      "p90_us" : 5.981
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1623251,
-      "median_us" : 18.464,
-      "p10_us" : 18.223,
-      "p90_us" : 19.214
+      "setup_ns" : 1641873,
+      "median_us" : 18.644,
+      "p10_us" : 18.353,
+      "p90_us" : 19.445
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1047238,
-      "median_us" : 4.878,
-      "p10_us" : 4.739,
-      "p90_us" : 4.939
+      "setup_ns" : 1030697,
+      "median_us" : 4.848,
+      "p10_us" : 4.719,
+      "p90_us" : 4.959
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23133800,
+      "setup_ns" : 23197300,
       "median_us" : 17.5,
-      "p10_us" : 17.1,
-      "p90_us" : 18.2
+      "p10_us" : 17.0,
+      "p90_us" : 18.3
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21606800,
+      "setup_ns" : 21206100,
       "median_us" : 4.9,
       "p10_us" : 4.7,
-      "p90_us" : 5.1
+      "p90_us" : 5.0
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 202797,
-      "median_us" : 13.395,
-      "p10_us" : 13.274,
-      "p90_us" : 13.615
+      "setup_ns" : 201866,
+      "median_us" : 13.494,
+      "p10_us" : 13.214,
+      "p90_us" : 13.955
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 190846,
-      "median_us" : 6.892,
+      "setup_ns" : 201064,
+      "median_us" : 7.013,
       "p10_us" : 6.842,
-      "p90_us" : 6.952
+      "p90_us" : 7.213
     } ]
   }, {
     "case" : "B1",
@@ -7089,66 +7089,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 699988,
-      "median_us" : 10.269,
-      "p10_us" : 9.948,
-      "p90_us" : 10.739
+      "setup_ns" : 694027,
+      "median_us" : 10.409,
+      "p10_us" : 10.138,
+      "p90_us" : 10.779
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 785704,
+      "setup_ns" : 779742,
       "median_us" : 0.571,
       "p10_us" : 0.561,
-      "p90_us" : 0.601
+      "p90_us" : 0.591
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1686015,
-      "median_us" : 3.977,
-      "p10_us" : 3.897,
-      "p90_us" : 4.098
+      "setup_ns" : 1630552,
+      "median_us" : 3.947,
+      "p10_us" : 3.847,
+      "p90_us" : 4.078
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1313100,
-      "median_us" : 0.582,
-      "p10_us" : 0.571,
-      "p90_us" : 0.611
+      "setup_ns" : 1371323,
+      "median_us" : 0.551,
+      "p10_us" : 0.541,
+      "p90_us" : 0.571
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23143900,
+      "setup_ns" : 23604800,
       "median_us" : 3.3,
-      "p10_us" : 3.2,
+      "p10_us" : 3.1,
       "p90_us" : 3.6
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21868300,
+      "setup_ns" : 21886500,
       "median_us" : 0.6,
-      "p10_us" : 0.4,
+      "p10_us" : 0.5,
       "p90_us" : 0.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 183212,
-      "median_us" : 3.806,
-      "p10_us" : 3.767,
-      "p90_us" : 3.847
+      "setup_ns" : 181759,
+      "median_us" : 3.726,
+      "p10_us" : 3.677,
+      "p90_us" : 3.777
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 342941,
-      "median_us" : 0.722,
-      "p10_us" : 0.711,
-      "p90_us" : 0.751
+      "setup_ns" : 182731,
+      "median_us" : 0.701,
+      "p10_us" : 0.691,
+      "p90_us" : 0.731
     } ]
   }, {
     "case" : "S1",
@@ -7313,114 +7313,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 655277,
-      "median_us" : 12.422,
-      "p10_us" : 12.162,
-      "p90_us" : 12.793
+      "setup_ns" : 781976,
+      "median_us" : 12.452,
+      "p10_us" : 12.132,
+      "p90_us" : 12.933
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 710627,
+      "setup_ns" : 703594,
       "median_us" : 1.232,
       "p10_us" : 1.212,
-      "p90_us" : 1.272
+      "p90_us" : 1.262
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1660408,
-      "median_us" : 5.39,
-      "p10_us" : 5.28,
-      "p90_us" : 5.56
+      "setup_ns" : 1535089,
+      "median_us" : 5.49,
+      "p10_us" : 5.359,
+      "p90_us" : 5.661
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 943139,
-      "median_us" : 0.982,
-      "p10_us" : 0.952,
-      "p90_us" : 1.012
+      "setup_ns" : 878661,
+      "median_us" : 1.072,
+      "p10_us" : 1.062,
+      "p90_us" : 1.102
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23149700,
-      "median_us" : 5.1,
+      "setup_ns" : 23462700,
+      "median_us" : 5.0,
       "p10_us" : 4.8,
       "p90_us" : 5.3
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21189900,
-      "median_us" : 0.9,
-      "p10_us" : 0.6,
-      "p90_us" : 1.1
+      "setup_ns" : 21746100,
+      "median_us" : 1.1,
+      "p10_us" : 1.1,
+      "p90_us" : 1.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 219738,
-      "median_us" : 4.388,
-      "p10_us" : 4.348,
+      "setup_ns" : 177501,
+      "median_us" : 4.378,
+      "p10_us" : 4.338,
       "p90_us" : 4.428
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 178594,
-      "median_us" : 1.342,
-      "p10_us" : 1.323,
-      "p90_us" : 1.363
+      "setup_ns" : 278625,
+      "median_us" : 1.322,
+      "p10_us" : 1.302,
+      "p90_us" : 1.343
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 206394,
+      "setup_ns" : 201285,
+      "median_us" : 3.056,
+      "p10_us" : 2.996,
+      "p90_us" : 3.126
+    }, {
+      "impl" : "rexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 194893,
+      "median_us" : 1.633,
+      "p10_us" : 1.593,
+      "p90_us" : 1.673
+    }, {
+      "impl" : "rexi",
+      "op" : "decode",
+      "input" : "exi",
+      "setup_ns" : 194542,
+      "median_us" : 0.792,
+      "p10_us" : 0.771,
+      "p90_us" : 0.812
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "xml",
+      "setup_ns" : 125798240,
+      "median_us" : 5.139,
+      "p10_us" : 4.979,
+      "p90_us" : 5.389
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 125550110,
       "median_us" : 3.066,
-      "p10_us" : 2.985,
-      "p90_us" : 3.156
-    }, {
-      "impl" : "rexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 212375,
-      "median_us" : 1.683,
-      "p10_us" : 1.643,
-      "p90_us" : 1.733
-    }, {
-      "impl" : "rexi",
-      "op" : "decode",
-      "input" : "exi",
-      "setup_ns" : 297630,
-      "median_us" : 0.852,
-      "p10_us" : 0.831,
-      "p90_us" : 0.882
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "xml",
-      "setup_ns" : 127814743,
-      "median_us" : 5.239,
-      "p10_us" : 5.069,
-      "p90_us" : 5.52
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 131562594,
-      "median_us" : 2.895,
-      "p10_us" : 2.796,
-      "p90_us" : 3.095
+      "p10_us" : 2.956,
+      "p90_us" : 3.286
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 125862205,
-      "median_us" : 0.831,
-      "p10_us" : 0.782,
-      "p90_us" : 0.981
+      "setup_ns" : 125866133,
+      "median_us" : 0.851,
+      "p10_us" : 0.811,
+      "p90_us" : 1.012
     } ]
   }, {
     "case" : "S2",
@@ -7585,114 +7585,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 676686,
-      "median_us" : 12.553,
-      "p10_us" : 12.273,
-      "p90_us" : 12.944
+      "setup_ns" : 752603,
+      "median_us" : 12.763,
+      "p10_us" : 12.492,
+      "p90_us" : 13.224
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 739109,
-      "median_us" : 1.192,
-      "p10_us" : 1.172,
-      "p90_us" : 1.232
+      "setup_ns" : 758654,
+      "median_us" : 1.212,
+      "p10_us" : 1.192,
+      "p90_us" : 1.252
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1882681,
-      "median_us" : 5.42,
-      "p10_us" : 5.31,
-      "p90_us" : 5.611
+      "setup_ns" : 1755890,
+      "median_us" : 5.34,
+      "p10_us" : 5.229,
+      "p90_us" : 5.53
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 888710,
-      "median_us" : 1.092,
-      "p10_us" : 1.072,
-      "p90_us" : 1.122
+      "setup_ns" : 930254,
+      "median_us" : 1.032,
+      "p10_us" : 1.012,
+      "p90_us" : 1.062
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 26833000,
-      "median_us" : 5.2,
-      "p10_us" : 5.0,
-      "p90_us" : 7.1
+      "setup_ns" : 22729800,
+      "median_us" : 5.0,
+      "p10_us" : 4.8,
+      "p90_us" : 5.3
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22335900,
-      "median_us" : 0.7,
+      "setup_ns" : 22465300,
+      "median_us" : 0.9,
       "p10_us" : 0.6,
-      "p90_us" : 1.6
+      "p90_us" : 1.0
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 277423,
-      "median_us" : 4.578,
-      "p10_us" : 4.509,
-      "p90_us" : 4.639
+      "setup_ns" : 280588,
+      "median_us" : 4.518,
+      "p10_us" : 4.468,
+      "p90_us" : 4.578
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 181008,
-      "median_us" : 1.403,
-      "p10_us" : 1.372,
-      "p90_us" : 1.422
+      "setup_ns" : 169356,
+      "median_us" : 1.373,
+      "p10_us" : 1.342,
+      "p90_us" : 1.393
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 202136,
-      "median_us" : 2.955,
-      "p10_us" : 2.885,
-      "p90_us" : 3.036
+      "setup_ns" : 204100,
+      "median_us" : 2.995,
+      "p10_us" : 2.935,
+      "p90_us" : 3.055
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 194201,
-      "median_us" : 1.653,
-      "p10_us" : 1.593,
-      "p90_us" : 1.723
+      "setup_ns" : 191056,
+      "median_us" : 1.603,
+      "p10_us" : 1.563,
+      "p90_us" : 1.653
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 189193,
-      "median_us" : 0.811,
-      "p10_us" : 0.791,
-      "p90_us" : 0.841
+      "setup_ns" : 194052,
+      "median_us" : 0.772,
+      "p10_us" : 0.751,
+      "p90_us" : 0.811
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 128054968,
-      "median_us" : 5.329,
-      "p10_us" : 5.149,
-      "p90_us" : 5.62
+      "setup_ns" : 124548927,
+      "median_us" : 5.169,
+      "p10_us" : 5.009,
+      "p90_us" : 5.42
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 126701295,
-      "median_us" : 3.176,
-      "p10_us" : 3.035,
-      "p90_us" : 3.396
+      "setup_ns" : 125387876,
+      "median_us" : 3.066,
+      "p10_us" : 2.965,
+      "p90_us" : 3.266
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 125787610,
-      "median_us" : 0.812,
-      "p10_us" : 0.772,
-      "p90_us" : 0.961
+      "setup_ns" : 128516120,
+      "median_us" : 0.821,
+      "p10_us" : 0.781,
+      "p90_us" : 0.962
     } ]
   }, {
     "case" : "S3",
@@ -7857,47 +7857,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 744088,
-      "median_us" : 10.98,
-      "p10_us" : 10.65,
+      "setup_ns" : 807532,
+      "median_us" : 11.08,
+      "p10_us" : 10.85,
       "p90_us" : 11.411
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 710657,
-      "median_us" : 0.841,
-      "p10_us" : 0.821,
-      "p90_us" : 0.872
+      "setup_ns" : 729931,
+      "median_us" : 0.831,
+      "p10_us" : 0.811,
+      "p90_us" : 0.852
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1650711,
-      "median_us" : 4.408,
-      "p10_us" : 4.318,
-      "p90_us" : 4.538
+      "setup_ns" : 1399955,
+      "median_us" : 4.258,
+      "p10_us" : 4.137,
+      "p90_us" : 4.448
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 885876,
-      "median_us" : 0.712,
-      "p10_us" : 0.701,
-      "p90_us" : 0.741
+      "setup_ns" : 850030,
+      "median_us" : 0.731,
+      "p10_us" : 0.711,
+      "p90_us" : 0.751
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22691600,
-      "median_us" : 3.6,
-      "p10_us" : 3.4,
-      "p90_us" : 3.9
+      "setup_ns" : 23006200,
+      "median_us" : 3.5,
+      "p10_us" : 3.3,
+      "p90_us" : 3.8
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22555800,
+      "setup_ns" : 21231500,
       "median_us" : 0.6,
       "p10_us" : 0.4,
       "p90_us" : 0.7
@@ -7905,66 +7905,66 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 287020,
-      "median_us" : 3.898,
-      "p10_us" : 3.857,
-      "p90_us" : 3.958
+      "setup_ns" : 195273,
+      "median_us" : 3.877,
+      "p10_us" : 3.847,
+      "p90_us" : 3.907
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 276962,
-      "median_us" : 0.931,
-      "p10_us" : 0.892,
+      "setup_ns" : 170288,
+      "median_us" : 0.941,
+      "p10_us" : 0.921,
+      "p90_us" : 0.952
+    }, {
+      "impl" : "rexi",
+      "op" : "encode",
+      "input" : "xml",
+      "setup_ns" : 213386,
+      "median_us" : 1.683,
+      "p10_us" : 1.633,
+      "p90_us" : 1.744
+    }, {
+      "impl" : "rexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 201395,
+      "median_us" : 0.912,
+      "p10_us" : 0.882,
       "p90_us" : 0.942
     }, {
       "impl" : "rexi",
-      "op" : "encode",
-      "input" : "xml",
-      "setup_ns" : 315331,
-      "median_us" : 1.703,
-      "p10_us" : 1.643,
-      "p90_us" : 1.763
-    }, {
-      "impl" : "rexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 196627,
-      "median_us" : 0.901,
-      "p10_us" : 0.872,
-      "p90_us" : 0.932
-    }, {
-      "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 304832,
-      "median_us" : 0.531,
-      "p10_us" : 0.521,
-      "p90_us" : 0.551
+      "setup_ns" : 189734,
+      "median_us" : 0.511,
+      "p10_us" : 0.5,
+      "p90_us" : 0.521
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 127004214,
-      "median_us" : 2.845,
-      "p10_us" : 2.715,
-      "p90_us" : 3.065
+      "setup_ns" : 125444148,
+      "median_us" : 3.155,
+      "p10_us" : 2.995,
+      "p90_us" : 3.377
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 127631671,
-      "median_us" : 1.653,
+      "setup_ns" : 126010203,
+      "median_us" : 1.663,
       "p10_us" : 1.573,
-      "p90_us" : 1.833
+      "p90_us" : 1.843
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 127189810,
-      "median_us" : 0.551,
+      "setup_ns" : 125160766,
+      "median_us" : 0.541,
       "p10_us" : 0.511,
-      "p90_us" : 0.692
+      "p90_us" : 0.681
     } ]
   }, {
     "case" : "S4",
@@ -8129,47 +8129,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 916170,
-      "median_us" : 13.395,
-      "p10_us" : 13.144,
-      "p90_us" : 13.745
+      "setup_ns" : 910028,
+      "median_us" : 11.902,
+      "p10_us" : 11.641,
+      "p90_us" : 12.292
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 752694,
-      "median_us" : 0.992,
-      "p10_us" : 0.972,
-      "p90_us" : 1.022
+      "setup_ns" : 773941,
+      "median_us" : 1.052,
+      "p10_us" : 1.031,
+      "p90_us" : 1.082
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1520686,
-      "median_us" : 5.029,
-      "p10_us" : 4.899,
-      "p90_us" : 5.2
+      "setup_ns" : 1632245,
+      "median_us" : 4.839,
+      "p10_us" : 4.739,
+      "p90_us" : 4.999
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 950242,
-      "median_us" : 0.751,
-      "p10_us" : 0.732,
-      "p90_us" : 0.772
+      "setup_ns" : 958075,
+      "median_us" : 0.862,
+      "p10_us" : 0.842,
+      "p90_us" : 0.882
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23645700,
+      "setup_ns" : 22932900,
       "median_us" : 4.2,
-      "p10_us" : 3.9,
-      "p90_us" : 4.5
+      "p10_us" : 4.0,
+      "p90_us" : 4.6
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21352400,
+      "setup_ns" : 21972900,
       "median_us" : 0.7,
       "p10_us" : 0.5,
       "p90_us" : 0.8
@@ -8177,66 +8177,66 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 299242,
-      "median_us" : 4.779,
-      "p10_us" : 4.738,
-      "p90_us" : 38.951
+      "setup_ns" : 318787,
+      "median_us" : 4.087,
+      "p10_us" : 4.057,
+      "p90_us" : 4.118
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 326572,
-      "median_us" : 0.971,
-      "p10_us" : 0.952,
-      "p90_us" : 1.002
+      "setup_ns" : 290406,
+      "median_us" : 1.002,
+      "p10_us" : 0.992,
+      "p90_us" : 1.022
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 369971,
-      "median_us" : 2.214,
-      "p10_us" : 2.154,
-      "p90_us" : 2.274
+      "setup_ns" : 237971,
+      "median_us" : 2.435,
+      "p10_us" : 2.384,
+      "p90_us" : 2.504
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 230768,
-      "median_us" : 1.183,
-      "p10_us" : 1.152,
-      "p90_us" : 1.232
+      "setup_ns" : 237841,
+      "median_us" : 1.212,
+      "p10_us" : 1.182,
+      "p90_us" : 1.252
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 241728,
-      "median_us" : 0.581,
-      "p10_us" : 0.571,
-      "p90_us" : 0.601
+      "setup_ns" : 240656,
+      "median_us" : 0.571,
+      "p10_us" : 0.561,
+      "p90_us" : 0.581
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 261415490,
-      "median_us" : 3.567,
-      "p10_us" : 3.447,
-      "p90_us" : 3.807
+      "setup_ns" : 261402161,
+      "median_us" : 3.356,
+      "p10_us" : 3.216,
+      "p90_us" : 3.586
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 263301227,
-      "median_us" : 1.833,
-      "p10_us" : 1.714,
-      "p90_us" : 2.024
+      "setup_ns" : 260529350,
+      "median_us" : 1.793,
+      "p10_us" : 1.723,
+      "p90_us" : 1.984
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 261663280,
-      "median_us" : 0.551,
-      "p10_us" : 0.521,
-      "p90_us" : 0.692
+      "setup_ns" : 259667470,
+      "median_us" : 0.541,
+      "p10_us" : 0.511,
+      "p90_us" : 0.701
     } ]
   }, {
     "case" : "S5",
@@ -8401,47 +8401,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 598715,
-      "median_us" : 12.322,
-      "p10_us" : 12.062,
-      "p90_us" : 12.733
+      "setup_ns" : 702732,
+      "median_us" : 12.262,
+      "p10_us" : 11.972,
+      "p90_us" : 12.653
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 688318,
-      "median_us" : 1.312,
-      "p10_us" : 1.292,
-      "p90_us" : 1.343
+      "setup_ns" : 714474,
+      "median_us" : 1.352,
+      "p10_us" : 1.333,
+      "p90_us" : 1.382
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1539950,
-      "median_us" : 5.339,
-      "p10_us" : 5.23,
-      "p90_us" : 5.51
+      "setup_ns" : 1517438,
+      "median_us" : 5.23,
+      "p10_us" : 5.099,
+      "p90_us" : 5.419
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 862243,
-      "median_us" : 1.002,
-      "p10_us" : 0.982,
-      "p90_us" : 1.032
+      "setup_ns" : 845321,
+      "median_us" : 1.092,
+      "p10_us" : 1.082,
+      "p90_us" : 1.122
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22763000,
+      "setup_ns" : 22877400,
       "median_us" : 4.7,
-      "p10_us" : 4.4,
+      "p10_us" : 4.5,
       "p90_us" : 5.0
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21567800,
+      "setup_ns" : 21204300,
       "median_us" : 0.9,
       "p10_us" : 0.6,
       "p90_us" : 1.0
@@ -8449,66 +8449,66 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 221130,
-      "median_us" : 4.609,
-      "p10_us" : 4.548,
-      "p90_us" : 4.689
+      "setup_ns" : 191217,
+      "median_us" : 4.499,
+      "p10_us" : 4.468,
+      "p90_us" : 4.588
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 182921,
-      "median_us" : 1.302,
-      "p10_us" : 1.292,
-      "p90_us" : 1.322
+      "setup_ns" : 290696,
+      "median_us" : 1.292,
+      "p10_us" : 1.272,
+      "p90_us" : 1.312
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 207937,
-      "median_us" : 2.745,
-      "p10_us" : 2.665,
-      "p90_us" : 2.826
+      "setup_ns" : 209168,
+      "median_us" : 2.755,
+      "p10_us" : 2.695,
+      "p90_us" : 2.825
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 304812,
-      "median_us" : 1.513,
-      "p10_us" : 1.473,
-      "p90_us" : 1.563
+      "setup_ns" : 214167,
+      "median_us" : 1.452,
+      "p10_us" : 1.413,
+      "p90_us" : 1.493
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 216773,
-      "median_us" : 0.762,
-      "p10_us" : 0.742,
-      "p90_us" : 0.792
+      "setup_ns" : 212154,
+      "median_us" : 0.711,
+      "p10_us" : 0.691,
+      "p90_us" : 0.722
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 125457542,
-      "median_us" : 4.207,
-      "p10_us" : 4.057,
-      "p90_us" : 4.438
+      "setup_ns" : 126144580,
+      "median_us" : 4.208,
+      "p10_us" : 4.058,
+      "p90_us" : 4.458
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 125939805,
-      "median_us" : 2.705,
-      "p10_us" : 2.604,
-      "p90_us" : 2.935
+      "setup_ns" : 124706055,
+      "median_us" : 2.294,
+      "p10_us" : 2.204,
+      "p90_us" : 2.475
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 126859692,
-      "median_us" : 0.732,
-      "p10_us" : 0.701,
-      "p90_us" : 0.872
+      "setup_ns" : 128444595,
+      "median_us" : 0.742,
+      "p10_us" : 0.711,
+      "p90_us" : 0.892
     } ]
   }, {
     "case" : "R1",
@@ -8673,114 +8673,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 834732,
-      "median_us" : 14.757,
-      "p10_us" : 14.426,
-      "p90_us" : 15.288
+      "setup_ns" : 773792,
+      "median_us" : 14.686,
+      "p10_us" : 14.376,
+      "p90_us" : 15.128
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 699147,
-      "median_us" : 1.903,
+      "setup_ns" : 738186,
+      "median_us" : 1.893,
       "p10_us" : 1.873,
-      "p90_us" : 1.954
+      "p90_us" : 1.934
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1713515,
-      "median_us" : 7.062,
-      "p10_us" : 6.912,
-      "p90_us" : 7.324
+      "setup_ns" : 1601049,
+      "median_us" : 6.943,
+      "p10_us" : 6.792,
+      "p90_us" : 7.223
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 924916,
-      "median_us" : 1.553,
-      "p10_us" : 1.533,
-      "p90_us" : 1.592
+      "setup_ns" : 860027,
+      "median_us" : 1.754,
+      "p10_us" : 1.713,
+      "p90_us" : 1.794
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22959600,
-      "median_us" : 6.6,
-      "p10_us" : 6.4,
-      "p90_us" : 7.4
+      "setup_ns" : 22889000,
+      "median_us" : 6.8,
+      "p10_us" : 6.5,
+      "p90_us" : 7.3
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22146300,
-      "median_us" : 1.0,
+      "setup_ns" : 21410900,
+      "median_us" : 1.7,
       "p10_us" : 1.0,
-      "p90_us" : 1.7
+      "p90_us" : 2.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 188722,
-      "median_us" : 5.44,
-      "p10_us" : 5.32,
-      "p90_us" : 5.591
+      "setup_ns" : 203368,
+      "median_us" : 5.38,
+      "p10_us" : 5.31,
+      "p90_us" : 5.47
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 180257,
-      "median_us" : 2.104,
-      "p10_us" : 2.054,
-      "p90_us" : 2.164
+      "setup_ns" : 182681,
+      "median_us" : 2.163,
+      "p10_us" : 2.104,
+      "p90_us" : 2.244
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 216863,
-      "median_us" : 4.368,
-      "p10_us" : 4.248,
-      "p90_us" : 4.508
+      "setup_ns" : 359871,
+      "median_us" : 4.187,
+      "p10_us" : 4.087,
+      "p90_us" : 4.317
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 202607,
-      "median_us" : 2.555,
-      "p10_us" : 2.504,
-      "p90_us" : 2.625
+      "setup_ns" : 217925,
+      "median_us" : 2.504,
+      "p10_us" : 2.444,
+      "p90_us" : 2.615
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 253529,
-      "median_us" : 1.203,
-      "p10_us" : 1.172,
-      "p90_us" : 1.253
+      "setup_ns" : 218906,
+      "median_us" : 1.172,
+      "p10_us" : 1.132,
+      "p90_us" : 1.212
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 128770034,
-      "median_us" : 6.612,
-      "p10_us" : 6.402,
-      "p90_us" : 6.922
+      "setup_ns" : 125067119,
+      "median_us" : 7.193,
+      "p10_us" : 7.002,
+      "p90_us" : 7.514
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 126396243,
-      "median_us" : 4.378,
-      "p10_us" : 4.228,
-      "p90_us" : 4.619
+      "setup_ns" : 125935311,
+      "median_us" : 4.348,
+      "p10_us" : 4.198,
+      "p90_us" : 4.588
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 127599022,
-      "median_us" : 1.163,
-      "p10_us" : 1.092,
-      "p90_us" : 1.313
+      "setup_ns" : 125533593,
+      "median_us" : 1.162,
+      "p10_us" : 1.102,
+      "p90_us" : 1.342
     } ]
   }, {
     "case" : "R2",
@@ -8945,39 +8945,39 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 750270,
-      "median_us" : 16.961,
-      "p10_us" : 16.65,
-      "p90_us" : 17.522
+      "setup_ns" : 619342,
+      "median_us" : 17.041,
+      "p10_us" : 16.7,
+      "p90_us" : 17.622
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 761791,
-      "median_us" : 2.384,
-      "p10_us" : 2.305,
-      "p90_us" : 2.444
+      "setup_ns" : 807602,
+      "median_us" : 2.364,
+      "p10_us" : 2.314,
+      "p90_us" : 2.424
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1682128,
-      "median_us" : 8.846,
-      "p10_us" : 8.686,
-      "p90_us" : 9.147
+      "setup_ns" : 1650759,
+      "median_us" : 8.595,
+      "p10_us" : 8.485,
+      "p90_us" : 8.806
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 915449,
-      "median_us" : 2.013,
-      "p10_us" : 1.983,
-      "p90_us" : 2.054
+      "setup_ns" : 933530,
+      "median_us" : 2.204,
+      "p10_us" : 2.144,
+      "p90_us" : 2.274
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22783800,
+      "setup_ns" : 22847100,
       "median_us" : 9.3,
       "p10_us" : 9.0,
       "p90_us" : 9.8
@@ -8985,74 +8985,74 @@
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21535100,
-      "median_us" : 1.4,
-      "p10_us" : 1.3,
+      "setup_ns" : 21604000,
+      "median_us" : 1.3,
+      "p10_us" : 1.2,
       "p90_us" : 2.0
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 232752,
-      "median_us" : 6.041,
-      "p10_us" : 5.961,
-      "p90_us" : 6.162
+      "setup_ns" : 193721,
+      "median_us" : 6.01,
+      "p10_us" : 5.931,
+      "p90_us" : 6.091
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 187810,
-      "median_us" : 2.615,
-      "p10_us" : 2.594,
-      "p90_us" : 2.645
+      "setup_ns" : 188471,
+      "median_us" : 2.605,
+      "p10_us" : 2.584,
+      "p90_us" : 2.625
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 227763,
-      "median_us" : 6.211,
-      "p10_us" : 6.061,
-      "p90_us" : 6.462
+      "setup_ns" : 343802,
+      "median_us" : 6.112,
+      "p10_us" : 6.001,
+      "p90_us" : 6.282
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 223314,
-      "median_us" : 3.827,
-      "p10_us" : 3.747,
-      "p90_us" : 3.907
+      "setup_ns" : 275379,
+      "median_us" : 3.667,
+      "p10_us" : 3.597,
+      "p90_us" : 3.747
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 348792,
-      "median_us" : 1.653,
-      "p10_us" : 1.603,
-      "p90_us" : 1.723
+      "setup_ns" : 217013,
+      "median_us" : 1.513,
+      "p10_us" : 1.483,
+      "p90_us" : 1.553
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 126867667,
-      "median_us" : 9.257,
-      "p10_us" : 9.026,
-      "p90_us" : 9.617
+      "setup_ns" : 126583265,
+      "median_us" : 9.417,
+      "p10_us" : 9.137,
+      "p90_us" : 9.818
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 127655705,
-      "median_us" : 6.011,
-      "p10_us" : 5.76,
-      "p90_us" : 6.331
+      "setup_ns" : 125400603,
+      "median_us" : 5.941,
+      "p10_us" : 5.761,
+      "p90_us" : 6.201
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 126532990,
-      "median_us" : 1.753,
-      "p10_us" : 1.593,
-      "p90_us" : 1.983
+      "setup_ns" : 124353898,
+      "median_us" : 1.703,
+      "p10_us" : 1.573,
+      "p90_us" : 1.903
     } ]
   }, {
     "case" : "R3",
@@ -9217,114 +9217,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 718402,
-      "median_us" : 12.302,
-      "p10_us" : 11.991,
-      "p90_us" : 12.744
+      "setup_ns" : 615956,
+      "median_us" : 12.523,
+      "p10_us" : 12.262,
+      "p90_us" : 12.904
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 655869,
-      "median_us" : 1.363,
-      "p10_us" : 1.332,
-      "p90_us" : 1.412
+      "setup_ns" : 719472,
+      "median_us" : 1.373,
+      "p10_us" : 1.353,
+      "p90_us" : 1.413
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1522749,
-      "median_us" : 5.51,
-      "p10_us" : 5.329,
-      "p90_us" : 5.75
+      "setup_ns" : 1490649,
+      "median_us" : 5.339,
+      "p10_us" : 5.249,
+      "p90_us" : 5.51
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 845792,
-      "median_us" : 1.162,
-      "p10_us" : 1.142,
-      "p90_us" : 1.192
+      "setup_ns" : 836715,
+      "median_us" : 1.292,
+      "p10_us" : 1.272,
+      "p90_us" : 1.323
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23323800,
-      "median_us" : 4.9,
+      "setup_ns" : 23350700,
+      "median_us" : 4.8,
       "p10_us" : 4.6,
-      "p90_us" : 5.2
+      "p90_us" : 5.1
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21909800,
-      "median_us" : 0.8,
+      "setup_ns" : 21229800,
+      "median_us" : 1.0,
       "p10_us" : 0.7,
-      "p90_us" : 1.1
+      "p90_us" : 1.2
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 235607,
+      "setup_ns" : 194913,
       "median_us" : 4.658,
       "p10_us" : 4.609,
-      "p90_us" : 4.709
+      "p90_us" : 4.708
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 301186,
-      "median_us" : 1.583,
-      "p10_us" : 1.563,
-      "p90_us" : 1.613
+      "setup_ns" : 287200,
+      "median_us" : 1.613,
+      "p10_us" : 1.583,
+      "p90_us" : 1.663
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 211113,
-      "median_us" : 2.735,
-      "p10_us" : 2.664,
-      "p90_us" : 2.845
-    }, {
-      "impl" : "rexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 207106,
-      "median_us" : 1.542,
-      "p10_us" : 1.502,
-      "p90_us" : 1.583
-    }, {
-      "impl" : "rexi",
-      "op" : "decode",
-      "input" : "exi",
-      "setup_ns" : 321262,
-      "median_us" : 0.851,
-      "p10_us" : 0.821,
-      "p90_us" : 0.882
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "xml",
-      "setup_ns" : 128272662,
-      "median_us" : 4.268,
-      "p10_us" : 4.118,
-      "p90_us" : 4.548
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 125821401,
+      "setup_ns" : 216693,
       "median_us" : 2.745,
-      "p10_us" : 2.625,
-      "p90_us" : 2.965
+      "p10_us" : 2.695,
+      "p90_us" : 2.815
+    }, {
+      "impl" : "rexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 211503,
+      "median_us" : 1.473,
+      "p10_us" : 1.433,
+      "p90_us" : 1.523
+    }, {
+      "impl" : "rexi",
+      "op" : "decode",
+      "input" : "exi",
+      "setup_ns" : 221892,
+      "median_us" : 0.782,
+      "p10_us" : 0.762,
+      "p90_us" : 0.811
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "xml",
+      "setup_ns" : 124996270,
+      "median_us" : 3.937,
+      "p10_us" : 3.797,
+      "p90_us" : 4.287
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 125064815,
+      "median_us" : 2.635,
+      "p10_us" : 2.554,
+      "p90_us" : 2.815
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 127714391,
-      "median_us" : 0.821,
-      "p10_us" : 0.791,
-      "p90_us" : 0.962
+      "setup_ns" : 124735939,
+      "median_us" : 0.852,
+      "p10_us" : 0.821,
+      "p90_us" : 1.002
     } ]
   }, {
     "case" : "R4",
@@ -9489,39 +9489,39 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 917743,
-      "median_us" : 12.803,
-      "p10_us" : 12.552,
-      "p90_us" : 13.164
+      "setup_ns" : 1048539,
+      "median_us" : 13.023,
+      "p10_us" : 12.743,
+      "p90_us" : 13.454
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 792155,
-      "median_us" : 1.152,
-      "p10_us" : 1.132,
-      "p90_us" : 1.192
+      "setup_ns" : 812782,
+      "median_us" : 1.142,
+      "p10_us" : 1.112,
+      "p90_us" : 1.182
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1646794,
-      "median_us" : 5.67,
-      "p10_us" : 5.54,
-      "p90_us" : 5.89
+      "setup_ns" : 1651801,
+      "median_us" : 5.69,
+      "p10_us" : 5.59,
+      "p90_us" : 5.851
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1027983,
-      "median_us" : 0.872,
-      "p10_us" : 0.852,
-      "p90_us" : 0.892
+      "setup_ns" : 993909,
+      "median_us" : 0.972,
+      "p10_us" : 0.961,
+      "p90_us" : 1.002
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22907200,
+      "setup_ns" : 24998900,
       "median_us" : 5.2,
       "p10_us" : 4.9,
       "p90_us" : 5.5
@@ -9529,7 +9529,7 @@
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21531100,
+      "setup_ns" : 21424400,
       "median_us" : 0.9,
       "p10_us" : 0.6,
       "p90_us" : 1.0
@@ -9537,66 +9537,66 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 370822,
-      "median_us" : 4.318,
-      "p10_us" : 4.278,
-      "p90_us" : 4.378
+      "setup_ns" : 313838,
+      "median_us" : 4.348,
+      "p10_us" : 4.288,
+      "p90_us" : 4.408
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 301457,
-      "median_us" : 1.112,
-      "p10_us" : 1.112,
-      "p90_us" : 1.172
+      "setup_ns" : 299061,
+      "median_us" : 1.152,
+      "p10_us" : 1.142,
+      "p90_us" : 1.153
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 248540,
-      "median_us" : 2.826,
-      "p10_us" : 2.755,
-      "p90_us" : 2.905
+      "setup_ns" : 415202,
+      "median_us" : 2.735,
+      "p10_us" : 2.675,
+      "p90_us" : 2.815
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 251515,
-      "median_us" : 1.613,
-      "p10_us" : 1.553,
-      "p90_us" : 1.673
+      "setup_ns" : 245184,
+      "median_us" : 1.492,
+      "p10_us" : 1.453,
+      "p90_us" : 1.533
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 251606,
-      "median_us" : 0.811,
-      "p10_us" : 0.791,
-      "p90_us" : 0.862
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "xml",
-      "setup_ns" : 264112477,
-      "median_us" : 4.418,
-      "p10_us" : 4.278,
-      "p90_us" : 4.648
-    }, {
-      "impl" : "jexi",
-      "op" : "encode",
-      "input" : "events",
-      "setup_ns" : 269650001,
-      "median_us" : 2.695,
-      "p10_us" : 2.534,
-      "p90_us" : 2.915
-    }, {
-      "impl" : "jexi",
-      "op" : "decode",
-      "input" : "exi",
-      "setup_ns" : 274837942,
+      "setup_ns" : 248309,
       "median_us" : 0.681,
-      "p10_us" : 0.651,
-      "p90_us" : 0.822
+      "p10_us" : 0.642,
+      "p90_us" : 0.701
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "xml",
+      "setup_ns" : 260656440,
+      "median_us" : 4.167,
+      "p10_us" : 4.017,
+      "p90_us" : 4.438
+    }, {
+      "impl" : "jexi",
+      "op" : "encode",
+      "input" : "events",
+      "setup_ns" : 259130608,
+      "median_us" : 2.684,
+      "p10_us" : 2.565,
+      "p90_us" : 2.875
+    }, {
+      "impl" : "jexi",
+      "op" : "decode",
+      "input" : "exi",
+      "setup_ns" : 261500028,
+      "median_us" : 0.691,
+      "p10_us" : 0.661,
+      "p90_us" : 0.832
     } ]
   }, {
     "case" : "R5",
@@ -9761,114 +9761,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 753846,
-      "median_us" : 14.987,
-      "p10_us" : 14.606,
-      "p90_us" : 15.588
+      "setup_ns" : 837005,
+      "median_us" : 14.707,
+      "p10_us" : 14.436,
+      "p90_us" : 15.207
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 700118,
-      "median_us" : 1.803,
-      "p10_us" : 1.773,
-      "p90_us" : 1.854
+      "setup_ns" : 743215,
+      "median_us" : 1.754,
+      "p10_us" : 1.723,
+      "p90_us" : 1.833
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1518522,
-      "median_us" : 7.003,
-      "p10_us" : 6.902,
-      "p90_us" : 7.173
+      "setup_ns" : 1591211,
+      "median_us" : 6.963,
+      "p10_us" : 6.812,
+      "p90_us" : 7.223
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1150504,
-      "median_us" : 1.503,
-      "p10_us" : 1.452,
-      "p90_us" : 1.553
+      "setup_ns" : 948358,
+      "median_us" : 1.683,
+      "p10_us" : 1.653,
+      "p90_us" : 1.723
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22947300,
-      "median_us" : 6.8,
-      "p10_us" : 6.6,
-      "p90_us" : 10.2
+      "setup_ns" : 23752900,
+      "median_us" : 7.0,
+      "p10_us" : 6.7,
+      "p90_us" : 7.4
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21348600,
+      "setup_ns" : 21386600,
       "median_us" : 1.2,
-      "p10_us" : 1.0,
-      "p90_us" : 1.6
+      "p10_us" : 0.9,
+      "p90_us" : 1.5
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 213056,
-      "median_us" : 5.36,
-      "p10_us" : 5.29,
-      "p90_us" : 5.46
+      "setup_ns" : 191577,
+      "median_us" : 5.45,
+      "p10_us" : 5.409,
+      "p90_us" : 5.52
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 243281,
-      "median_us" : 1.953,
-      "p10_us" : 1.913,
-      "p90_us" : 2.014
+      "setup_ns" : 208667,
+      "median_us" : 1.914,
+      "p10_us" : 1.884,
+      "p90_us" : 1.974
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 338333,
-      "median_us" : 4.378,
-      "p10_us" : 4.288,
-      "p90_us" : 4.478
+      "setup_ns" : 225609,
+      "median_us" : 4.178,
+      "p10_us" : 4.107,
+      "p90_us" : 4.277
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 218576,
-      "median_us" : 2.675,
-      "p10_us" : 2.585,
-      "p90_us" : 2.785
+      "setup_ns" : 339415,
+      "median_us" : 2.575,
+      "p10_us" : 2.515,
+      "p90_us" : 2.645
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 223274,
-      "median_us" : 1.162,
-      "p10_us" : 1.122,
-      "p90_us" : 1.213
+      "setup_ns" : 217203,
+      "median_us" : 1.032,
+      "p10_us" : 1.011,
+      "p90_us" : 1.062
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 125345418,
-      "median_us" : 6.732,
-      "p10_us" : 6.542,
-      "p90_us" : 7.043
+      "setup_ns" : 124897943,
+      "median_us" : 6.362,
+      "p10_us" : 6.162,
+      "p90_us" : 6.682
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 126310076,
-      "median_us" : 4.057,
-      "p10_us" : 3.897,
-      "p90_us" : 4.318
+      "setup_ns" : 125685739,
+      "median_us" : 4.077,
+      "p10_us" : 3.927,
+      "p90_us" : 4.308
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 125215643,
-      "median_us" : 1.303,
-      "p10_us" : 1.182,
-      "p90_us" : 1.502
+      "setup_ns" : 126295183,
+      "median_us" : 1.292,
+      "p10_us" : 1.162,
+      "p90_us" : 1.492
     } ]
   }, {
     "case" : "X1",
@@ -10033,114 +10033,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 611408,
-      "median_us" : 15.158,
-      "p10_us" : 14.887,
-      "p90_us" : 15.678
+      "setup_ns" : 741954,
+      "median_us" : 15.268,
+      "p10_us" : 15.028,
+      "p90_us" : 15.698
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 692846,
-      "median_us" : 1.523,
+      "setup_ns" : 699156,
+      "median_us" : 1.553,
+      "p10_us" : 1.523,
+      "p90_us" : 1.603
+    }, {
+      "impl" : "Nagasena",
+      "op" : "encode",
+      "input" : "xml",
+      "setup_ns" : 1545429,
+      "median_us" : 7.614,
+      "p10_us" : 7.403,
+      "p90_us" : 7.804
+    }, {
+      "impl" : "Nagasena",
+      "op" : "decode",
+      "input" : "exi",
+      "setup_ns" : 866058,
+      "median_us" : 1.533,
       "p10_us" : 1.493,
-      "p90_us" : 1.593
-    }, {
-      "impl" : "Nagasena",
-      "op" : "encode",
-      "input" : "xml",
-      "setup_ns" : 1487796,
-      "median_us" : 7.544,
-      "p10_us" : 7.413,
-      "p90_us" : 7.734
-    }, {
-      "impl" : "Nagasena",
-      "op" : "decode",
-      "input" : "exi",
-      "setup_ns" : 855359,
-      "median_us" : 1.423,
-      "p10_us" : 1.402,
-      "p90_us" : 1.463
+      "p90_us" : 1.582
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22881000,
-      "median_us" : 7.3,
-      "p10_us" : 7.1,
-      "p90_us" : 11.5
+      "setup_ns" : 23590100,
+      "median_us" : 7.2,
+      "p10_us" : 7.0,
+      "p90_us" : 7.6
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21138400,
-      "median_us" : 1.0,
+      "setup_ns" : 21369700,
+      "median_us" : 1.2,
       "p10_us" : 0.8,
       "p90_us" : 1.4
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 324989,
-      "median_us" : 4.739,
-      "p10_us" : 4.698,
-      "p90_us" : 4.788
+      "setup_ns" : 220640,
+      "median_us" : 4.799,
+      "p10_us" : 4.749,
+      "p90_us" : 4.869
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 179786,
-      "median_us" : 1.713,
-      "p10_us" : 1.673,
-      "p90_us" : 1.744
+      "setup_ns" : 283203,
+      "median_us" : 1.663,
+      "p10_us" : 1.653,
+      "p90_us" : 1.713
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 213917,
-      "median_us" : 4.688,
-      "p10_us" : 4.559,
-      "p90_us" : 4.809
+      "setup_ns" : 210662,
+      "median_us" : 4.618,
+      "p10_us" : 4.519,
+      "p90_us" : 4.739
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 198269,
-      "median_us" : 2.685,
-      "p10_us" : 2.614,
-      "p90_us" : 2.765
+      "setup_ns" : 225328,
+      "median_us" : 2.575,
+      "p10_us" : 2.494,
+      "p90_us" : 2.675
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 325280,
-      "median_us" : 1.222,
-      "p10_us" : 1.182,
-      "p90_us" : 1.273
+      "setup_ns" : 205122,
+      "median_us" : 1.072,
+      "p10_us" : 1.032,
+      "p90_us" : 1.112
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 124893670,
-      "median_us" : 7.524,
-      "p10_us" : 7.313,
-      "p90_us" : 7.835
+      "setup_ns" : 125676322,
+      "median_us" : 7.584,
+      "p10_us" : 7.343,
+      "p90_us" : 8.005
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 126034477,
-      "median_us" : 5.06,
-      "p10_us" : 4.799,
-      "p90_us" : 5.33
+      "setup_ns" : 125064625,
+      "median_us" : 5.099,
+      "p10_us" : 4.969,
+      "p90_us" : 5.35
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 127771375,
-      "median_us" : 1.112,
-      "p10_us" : 1.071,
-      "p90_us" : 1.282
+      "setup_ns" : 126570742,
+      "median_us" : 1.122,
+      "p10_us" : 1.082,
+      "p90_us" : 1.272
     } ]
   }, {
     "case" : "X2",
@@ -10311,114 +10311,114 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 677808,
-      "median_us" : 15.949,
-      "p10_us" : 15.568,
-      "p90_us" : 16.6
+      "setup_ns" : 683357,
+      "median_us" : 15.649,
+      "p10_us" : 15.348,
+      "p90_us" : 16.2
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 648174,
-      "median_us" : 1.713,
-      "p10_us" : 1.683,
-      "p90_us" : 1.763
+      "setup_ns" : 638326,
+      "median_us" : 1.643,
+      "p10_us" : 1.623,
+      "p90_us" : 1.683
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1526466,
-      "median_us" : 7.724,
-      "p10_us" : 7.614,
-      "p90_us" : 7.874
+      "setup_ns" : 1472306,
+      "median_us" : 7.573,
+      "p10_us" : 7.453,
+      "p90_us" : 7.764
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 823252,
-      "median_us" : 1.462,
-      "p10_us" : 1.433,
-      "p90_us" : 1.502
+      "setup_ns" : 773070,
+      "median_us" : 1.513,
+      "p10_us" : 1.483,
+      "p90_us" : 1.553
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22844700,
-      "median_us" : 7.4,
+      "setup_ns" : 23509000,
+      "median_us" : 7.5,
       "p10_us" : 7.2,
-      "p90_us" : 7.9
+      "p90_us" : 7.8
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21722900,
+      "setup_ns" : 21714000,
       "median_us" : 0.9,
       "p10_us" : 0.8,
-      "p90_us" : 1.6
+      "p90_us" : 1.4
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 289254,
-      "median_us" : 4.989,
-      "p10_us" : 4.909,
-      "p90_us" : 5.079
+      "setup_ns" : 290736,
+      "median_us" : 4.959,
+      "p10_us" : 4.919,
+      "p90_us" : 5.029
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 173024,
-      "median_us" : 1.593,
-      "p10_us" : 1.573,
-      "p90_us" : 1.613
+      "setup_ns" : 178423,
+      "median_us" : 1.633,
+      "p10_us" : 1.623,
+      "p90_us" : 1.643
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 199021,
-      "median_us" : 4.658,
-      "p10_us" : 4.538,
-      "p90_us" : 4.779
+      "setup_ns" : 304652,
+      "median_us" : 4.698,
+      "p10_us" : 4.568,
+      "p90_us" : 4.869
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 290857,
-      "median_us" : 2.514,
-      "p10_us" : 2.454,
-      "p90_us" : 2.585
+      "setup_ns" : 194342,
+      "median_us" : 2.444,
+      "p10_us" : 2.365,
+      "p90_us" : 2.544
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 222303,
-      "median_us" : 1.293,
-      "p10_us" : 1.262,
-      "p90_us" : 1.342
+      "setup_ns" : 214218,
+      "median_us" : 1.142,
+      "p10_us" : 1.112,
+      "p90_us" : 1.192
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 126124290,
-      "median_us" : 8.225,
-      "p10_us" : 8.015,
-      "p90_us" : 8.566
+      "setup_ns" : 125830521,
+      "median_us" : 7.754,
+      "p10_us" : 7.574,
+      "p90_us" : 8.044
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 125332625,
-      "median_us" : 4.879,
-      "p10_us" : 4.689,
-      "p90_us" : 5.299
+      "setup_ns" : 125442349,
+      "median_us" : 4.938,
+      "p10_us" : 4.748,
+      "p90_us" : 5.19
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 128025275,
-      "median_us" : 1.172,
-      "p10_us" : 1.122,
-      "p90_us" : 1.333
+      "setup_ns" : 125396285,
+      "median_us" : 1.142,
+      "p10_us" : 1.082,
+      "p90_us" : 1.312
     } ]
   }, {
     "case" : "U1",
@@ -10583,39 +10583,39 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 948088,
-      "median_us" : 27.039,
-      "p10_us" : 26.508,
-      "p90_us" : 28.151
+      "setup_ns" : 957754,
+      "median_us" : 26.899,
+      "p10_us" : 26.608,
+      "p90_us" : 27.8
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 650378,
-      "median_us" : 6.111,
-      "p10_us" : 6.041,
-      "p90_us" : 6.212
+      "setup_ns" : 723780,
+      "median_us" : 6.171,
+      "p10_us" : 6.071,
+      "p90_us" : 6.362
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1482796,
-      "median_us" : 17.682,
-      "p10_us" : 17.422,
-      "p90_us" : 18.433
+      "setup_ns" : 1728870,
+      "median_us" : 17.592,
+      "p10_us" : 17.352,
+      "p90_us" : 18.353
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1362088,
-      "median_us" : 5.79,
-      "p10_us" : 5.711,
-      "p90_us" : 5.971
+      "setup_ns" : 902404,
+      "median_us" : 6.391,
+      "p10_us" : 6.301,
+      "p90_us" : 6.502
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 22997100,
+      "setup_ns" : 22796300,
       "median_us" : 15.7,
       "p10_us" : 15.4,
       "p90_us" : 16.2
@@ -10623,74 +10623,74 @@
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21274000,
+      "setup_ns" : 21711800,
       "median_us" : 3.5,
-      "p10_us" : 3.4,
-      "p90_us" : 3.7
+      "p10_us" : 3.3,
+      "p90_us" : 3.6
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 325901,
-      "median_us" : 12.062,
-      "p10_us" : 11.871,
-      "p90_us" : 15.398
+      "setup_ns" : 265350,
+      "median_us" : 12.192,
+      "p10_us" : 11.901,
+      "p90_us" : 12.443
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 266362,
-      "median_us" : 6.472,
-      "p10_us" : 6.371,
-      "p90_us" : 6.632
+      "setup_ns" : 217363,
+      "median_us" : 6.372,
+      "p10_us" : 6.271,
+      "p90_us" : 9.888
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 219508,
-      "median_us" : 17.081,
-      "p10_us" : 16.92,
-      "p90_us" : 17.271
+      "setup_ns" : 223444,
+      "median_us" : 14.456,
+      "p10_us" : 14.206,
+      "p90_us" : 14.827
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 236509,
-      "median_us" : 10.008,
-      "p10_us" : 9.888,
-      "p90_us" : 10.258
+      "setup_ns" : 215139,
+      "median_us" : 9.598,
+      "p10_us" : 9.497,
+      "p90_us" : 9.777
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 217824,
-      "median_us" : 4.107,
-      "p10_us" : 4.027,
-      "p90_us" : 4.188
+      "setup_ns" : 218506,
+      "median_us" : 4.018,
+      "p10_us" : 3.937,
+      "p90_us" : 4.167
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 164646493,
-      "median_us" : 20.037,
-      "p10_us" : 19.485,
-      "p90_us" : 20.908
+      "setup_ns" : 165103633,
+      "median_us" : 19.706,
+      "p10_us" : 19.155,
+      "p90_us" : 20.427
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 163951393,
-      "median_us" : 14.576,
-      "p10_us" : 14.066,
-      "p90_us" : 15.398
+      "setup_ns" : 163408794,
+      "median_us" : 14.456,
+      "p10_us" : 13.966,
+      "p90_us" : 15.147
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 166146321,
-      "median_us" : 5.33,
-      "p10_us" : 4.979,
-      "p90_us" : 5.82
+      "setup_ns" : 165318492,
+      "median_us" : 5.39,
+      "p10_us" : 5.059,
+      "p90_us" : 5.84
     } ]
   }, {
     "case" : "B1",
@@ -10855,47 +10855,47 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 661168,
-      "median_us" : 10.399,
-      "p10_us" : 10.099,
-      "p90_us" : 10.849
+      "setup_ns" : 729040,
+      "median_us" : 10.559,
+      "p10_us" : 10.268,
+      "p90_us" : 10.94
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 658012,
-      "median_us" : 0.551,
-      "p10_us" : 0.541,
-      "p90_us" : 0.581
+      "setup_ns" : 659825,
+      "median_us" : 0.571,
+      "p10_us" : 0.561,
+      "p90_us" : 0.601
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1342993,
-      "median_us" : 3.957,
-      "p10_us" : 3.867,
-      "p90_us" : 4.087
+      "setup_ns" : 1508211,
+      "median_us" : 3.907,
+      "p10_us" : 3.827,
+      "p90_us" : 4.037
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 809096,
-      "median_us" : 0.591,
-      "p10_us" : 0.571,
-      "p90_us" : 0.612
+      "setup_ns" : 792855,
+      "median_us" : 0.611,
+      "p10_us" : 0.591,
+      "p90_us" : 0.641
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 23526900,
-      "median_us" : 3.2,
+      "setup_ns" : 23278200,
+      "median_us" : 3.3,
       "p10_us" : 3.1,
       "p90_us" : 3.5
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21819100,
+      "setup_ns" : 21859100,
       "median_us" : 0.5,
       "p10_us" : 0.3,
       "p90_us" : 0.6
@@ -10903,23 +10903,23 @@
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 324648,
-      "median_us" : 3.586,
+      "setup_ns" : 194452,
+      "median_us" : 3.587,
       "p10_us" : 3.566,
-      "p90_us" : 3.607
+      "p90_us" : 3.647
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 176690,
-      "median_us" : 0.651,
+      "setup_ns" : 239774,
+      "median_us" : 0.652,
       "p10_us" : 0.651,
-      "p90_us" : 0.661
+      "p90_us" : 0.741
     }, {
       "impl" : "rexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 321342,
+      "setup_ns" : 363257,
       "median_us" : 1.693,
       "p10_us" : 1.643,
       "p90_us" : 1.743
@@ -10927,42 +10927,42 @@
       "impl" : "rexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 200794,
-      "median_us" : 0.972,
-      "p10_us" : 0.941,
-      "p90_us" : 1.012
+      "setup_ns" : 201986,
+      "median_us" : 0.992,
+      "p10_us" : 0.962,
+      "p90_us" : 1.042
     }, {
       "impl" : "rexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 198309,
-      "median_us" : 0.421,
-      "p10_us" : 0.411,
-      "p90_us" : 0.431
+      "setup_ns" : 319799,
+      "median_us" : 0.401,
+      "p10_us" : 0.39,
+      "p90_us" : 0.421
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 164017904,
-      "median_us" : 2.955,
-      "p10_us" : 2.825,
-      "p90_us" : 3.176
+      "setup_ns" : 165170604,
+      "median_us" : 3.136,
+      "p10_us" : 3.005,
+      "p90_us" : 3.366
     }, {
       "impl" : "jexi",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 164225600,
+      "setup_ns" : 164569787,
       "median_us" : 2.024,
-      "p10_us" : 1.933,
+      "p10_us" : 1.963,
       "p90_us" : 2.214
     }, {
       "impl" : "jexi",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 166711124,
+      "setup_ns" : 166788433,
       "median_us" : 0.461,
-      "p10_us" : 0.44,
-      "p90_us" : 0.571
+      "p10_us" : 0.441,
+      "p90_us" : 0.531
     } ]
   }, {
     "case" : "S1",
@@ -11140,66 +11140,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 759978,
-      "median_us" : 20.918,
-      "p10_us" : 20.377,
-      "p90_us" : 24.034
+      "setup_ns" : 551900,
+      "median_us" : 20.478,
+      "p10_us" : 20.097,
+      "p90_us" : 21.058
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 604886,
-      "median_us" : 6.822,
-      "p10_us" : 5.409,
-      "p90_us" : 8.375
+      "setup_ns" : 632014,
+      "median_us" : 10.359,
+      "p10_us" : 10.218,
+      "p90_us" : 11.701
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1508643,
-      "median_us" : 13.564,
-      "p10_us" : 13.024,
-      "p90_us" : 17.782
+      "setup_ns" : 1521826,
+      "median_us" : 13.695,
+      "p10_us" : 13.133,
+      "p90_us" : 17.572
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 968515,
-      "median_us" : 2.835,
-      "p10_us" : 2.495,
-      "p90_us" : 3.928
+      "setup_ns" : 984823,
+      "median_us" : 2.985,
+      "p10_us" : 2.565,
+      "p90_us" : 3.887
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 25183300,
-      "median_us" : 56.7,
-      "p10_us" : 55.5,
-      "p90_us" : 59.6
+      "setup_ns" : 24507000,
+      "median_us" : 55.4,
+      "p10_us" : 55.0,
+      "p90_us" : 56.7
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22241800,
-      "median_us" : 2.0,
+      "setup_ns" : 22278900,
+      "median_us" : 2.1,
       "p10_us" : 1.8,
       "p90_us" : 2.5
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 176830,
-      "median_us" : 7.975,
-      "p10_us" : 7.884,
-      "p90_us" : 8.065
+      "setup_ns" : 179355,
+      "median_us" : 7.714,
+      "p10_us" : 7.664,
+      "p90_us" : 7.774
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 204912,
-      "median_us" : 2.284,
-      "p10_us" : 2.224,
-      "p90_us" : 2.334
+      "setup_ns" : 177642,
+      "median_us" : 2.274,
+      "p10_us" : 2.254,
+      "p90_us" : 2.294
     } ]
   }, {
     "case" : "S2",
@@ -11377,66 +11377,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 618080,
-      "median_us" : 21.188,
-      "p10_us" : 20.788,
-      "p90_us" : 22.05
+      "setup_ns" : 727878,
+      "median_us" : 20.868,
+      "p10_us" : 20.527,
+      "p90_us" : 21.509
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 682397,
-      "median_us" : 5.54,
-      "p10_us" : 5.319,
-      "p90_us" : 7.353
+      "setup_ns" : 656509,
+      "median_us" : 5.67,
+      "p10_us" : 5.45,
+      "p90_us" : 7.674
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1412539,
-      "median_us" : 13.515,
-      "p10_us" : 12.994,
-      "p90_us" : 17.722
+      "setup_ns" : 1430480,
+      "median_us" : 13.234,
+      "p10_us" : 12.833,
+      "p90_us" : 17.402
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 846414,
-      "median_us" : 2.865,
-      "p10_us" : 2.434,
-      "p90_us" : 3.897
+      "setup_ns" : 829983,
+      "median_us" : 2.885,
+      "p10_us" : 2.475,
+      "p90_us" : 3.847
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 27718900,
-      "median_us" : 55.9,
-      "p10_us" : 54.8,
-      "p90_us" : 59.0
+      "setup_ns" : 24743300,
+      "median_us" : 56.0,
+      "p10_us" : 55.1,
+      "p90_us" : 58.4
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21740300,
-      "median_us" : 2.1,
-      "p10_us" : 1.8,
-      "p90_us" : 2.6
+      "setup_ns" : 22140600,
+      "median_us" : 1.9,
+      "p10_us" : 1.7,
+      "p90_us" : 2.3
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 280889,
-      "median_us" : 7.794,
-      "p10_us" : 7.744,
-      "p90_us" : 7.864
+      "setup_ns" : 282532,
+      "median_us" : 8.145,
+      "p10_us" : 8.064,
+      "p90_us" : 8.305
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 173675,
-      "median_us" : 2.164,
-      "p10_us" : 2.144,
-      "p90_us" : 2.184
+      "setup_ns" : 172192,
+      "median_us" : 2.204,
+      "p10_us" : 2.174,
+      "p90_us" : 2.224
     } ]
   }, {
     "case" : "S3",
@@ -11614,66 +11614,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 706250,
-      "median_us" : 18.073,
-      "p10_us" : 17.482,
-      "p90_us" : 18.924
+      "setup_ns" : 551228,
+      "median_us" : 17.471,
+      "p10_us" : 17.091,
+      "p90_us" : 18.063
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 601059,
-      "median_us" : 4.529,
-      "p10_us" : 4.128,
-      "p90_us" : 7.223
+      "setup_ns" : 612760,
+      "median_us" : 6.792,
+      "p10_us" : 5.06,
+      "p90_us" : 9.978
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1383397,
-      "median_us" : 12.012,
-      "p10_us" : 11.551,
-      "p90_us" : 16.289
+      "setup_ns" : 1943178,
+      "median_us" : 12.021,
+      "p10_us" : 11.541,
+      "p90_us" : 16.149
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 899270,
-      "median_us" : 2.414,
+      "setup_ns" : 848988,
+      "median_us" : 2.405,
       "p10_us" : 2.004,
-      "p90_us" : 3.446
+      "p90_us" : 3.426
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24653000,
-      "median_us" : 63.6,
+      "setup_ns" : 24924500,
+      "median_us" : 53.8,
       "p10_us" : 53.4,
-      "p90_us" : 526.0
+      "p90_us" : 55.1
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22812800,
-      "median_us" : 1.7,
-      "p10_us" : 1.5,
-      "p90_us" : 2.1
+      "setup_ns" : 22095800,
+      "median_us" : 1.6,
+      "p10_us" : 1.4,
+      "p90_us" : 1.9
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 271462,
-      "median_us" : 6.963,
-      "p10_us" : 6.883,
-      "p90_us" : 7.062
+      "setup_ns" : 177882,
+      "median_us" : 6.862,
+      "p10_us" : 6.812,
+      "p90_us" : 6.933
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 174536,
-      "median_us" : 1.643,
-      "p10_us" : 1.613,
-      "p90_us" : 1.683
+      "setup_ns" : 283022,
+      "median_us" : 1.552,
+      "p10_us" : 1.533,
+      "p90_us" : 1.573
     } ]
   }, {
     "case" : "S4",
@@ -11851,66 +11851,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 627016,
-      "median_us" : 20.077,
-      "p10_us" : 19.686,
-      "p90_us" : 20.718
+      "setup_ns" : 632976,
+      "median_us" : 19.796,
+      "p10_us" : 19.415,
+      "p90_us" : 20.577
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 712991,
-      "median_us" : 12.002,
-      "p10_us" : 7.293,
-      "p90_us" : 27.329
+      "setup_ns" : 723630,
+      "median_us" : 5.761,
+      "p10_us" : 5.46,
+      "p90_us" : 7.834
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 6935206,
-      "median_us" : 13.144,
-      "p10_us" : 12.443,
-      "p90_us" : 17.301
+      "setup_ns" : 1516436,
+      "median_us" : 12.943,
+      "p10_us" : 12.493,
+      "p90_us" : 17.091
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 938030,
-      "median_us" : 2.565,
-      "p10_us" : 2.134,
-      "p90_us" : 3.497
+      "setup_ns" : 904117,
+      "median_us" : 2.604,
+      "p10_us" : 2.164,
+      "p90_us" : 3.596
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24623500,
-      "median_us" : 56.2,
-      "p10_us" : 54.8,
-      "p90_us" : 58.9
+      "setup_ns" : 24598800,
+      "median_us" : 54.5,
+      "p10_us" : 54.0,
+      "p90_us" : 55.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22134600,
-      "median_us" : 1.8,
+      "setup_ns" : 21833400,
+      "median_us" : 1.7,
       "p10_us" : 1.6,
       "p90_us" : 2.1
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 475181,
-      "median_us" : 7.283,
-      "p10_us" : 7.203,
-      "p90_us" : 7.464
+      "setup_ns" : 296687,
+      "median_us" : 7.203,
+      "p10_us" : 7.163,
+      "p90_us" : 7.244
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 290596,
-      "median_us" : 1.613,
+      "setup_ns" : 488535,
+      "median_us" : 14.696,
       "p10_us" : 1.593,
-      "p90_us" : 1.633
+      "p90_us" : 27.009
     } ]
   }, {
     "case" : "S5",
@@ -12088,66 +12088,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 713312,
-      "median_us" : 22.361,
-      "p10_us" : 22.03,
-      "p90_us" : 23.282
+      "setup_ns" : 697263,
+      "median_us" : 22.921,
+      "p10_us" : 22.191,
+      "p90_us" : 23.733
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 722139,
-      "median_us" : 9.117,
-      "p10_us" : 7.303,
-      "p90_us" : 12.523
+      "setup_ns" : 707421,
+      "median_us" : 6.902,
+      "p10_us" : 6.732,
+      "p90_us" : 8.065
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1807155,
-      "median_us" : 14.035,
-      "p10_us" : 13.385,
-      "p90_us" : 18.593
+      "setup_ns" : 1552080,
+      "median_us" : 13.966,
+      "p10_us" : 13.494,
+      "p90_us" : 18.093
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 931087,
-      "median_us" : 3.055,
-      "p10_us" : 2.554,
-      "p90_us" : 4.138
+      "setup_ns" : 916109,
+      "median_us" : 3.015,
+      "p10_us" : 2.584,
+      "p90_us" : 3.957
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 25278100,
-      "median_us" : 55.8,
-      "p10_us" : 54.7,
-      "p90_us" : 58.9
+      "setup_ns" : 24339300,
+      "median_us" : 55.5,
+      "p10_us" : 54.9,
+      "p90_us" : 58.5
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 21928300,
-      "median_us" : 2.2,
-      "p10_us" : 2.0,
-      "p90_us" : 2.6
+      "setup_ns" : 22440600,
+      "median_us" : 2.1,
+      "p10_us" : 1.9,
+      "p90_us" : 2.5
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 248260,
-      "median_us" : 8.396,
-      "p10_us" : 8.265,
-      "p90_us" : 8.505
+      "setup_ns" : 253329,
+      "median_us" : 8.225,
+      "p10_us" : 8.175,
+      "p90_us" : 8.285
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 179395,
-      "median_us" : 2.174,
-      "p10_us" : 2.133,
-      "p90_us" : 2.214
+      "setup_ns" : 184604,
+      "median_us" : 2.184,
+      "p10_us" : 2.144,
+      "p90_us" : 2.294
     } ]
   }, {
     "case" : "R1",
@@ -12325,66 +12325,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 525051,
-      "median_us" : 29.644,
-      "p10_us" : 28.992,
-      "p90_us" : 30.846
+      "setup_ns" : 522366,
+      "median_us" : 28.892,
+      "p10_us" : 28.561,
+      "p90_us" : 29.723
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 596511,
-      "median_us" : 9.888,
-      "p10_us" : 9.577,
-      "p90_us" : 11.171
+      "setup_ns" : 622137,
+      "median_us" : 10.008,
+      "p10_us" : 9.808,
+      "p90_us" : 10.659
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1511178,
-      "median_us" : 16.801,
-      "p10_us" : 15.999,
-      "p90_us" : 20.958
+      "setup_ns" : 1453071,
+      "median_us" : 16.66,
+      "p10_us" : 16.119,
+      "p90_us" : 20.898
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 859547,
-      "median_us" : 3.776,
-      "p10_us" : 3.386,
-      "p90_us" : 4.788
+      "setup_ns" : 844058,
+      "median_us" : 3.807,
+      "p10_us" : 3.397,
+      "p90_us" : 4.829
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24992600,
-      "median_us" : 57.6,
-      "p10_us" : 57.1,
-      "p90_us" : 61.4
+      "setup_ns" : 24775500,
+      "median_us" : 58.4,
+      "p10_us" : 57.4,
+      "p90_us" : 61.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22245600,
-      "median_us" : 3.1,
-      "p10_us" : 2.8,
-      "p90_us" : 3.7
+      "setup_ns" : 22463600,
+      "median_us" : 2.9,
+      "p10_us" : 2.7,
+      "p90_us" : 3.5
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 186518,
-      "median_us" : 10.148,
-      "p10_us" : 10.008,
-      "p90_us" : 10.329
+      "setup_ns" : 251065,
+      "median_us" : 10.068,
+      "p10_us" : 9.928,
+      "p90_us" : 10.259
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 191747,
-      "median_us" : 3.486,
-      "p10_us" : 3.406,
-      "p90_us" : 3.596
+      "setup_ns" : 173945,
+      "median_us" : 3.367,
+      "p10_us" : 3.306,
+      "p90_us" : 3.477
     } ]
   }, {
     "case" : "R2",
@@ -12562,66 +12562,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 543575,
-      "median_us" : 32.198,
-      "p10_us" : 31.647,
-      "p90_us" : 33.42
+      "setup_ns" : 550858,
+      "median_us" : 31.797,
+      "p10_us" : 31.427,
+      "p90_us" : 32.909
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 631104,
-      "median_us" : 10.599,
-      "p10_us" : 10.379,
-      "p90_us" : 11.15
+      "setup_ns" : 661057,
+      "median_us" : 10.89,
+      "p10_us" : 10.428,
+      "p90_us" : 21.959
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1504265,
+      "setup_ns" : 1383385,
       "median_us" : 18.373,
-      "p10_us" : 17.803,
-      "p90_us" : 22.832
+      "p10_us" : 17.893,
+      "p90_us" : 22.691
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 842667,
-      "median_us" : 4.459,
-      "p10_us" : 4.107,
+      "setup_ns" : 893999,
+      "median_us" : 4.448,
+      "p10_us" : 4.057,
       "p90_us" : 5.52
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 25237800,
-      "median_us" : 60.8,
-      "p10_us" : 59.6,
-      "p90_us" : 63.9
+      "setup_ns" : 24655900,
+      "median_us" : 60.0,
+      "p10_us" : 59.4,
+      "p90_us" : 63.0
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22369600,
-      "median_us" : 3.4,
+      "setup_ns" : 22278500,
+      "median_us" : 3.5,
       "p10_us" : 3.2,
       "p90_us" : 3.9
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 190565,
-      "median_us" : 11.3,
-      "p10_us" : 11.05,
-      "p90_us" : 11.491
+      "setup_ns" : 309881,
+      "median_us" : 11.1,
+      "p10_us" : 10.939,
+      "p90_us" : 11.3
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 190445,
-      "median_us" : 4.077,
-      "p10_us" : 4.008,
-      "p90_us" : 4.248
+      "setup_ns" : 189163,
+      "median_us" : 4.057,
+      "p10_us" : 4.017,
+      "p90_us" : 4.207
     } ]
   }, {
     "case" : "R3",
@@ -12799,66 +12799,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 728720,
-      "median_us" : 22.931,
-      "p10_us" : 22.571,
-      "p90_us" : 23.653
+      "setup_ns" : 587174,
+      "median_us" : 23.322,
+      "p10_us" : 22.842,
+      "p90_us" : 24.294
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 576044,
-      "median_us" : 7.584,
-      "p10_us" : 7.373,
-      "p90_us" : 7.935
+      "setup_ns" : 601158,
+      "median_us" : 7.704,
+      "p10_us" : 7.484,
+      "p90_us" : 7.984
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1473239,
-      "median_us" : 14.436,
-      "p10_us" : 13.685,
-      "p90_us" : 18.634
+      "setup_ns" : 1366444,
+      "median_us" : 13.995,
+      "p10_us" : 13.504,
+      "p90_us" : 18.233
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 817201,
-      "median_us" : 3.176,
-      "p10_us" : 2.795,
-      "p90_us" : 4.207
+      "setup_ns" : 812581,
+      "median_us" : 3.225,
+      "p10_us" : 2.865,
+      "p90_us" : 4.258
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24985700,
-      "median_us" : 56.8,
-      "p10_us" : 55.4,
-      "p90_us" : 59.4
+      "setup_ns" : 25819100,
+      "median_us" : 56.2,
+      "p10_us" : 55.2,
+      "p90_us" : 59.1
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22294000,
+      "setup_ns" : 22253000,
       "median_us" : 2.4,
-      "p10_us" : 2.2,
-      "p90_us" : 2.8
+      "p10_us" : 2.1,
+      "p90_us" : 2.7
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 184424,
-      "median_us" : 8.656,
-      "p10_us" : 8.575,
-      "p90_us" : 8.766
+      "setup_ns" : 182180,
+      "median_us" : 8.676,
+      "p10_us" : 8.515,
+      "p90_us" : 8.816
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 176089,
-      "median_us" : 2.515,
-      "p10_us" : 2.474,
-      "p90_us" : 2.574
+      "setup_ns" : 288212,
+      "median_us" : 2.434,
+      "p10_us" : 2.404,
+      "p90_us" : 2.936
     } ]
   }, {
     "case" : "R4",
@@ -13036,66 +13036,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 793739,
-      "median_us" : 21.138,
-      "p10_us" : 20.778,
-      "p90_us" : 21.809
+      "setup_ns" : 776336,
+      "median_us" : 21.338,
+      "p10_us" : 20.958,
+      "p90_us" : 22.12
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 697254,
-      "median_us" : 12.834,
-      "p10_us" : 5.58,
-      "p90_us" : 39.501
+      "setup_ns" : 694618,
+      "median_us" : 5.851,
+      "p10_us" : 5.68,
+      "p90_us" : 6.101
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1450969,
-      "median_us" : 15.468,
-      "p10_us" : 14.797,
-      "p90_us" : 19.765
+      "setup_ns" : 1371123,
+      "median_us" : 14.096,
+      "p10_us" : 13.554,
+      "p90_us" : 18.102
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 1078555,
-      "median_us" : 2.835,
-      "p10_us" : 2.435,
-      "p90_us" : 3.807
+      "setup_ns" : 971900,
+      "median_us" : 2.865,
+      "p10_us" : 2.475,
+      "p90_us" : 3.806
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 25396700,
-      "median_us" : 55.6,
+      "setup_ns" : 24921300,
+      "median_us" : 55.7,
       "p10_us" : 55.3,
-      "p90_us" : 59.2
+      "p90_us" : 57.1
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22719200,
+      "setup_ns" : 22101200,
       "median_us" : 1.9,
       "p10_us" : 1.7,
-      "p90_us" : 2.3
+      "p90_us" : 2.4
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 478567,
-      "median_us" : 7.724,
-      "p10_us" : 7.654,
-      "p90_us" : 7.814
+      "setup_ns" : 486881,
+      "median_us" : 7.744,
+      "p10_us" : 7.673,
+      "p90_us" : 7.815
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 316874,
-      "median_us" : 2.053,
-      "p10_us" : 2.004,
-      "p90_us" : 2.124
+      "setup_ns" : 377484,
+      "median_us" : 1.913,
+      "p10_us" : 1.834,
+      "p90_us" : 1.994
     } ]
   }, {
     "case" : "R5",
@@ -13273,66 +13273,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 708824,
-      "median_us" : 28.0,
-      "p10_us" : 27.57,
-      "p90_us" : 28.972
+      "setup_ns" : 595118,
+      "median_us" : 27.539,
+      "p10_us" : 26.998,
+      "p90_us" : 28.411
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 651721,
-      "median_us" : 8.786,
-      "p10_us" : 8.545,
-      "p90_us" : 9.126
+      "setup_ns" : 661137,
+      "median_us" : 9.116,
+      "p10_us" : 8.755,
+      "p90_us" : 18.203
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1587987,
-      "median_us" : 16.75,
-      "p10_us" : 15.808,
-      "p90_us" : 21.028
+      "setup_ns" : 1476203,
+      "median_us" : 16.74,
+      "p10_us" : 15.829,
+      "p90_us" : 20.697
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 971240,
-      "median_us" : 3.806,
-      "p10_us" : 3.417,
-      "p90_us" : 4.888
+      "setup_ns" : 907744,
+      "median_us" : 3.717,
+      "p10_us" : 3.376,
+      "p90_us" : 4.799
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 25211300,
-      "median_us" : 58.3,
-      "p10_us" : 57.4,
-      "p90_us" : 61.6
+      "setup_ns" : 25788400,
+      "median_us" : 57.4,
+      "p10_us" : 57.0,
+      "p90_us" : 59.2
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22529500,
+      "setup_ns" : 21960900,
       "median_us" : 2.9,
-      "p10_us" : 2.7,
-      "p90_us" : 3.5
+      "p10_us" : 2.6,
+      "p90_us" : 3.3
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 330419,
-      "median_us" : 9.908,
-      "p10_us" : 9.768,
-      "p90_us" : 10.199
+      "setup_ns" : 277883,
+      "median_us" : 9.848,
+      "p10_us" : 9.738,
+      "p90_us" : 10.008
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 215631,
-      "median_us" : 3.847,
-      "p10_us" : 3.806,
-      "p90_us" : 3.907
+      "setup_ns" : 189043,
+      "median_us" : 3.216,
+      "p10_us" : 3.116,
+      "p90_us" : 3.356
     } ]
   }, {
     "case" : "X1",
@@ -13510,66 +13510,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 693867,
-      "median_us" : 25.977,
-      "p10_us" : 25.516,
-      "p90_us" : 27.039
+      "setup_ns" : 561937,
+      "median_us" : 25.286,
+      "p10_us" : 24.805,
+      "p90_us" : 26.097
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 596892,
+      "setup_ns" : 641251,
       "median_us" : 7.934,
-      "p10_us" : 7.714,
-      "p90_us" : 8.265
+      "p10_us" : 7.764,
+      "p90_us" : 8.235
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1358532,
-      "median_us" : 20.357,
-      "p10_us" : 17.802,
-      "p90_us" : 32.609
+      "setup_ns" : 1377925,
+      "median_us" : 16.399,
+      "p10_us" : 15.649,
+      "p90_us" : 20.598
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 2509146,
-      "median_us" : 5.299,
-      "p10_us" : 4.539,
-      "p90_us" : 7.073
+      "setup_ns" : 830925,
+      "median_us" : 4.338,
+      "p10_us" : 3.938,
+      "p90_us" : 5.259
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 30911300,
+      "setup_ns" : 25008100,
       "median_us" : 58.9,
-      "p10_us" : 57.9,
-      "p90_us" : 62.1
+      "p10_us" : 57.8,
+      "p90_us" : 62.0
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22558600,
-      "median_us" : 6.0,
-      "p10_us" : 5.8,
+      "setup_ns" : 22150000,
+      "median_us" : 5.9,
+      "p10_us" : 5.7,
       "p90_us" : 6.3
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 237390,
-      "median_us" : 8.565,
-      "p10_us" : 8.495,
-      "p90_us" : 8.676
+      "setup_ns" : 184935,
+      "median_us" : 8.616,
+      "p10_us" : 8.505,
+      "p90_us" : 8.836
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 283464,
-      "median_us" : 3.587,
-      "p10_us" : 3.536,
-      "p90_us" : 3.656
+      "setup_ns" : 168445,
+      "median_us" : 3.616,
+      "p10_us" : 3.567,
+      "p90_us" : 3.707
     } ]
   }, {
     "case" : "X2",
@@ -13751,66 +13751,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 675604,
-      "median_us" : 25.076,
-      "p10_us" : 24.624,
-      "p90_us" : 26.128
+      "setup_ns" : 494144,
+      "median_us" : 25.216,
+      "p10_us" : 24.815,
+      "p90_us" : 25.977
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 516045,
-      "median_us" : 6.943,
-      "p10_us" : 6.793,
-      "p90_us" : 7.213
+      "setup_ns" : 610645,
+      "median_us" : 7.143,
+      "p10_us" : 6.762,
+      "p90_us" : 14.477
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1285880,
-      "median_us" : 16.039,
-      "p10_us" : 15.378,
-      "p90_us" : 20.267
+      "setup_ns" : 1305003,
+      "median_us" : 15.749,
+      "p10_us" : 15.327,
+      "p90_us" : 19.826
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 798647,
-      "median_us" : 3.476,
-      "p10_us" : 3.095,
-      "p90_us" : 4.528
+      "setup_ns" : 783189,
+      "median_us" : 3.517,
+      "p10_us" : 3.125,
+      "p90_us" : 4.569
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 25129000,
-      "median_us" : 59.0,
-      "p10_us" : 58.0,
-      "p90_us" : 62.0
+      "setup_ns" : 25380700,
+      "median_us" : 59.4,
+      "p10_us" : 57.9,
+      "p90_us" : 63.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22646600,
+      "setup_ns" : 22247400,
       "median_us" : 2.3,
       "p10_us" : 2.1,
-      "p90_us" : 2.9
+      "p90_us" : 3.0
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 176259,
-      "median_us" : 8.435,
-      "p10_us" : 8.365,
-      "p90_us" : 8.546
+      "setup_ns" : 182030,
+      "median_us" : 8.485,
+      "p10_us" : 8.355,
+      "p90_us" : 8.636
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 301697,
-      "median_us" : 2.655,
-      "p10_us" : 2.625,
-      "p90_us" : 2.785
+      "setup_ns" : 174496,
+      "median_us" : 2.735,
+      "p10_us" : 2.695,
+      "p90_us" : 2.775
     } ]
   }, {
     "case" : "U1",
@@ -13988,66 +13988,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 719915,
-      "median_us" : 88.82,
-      "p10_us" : 87.358,
-      "p90_us" : 93.118
+      "setup_ns" : 900140,
+      "median_us" : 87.94,
+      "p10_us" : 86.647,
+      "p90_us" : 92.277
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 626234,
-      "median_us" : 41.035,
-      "p10_us" : 40.073,
-      "p90_us" : 45.563
+      "setup_ns" : 680733,
+      "median_us" : 42.296,
+      "p10_us" : 41.565,
+      "p90_us" : 44.11
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1394968,
-      "median_us" : 33.651,
-      "p10_us" : 32.729,
-      "p90_us" : 38.21
+      "setup_ns" : 1390878,
+      "median_us" : 33.711,
+      "p10_us" : 32.819,
+      "p90_us" : 37.908
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 878531,
-      "median_us" : 9.457,
-      "p10_us" : 9.137,
-      "p90_us" : 10.549
+      "setup_ns" : 898607,
+      "median_us" : 9.818,
+      "p10_us" : 9.487,
+      "p90_us" : 10.94
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24891700,
-      "median_us" : 68.6,
-      "p10_us" : 67.1,
-      "p90_us" : 72.1
+      "setup_ns" : 25108600,
+      "median_us" : 69.9,
+      "p10_us" : 67.4,
+      "p90_us" : 72.9
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22615200,
-      "median_us" : 12.5,
-      "p10_us" : 12.3,
-      "p90_us" : 12.8
+      "setup_ns" : 21833500,
+      "median_us" : 12.1,
+      "p10_us" : 11.9,
+      "p90_us" : 12.5
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 200233,
-      "median_us" : 25.706,
-      "p10_us" : 25.486,
-      "p90_us" : 26.108
+      "setup_ns" : 324859,
+      "median_us" : 25.747,
+      "p10_us" : 25.276,
+      "p90_us" : 26.568
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 193821,
-      "median_us" : 107.355,
-      "p10_us" : 11.611,
-      "p90_us" : 155.402
+      "setup_ns" : 308418,
+      "median_us" : 11.631,
+      "p10_us" : 11.461,
+      "p90_us" : 11.882
     } ]
   }, {
     "case" : "B1",
@@ -14225,66 +14225,66 @@
       "impl" : "EXIficient",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 596441,
-      "median_us" : 14.336,
-      "p10_us" : 14.055,
-      "p90_us" : 14.827
+      "setup_ns" : 593905,
+      "median_us" : 14.426,
+      "p10_us" : 14.166,
+      "p90_us" : 14.817
     }, {
       "impl" : "EXIficient",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 578979,
-      "median_us" : 2.624,
-      "p10_us" : 2.444,
-      "p90_us" : 2.866
+      "setup_ns" : 644487,
+      "median_us" : 7.694,
+      "p10_us" : 7.393,
+      "p90_us" : 9.056
     }, {
       "impl" : "Nagasena",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 1659166,
-      "median_us" : 11.361,
-      "p10_us" : 10.779,
-      "p90_us" : 15.478
+      "setup_ns" : 1610857,
+      "median_us" : 11.09,
+      "p10_us" : 10.64,
+      "p90_us" : 15.188
     }, {
       "impl" : "Nagasena",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 801713,
-      "median_us" : 2.375,
-      "p10_us" : 1.984,
-      "p90_us" : 3.326
+      "setup_ns" : 844839,
+      "median_us" : 2.484,
+      "p10_us" : 2.004,
+      "p90_us" : 3.417
     }, {
       "impl" : "Nagasena.NET",
       "op" : "encode",
       "input" : "xml",
-      "setup_ns" : 24615300,
-      "median_us" : 54.7,
-      "p10_us" : 53.7,
-      "p90_us" : 56.9
+      "setup_ns" : 28021100,
+      "median_us" : 53.6,
+      "p10_us" : 53.3,
+      "p90_us" : 55.0
     }, {
       "impl" : "Nagasena.NET",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 22198200,
-      "median_us" : 1.5,
-      "p10_us" : 1.3,
-      "p90_us" : 1.8
+      "setup_ns" : 21962900,
+      "median_us" : 1.4,
+      "p10_us" : 1.2,
+      "p90_us" : 1.7
     }, {
       "impl" : "exip",
       "op" : "encode",
       "input" : "events",
-      "setup_ns" : 183903,
-      "median_us" : 5.951,
-      "p10_us" : 5.9,
-      "p90_us" : 6.02
+      "setup_ns" : 182911,
+      "median_us" : 5.97,
+      "p10_us" : 5.911,
+      "p90_us" : 6.041
     }, {
       "impl" : "exip",
       "op" : "decode",
       "input" : "exi",
-      "setup_ns" : 297279,
-      "median_us" : 1.262,
-      "p10_us" : 1.232,
-      "p90_us" : 1.283
+      "setup_ns" : 177592,
+      "median_us" : 1.222,
+      "p10_us" : 1.202,
+      "p90_us" : 1.252
     } ]
   } ]
 }

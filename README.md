@@ -101,9 +101,9 @@ From the committed report (`reports/latest.md`, every cell and message).
 ### rexi
 
 The Rust implementation. Its decoder is below EXIficient's median on all 14
-cases in P0 and P2, by 1.25× or more (U1 4.4 against 5.8 µs in P0, 4.1 against
-6.1 in P2); its encoder, from XML with parsing included, is below EXIficient's
-too.
+cases in P0 and P2, by 1.12× or more (U1 4.4 against 5.7 µs in P0, 4.0 against
+6.2 in P2), and below jexi's or within 3 % of it on all of them. Its encoder,
+from XML with parsing included, is below EXIficient's and jexi's too.
 
 ### jexi
 
@@ -111,13 +111,13 @@ The Julia port of rexi, driven through `bin/jexi`, which takes rexi's command
 line and prints the same bench JSON (Julia 1.12.7, with a PrecompileTools
 workload). Same results as rexi in every cell it takes part in.
 
-- **Decoding**: 0.4–6.0 µs median, below EXIficient's on every case but P0 U1
-  (6.0 against 5.8), 0.92–1.36× rexi. Its p90 is higher than EXIficient's
+- **Decoding**: 0.45–5.9 µs median, below EXIficient's on every case but P0 U1
+  (5.9 against 5.7), 0.95–1.34× rexi. Its p90 is higher than EXIficient's
   (collector pauses).
-- **Encoding from XML** (parsing included): 2.9–21.6 µs, below EXIficient's on
-  all 14 cases in P0 and P2 (U1 20.3 against 27.3 in P0), 0.76–0.97× rexi. jexi
+- **Encoding from XML** (parsing included): 2.9–21.1 µs, below EXIficient's on
+  all 14 cases in P0 and P2 (U1 21.1 against 27.4 in P0), 1.20–1.90× rexi. jexi
   streams XML.jl's tokens straight into the encoder.
-- **Encoding from events**: 1.7–6 µs (U1 14.4–14.7), 1.2–1.8× rexi.
+- **Encoding from events**: 1.6–5.9 µs (U1 14.3–14.5), 1.25–2.08× rexi.
 
 ### Nagasena for .NET
 
