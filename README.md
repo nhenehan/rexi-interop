@@ -95,15 +95,33 @@ From the committed report (`reports/latest.md`, every cell and message).
   non-strict nor compression).
 - **Byte equality.** On P0 and P2, every encoder's bytes equal EXIficient's on
   every case but X2.
-- **Speed.** See `reports/latest.md` for every timing; the sections below give
-  the headlines.
+- **Timing.** In `reports/latest.md`, one table per profile.
 
-### rexi
+### Missing and incompatible features
 
-The Rust implementation. Its decoder is below EXIficient's median on all 14
-cases in P0 and P2, by 1.12× or more (U1 4.4 against 5.7 µs in P0, 4.0 against
-6.2 in P2), and below jexi's or within 3 % of it on all of them. Its encoder,
-from XML with parsing included, is below EXIficient's and jexi's too.
+What each library leaves out, as far as this matrix and the W3C test suite show
+(see [W3C EXI test suite](#w3c-exi-test-suite) below).
+
+- **EXIficient** drops `xsi:nil="false"` when it encodes (X2), so its stream
+  decodes without that attribute. Every other encoder keeps it. It also drops
+  whitespace-only text between tags in mixed content (see
+  [The exip driver](#method)); rexi does the same.
+- **Nagasena for .NET** has no schema compiler: it reads only schemas compiled
+  by Java Nagasena (the harness compiles each XSD with Java Nagasena first). Its
+  encoder never sets a DEFLATE level (the default is commented out in
+  `src/Nagasena/Sax/Transmogrifier.cs` line 500, "REVISIT: compression"), so its
+  P3 streams hold stored, uncompressed blocks: 5–46 % larger than the other
+  encoders' (S1 74 B against 64, U1 714 against 584). They are still valid EXI,
+  and every decoder reads them.
+- **exip** has no XML front end. The harness drives it with an event stream
+  parsed beforehand, converting each value to the type exip asks for (see
+  [The exip driver](#method)).
+- **rexi and jexi** implement strict mode only, without compression, so they
+  take no part in P1 and P3. They also refuse, with an error, schema-less
+  streams (built-in grammars), wildcard content (`xs:any`, `xs:anyAttribute`),
+  fragments, `Preserve.lexicalValues`, datatype representation maps, and
+  restricted-character-set strings whose `xs:pattern` they cannot read. jexi is
+  a port of rexi and has the same gaps.
 
 ### jexi
 
@@ -111,29 +129,18 @@ The Julia port of rexi, driven through `bin/jexi`, which takes rexi's command
 line and prints the same bench JSON (Julia 1.12.7, with a PrecompileTools
 workload). Same results as rexi in every cell it takes part in.
 
-- **Decoding**: 0.45–5.9 µs median, below EXIficient's on every case but P0 U1
-  (5.9 against 5.7), 0.95–1.34× rexi. Its p90 is higher than EXIficient's
-  (collector pauses).
-- **Encoding from XML** (parsing included): 2.9–21.1 µs, below EXIficient's on
-  all 14 cases in P0 and P2 (U1 21.1 against 27.4 in P0), 1.20–1.90× rexi. jexi
-  streams XML.jl's tokens straight into the encoder.
-- **Encoding from events**: 1.6–5.9 µs (U1 14.3–14.5), 1.25–2.08× rexi.
-
 ### Nagasena for .NET
 
 svn r1188 (2016-08-22, version 0000.0002.0056.1, the port's last change), built
 for .NET 10.
 
-- **Correct and interoperable on every profile.** It reads and is read by all four
-  other implementations in P0–P3 (rexi only where rexi takes part: P0, P2), on all
-  14 cases. On P0 and P2 its bytes equal EXIficient's on every case, and so also
-  Java Nagasena's and rexi's.
+- **Interoperable on every profile.** It reads and is read by all other
+  implementations in P0–P3 (rexi and jexi only where they take part: P0, P2), on
+  all 14 cases. On P0 and P2 its bytes equal EXIficient's on every case but X2,
+  and so also Java Nagasena's and rexi's.
 - **X2** fails exactly as Java Nagasena does: EXIficient drops `xsi:nil="false"`, so
   its stream decodes without the attribute (see above). Its own X2 stream is the
   same as Java Nagasena's, one byte longer than EXIficient's.
-- **Speed.** On P0–P2 it is about as fast as Java Nagasena. Compression encode
-  (P3) is 2–6× slower than Java Nagasena whatever the document size: most of it
-  is SharpZipLib's `Deflater.Reset()`, which runs three times per stream.
 
 ## License
 
@@ -232,8 +239,7 @@ checked out only with `--sources` (Subversion is needed for Nagasena), into
     median and p10–p90 in microseconds. The warm-up is timed because a JIT
     reaches its optimized code after some time, not after a count: .NET's tiered
     JIT waits for about 100 ms without new compiles and then optimizes in stages.
-    With 2000 runs only (about 10 ms on a small case), Nagasena.NET was timed on
-    unoptimized code: S3 P0 14–22 µs instead of 4, U1 123–143 instead of 19. Its
+    With a count-only warm-up, Nagasena.NET was timed on unoptimized code; its
     medians level off after 2–3 s of warm-up (measured 2026-10-18). A full run
     takes about 36 minutes; `--warmup-ms 0` gives the old count-only warm-up.
 - **Nagasena for .NET.** The C# port reads compiled schemas but has no schema
