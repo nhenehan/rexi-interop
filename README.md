@@ -199,7 +199,7 @@ Thank you.
 Third parties live in
 `${REXI_INTEROP_THIRD_PARTY:-~/.cache/rexi-interop/third_party}`, never in this
 tree; `third-party.lock` pins them (`scripts/fetch-third-party.sh --check`,
-`--update NAME`).
+`--update NAME`). rexi and jexi are pinned by release tag, the others by commit.
 `sources.lock` pins the upstream sources of the packaged Java builds; they are
 checked out only with `--sources` (Subversion is needed for Nagasena), into
 `<cache>/sources`, and are never built or run by the harness.

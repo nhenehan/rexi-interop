@@ -21,6 +21,13 @@ TP="$("$ROOT/scripts/fetch-third-party.sh" --print-dir)"
 }
 
 pin() { awk -v n="$1" '!/^[[:space:]]*(#|$)/ && $1 == n { print $3 }' "$ROOT/third-party.lock"; }
+# A git pin for the report: the tag and the commit it names, or the commit alone.
+pin_label() {
+    local p head
+    p="$(pin "$1")"
+    head="$(git -C "$TP/$1" rev-parse --short=12 HEAD)"
+    if [[ "$p" =~ ^[0-9a-f]{40}$ ]]; then echo "$head"; else echo "$p ($head)"; fi
+}
 
 echo "building drivers/exip" >&2
 cmake -S "$ROOT/drivers/exip" -B "$ROOT/build/exip" -DEXIP_DIR="$TP/exip" \
@@ -51,7 +58,7 @@ JEXI_ARGS=()
 JEXI_META=()
 if command -v julia >/dev/null && [[ -x "$TP/jexi/bin/jexi" ]]; then
     JEXI_ARGS=(--jexi "$TP/jexi/bin/jexi")
-    JEXI_META=(--meta "jexi=$(pin jexi | cut -c1-12), bin/jexi ($(julia --version))")
+    JEXI_META=(--meta "jexi=$(pin_label jexi), bin/jexi ($(julia --version))")
 else
     echo "warning: julia or the jexi checkout not found; the jexi column is left out" >&2
 fi
@@ -73,6 +80,6 @@ java -jar harness/target/rexi-interop-harness.jar \
     --meta "EXIficient=1.0.7 (Maven Central), in-process" \
     --meta "Nagasena=W3C exi-testsuite $(pin exi-testsuite | cut -c1-12) candidates/openexi/lib, in-process" \
     --meta "exip=nhenehan/exip $(pin exip | cut -c1-12), Release build, drivers/exip ($(cc --version | head -1))" \
-    --meta "rexi=$(pin rexi | cut -c1-12), release build, rexi bench ($(rustc --version))" \
+    --meta "rexi=$(pin_label rexi), release build, rexi bench ($(rustc --version))" \
     "${CS_META[@]}" "${JEXI_META[@]}" \
     "$@" 2> >(grep -v '^SLF4J' >&2)

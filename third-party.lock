@@ -1,8 +1,9 @@
 # Implementations and data under test, fetched by scripts/fetch-third-party.sh
 # into ${REXI_INTEROP_THIRD_PARTY:-${XDG_CACHE_HOME:-~/.cache}/rexi-interop/third_party}
-# (never into this working tree). Pins move only through --update NAME.
+# (never into this working tree). A pin moves through --update NAME (a commit)
+# or by writing a release tag by hand.
 #
-# Each line: <name> <git url or path relative to this repo> <40-char commit> [sparse path]
+# Each line: <name> <git url or path relative to this repo> <40-char commit or tag> [sparse path]
 # A sparse path checks out only that directory (blobs fetched on demand).
 #
 # exip:          C implementation (libexip for the exip driver; exipd).
@@ -17,6 +18,6 @@
 
 exip https://github.com/nhenehan/exip.git b2870c106f0cc88fd199208f724ce575df150444
 exi-testsuite https://github.com/w3c/exi-testsuite.git 23d5f587ba3ec281f1a6a8182c1450cb870b469e candidates/openexi/lib
-rexi https://github.com/nhenehan/rexi.git db7bb96f99fbf48b2b69235c214c42053cda99cb
-jexi https://github.com/nhenehan/jexi.git ac75e80cfd149c434d94a9f754c54f9bf97cffb2
+rexi https://github.com/nhenehan/rexi.git v0.2.0
+jexi https://github.com/nhenehan/jexi.git v0.2.0
 nagasenacs svn:https://svn.code.sf.net/p/openexi/code 1188 trunk/nagasenacs
