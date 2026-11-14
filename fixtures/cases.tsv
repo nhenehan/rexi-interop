@@ -1,4 +1,4 @@
-id	dir	xml	main_xsd	import_xsds	origin
+id	dir	xml	main_xsd	import_xsds	origin	options
 S1	seed	order-complex.xml	order-complex.xsd		exip interop-tests
 S2	seed	telemetry-complex.xml	telemetry-complex.xsd		exip interop-tests
 S3	seed	inheritance-extension.xml	inheritance-extension.xsd		exip interop-tests
@@ -13,3 +13,4 @@ X1	xsi	shapes.xml	shapes.xsd		xsi:type casts (rexi-interop)
 X2	xsi	readings.xml	readings.xsd		xsi:nil (rexi-interop)
 U1	utf8	multilingual.xml	multilingual.xsd		multilingual UTF-8 (rexi-interop)
 B1	binary	binary-types.xml	binary-types.xsd		hexBinary / base64Binary (rexi-interop)
+F1	fragment	home-water.xml	home-water.xsd		home water system log as an EXI fragment (rexi-interop)	fragment

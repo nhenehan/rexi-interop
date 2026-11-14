@@ -107,14 +107,14 @@ public final class Main {
     }
 
     static CaseRun runCase(Case c, Profile p, List<Codec> codecs, Bench bench) throws Exception {
-        List<Ev> reference = Codec.referenceEvents(Files.readAllBytes(c.xml()));
+        List<Ev> reference = Codec.referenceEvents(c);
         Map<String, Outcome> encodes = new LinkedHashMap<>();
         Map<String, Map<String, Outcome>> decodes = new LinkedHashMap<>();
         Map<String, String> bytes = new LinkedHashMap<>();
         List<TimingRow> timings = new ArrayList<>();
 
         for (Codec enc : codecs) {
-            String why = enc.unsupported(p);
+            String why = enc.unsupported(c, p);
             Outcome[] slot = new Outcome[1];
             encodes.put(enc.name(), why != null ? Outcome.unsupported(why)
                     : attempt(() -> slot[0] = enc.encode(c, p, Bench.ONCE), slot));
@@ -123,7 +123,7 @@ public final class Main {
             Outcome e = encodes.get(enc.name());
             Map<String, Outcome> row = new LinkedHashMap<>();
             for (Codec dec : codecs) {
-                String why = dec.unsupported(p);
+                String why = dec.unsupported(c, p);
                 if (e.status() != Status.OK) {
                     row.put(dec.name(), e.status() == Status.UNSUPPORTED ? e : Outcome.fail("encoder failed"));
                 } else if (why != null) {
@@ -155,7 +155,7 @@ public final class Main {
 
         if (bench != null && ref.status() == Status.OK) {
             for (Codec codec : codecs) {
-                if (codec.unsupported(p) != null) {
+                if (codec.unsupported(c, p) != null) {
                     continue;
                 }
                 timings.add(timed(codec.name(), "encode", () -> codec.encode(c, p, bench)));

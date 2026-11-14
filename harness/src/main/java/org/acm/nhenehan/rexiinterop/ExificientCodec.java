@@ -50,6 +50,7 @@ final class ExificientCodec implements Codec {
         });
         f.setFidelityOptions(p.strict ? FidelityOptions.createStrict() : FidelityOptions.createDefault());
         f.setEncodingOptions(EncodingOptions.createDefault());
+        f.setFragment(c.fragment());
         return f;
     }
 
@@ -66,9 +67,13 @@ final class ExificientCodec implements Codec {
             ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
             EXIResult result = new EXIResult(f);
             result.setOutputStream(out);
-            XMLReader r = spf.newSAXParser().getXMLReader();
-            r.setContentHandler(result.getHandler());
-            r.parse(new InputSource(new ByteArrayInputStream(xml)));
+            if (c.fragment()) {
+                Codec.parseXml(c, xml, result.getHandler());
+            } else {
+                XMLReader r = spf.newSAXParser().getXMLReader();
+                r.setContentHandler(result.getHandler());
+                r.parse(new InputSource(new ByteArrayInputStream(xml)));
+            }
             last[0] = out.toByteArray();
         };
         once.run();

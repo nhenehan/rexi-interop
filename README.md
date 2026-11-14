@@ -115,13 +115,18 @@ What each library leaves out, as far as this matrix and the W3C test suite show
   and every decoder reads them.
 - **exip** has no XML front end. The harness drives it with an event stream
   parsed beforehand, converting each value to the type exip asks for (see
-  [The exip driver](#method)).
+  [The exip driver](#method)). It also builds no schema-informed fragment
+  grammar: with a schema and the fragment option, its parser and serializer
+  return `EXIP_NOT_IMPLEMENTED_YET` ("TODO: create a Schema-informed Fragment
+  Grammar", `src/contentIO/src/EXIParser.c` line 146 and `EXISerializer.c` line
+  174), so it takes no part in F1.
 - **rexi and jexi** implement strict mode only, without compression, so they
   take no part in P1 and P3. They also refuse, with an error, schema-less
   streams (built-in grammars), wildcard content (`xs:any`, `xs:anyAttribute`),
-  fragments, `Preserve.lexicalValues`, datatype representation maps, and
+  `Preserve.lexicalValues`, datatype representation maps, and
   restricted-character-set strings whose `xs:pattern` they cannot read. jexi is
-  a port of rexi and has the same gaps.
+  a port of rexi and has the same gaps, and one more: rexi encodes and decodes
+  schema-informed fragments (case F1) since 0.3.1, jexi does not yet.
 
 ### jexi
 
@@ -154,7 +159,7 @@ Some files keep the license of the project they come from:
 - `fixtures/rexi/` (cases R1–R5) are copied from rexi's
   `crates/rexi-tests/fixtures/interop/` ([nhenehan/rexi](https://github.com/nhenehan/rexi)),
   under rexi's BSD 3-Clause license.
-- The other fixtures (X1, X2, U1, B1) were written for this repository.
+- The other fixtures (X1, X2, U1, B1, F1) were written for this repository.
 
 The third parties that the scripts and builds download (EXIficient from Maven
 Central, Nagasena and Nagasena for .NET, exip, rexi, jexi, the W3C exi-testsuite,
@@ -208,7 +213,7 @@ checked out only with `--sources` (Subversion is needed for Nagasena), into
 
 | path | contents |
 |---|---|
-| `fixtures/cases.tsv` | the cases: S1–S5 from exip's `interop-tests`, R1–R5 rexi's byte-exact fixtures, X1 `xsi:type` casts, X2 `xsi:nil`, U1 multilingual UTF-8 and B1 hexBinary / base64Binary (this repo) |
+| `fixtures/cases.tsv` | the cases: S1–S5 from exip's `interop-tests`, R1–R5 rexi's byte-exact fixtures, X1 `xsi:type` casts, X2 `xsi:nil`, U1 multilingual UTF-8, B1 hexBinary / base64Binary and F1 a home water system log sent as a fragment (this repo); the `options` column marks fragment cases |
 | `drivers/exip/` | `exip-driver`: encode from an event stream / decode to events, with timing loops (C, CMake) |
 | `drivers/nagasena-cs/` | `nagasena-cs-driver`: encode XML / decode to events with Nagasena for .NET, with timing loops (C#); `OpenEXI.Nagasena.csproj` builds the svn checkout with today's SDK (upstream used NAnt and .NET Framework 4.0) |
 | `harness/` | the matrix runner and report writer (Java 25, Maven; `mvn test` checks the comparison logic) |
@@ -220,6 +225,14 @@ checked out only with `--sources` (Subversion is needed for Nagasena), into
 - **Profiles.** P0 strict bit-packed, P1 non-strict bit-packed, P2 strict
   byte-aligned, P3 strict compression (the seed project's set). Options always
   travel out of band: no options document, no cookie.
+- **Fragments.** A case marked `fragment` in `cases.tsv` (F1) is an XML fragment:
+  several root elements with no wrapper, and every stream sets the EXI fragment
+  option ([EXI 8.5.2](https://www.w3.org/TR/exi/#informedFragGrammars)), so any
+  element the schema declares, global or local, may start it. A SAX parser
+  refuses several roots, so the harness parses the fragment inside a wrapper
+  element and hides the wrapper from EXIficient's and Nagasena's encoders.
+  Nagasena for .NET reads it with an `XmlReader` set to
+  `ConformanceLevel.Fragment`; rexi takes it as it is (`--fragment`).
 - **Correctness.** The reference is the XML's own event stream: `xsi:type` and
   `xsi:nil` first, other attributes sorted by local name then namespace, adjacent
   text merged, whitespace-only text dropped. Values compare as written, then as

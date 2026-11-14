@@ -81,7 +81,8 @@ final class Report {
         for (Case c : cases) {
             b.append("- ").append(c.id()).append(": `").append(c.xml().getFileName()).append("` against `")
                     .append(c.mainXsd().getFileName()).append('`')
-                    .append(c.importXsds().isEmpty() ? "" : " + imports").append(" — ").append(c.origin())
+                    .append(c.importXsds().isEmpty() ? "" : " + imports")
+                    .append(c.fragment() ? ", as a fragment (fragment option set)" : "").append(" — ").append(c.origin())
                     .append('\n');
         }
         b.append("\nAll profiles carry the options out of band: no options document, no cookie.\n");

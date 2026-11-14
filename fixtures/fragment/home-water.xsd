@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A house's water system log, sent as an EXI fragment: a run of events with no
+     wrapper element. The house has a main water meter, leak sensors, a shut-off
+     valve and a pump. Every element the schema declares, global or local, may
+     start the fragment (EXI 8.5.2). `device` is declared both globally and inside
+     Event with the same type, so the fragment lists it once; `reading` is only
+     declared locally. -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:interop:homewater"
+           xmlns="urn:interop:homewater" elementFormDefault="qualified">
+  <xs:simpleType name="Severity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="info"/>
+      <xs:enumeration value="warning"/>
+      <xs:enumeration value="alert"/>
+      <xs:enumeration value="critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ReadingFlag">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ok"/>
+      <xs:enumeration value="estimated"/>
+      <xs:enumeration value="frozen"/>
+      <xs:enumeration value="lowBattery"/>
+      <xs:enumeration value="tampered"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ReadingFlags">
+    <xs:list itemType="ReadingFlag"/>
+  </xs:simpleType>
+
+  <xs:complexType name="DeviceRef">
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="room" type="xs:string" use="required"/>
+    <xs:attribute name="channel" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:element name="device" type="DeviceRef"/>
+
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element name="time" type="xs:dateTime"/>
+      <xs:element name="device" type="DeviceRef"/>
+    </xs:sequence>
+    <xs:attribute name="seq" type="xs:unsignedInt" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="Reading">
+    <xs:sequence>
+      <xs:element name="value" type="xs:double"/>
+      <xs:element name="flags" type="ReadingFlags"/>
+    </xs:sequence>
+    <xs:attribute name="unit" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- A flow rate plus the meter's running total. -->
+  <xs:complexType name="FlowReading">
+    <xs:complexContent>
+      <xs:extension base="Reading">
+        <xs:sequence>
+          <xs:element name="total" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="leak">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="Event">
+          <xs:sequence>
+            <xs:element name="severity" type="Severity"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="acknowledged" type="xs:boolean" minOccurs="0"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="meterReport">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="Event">
+          <xs:sequence>
+            <xs:element name="reading" type="Reading" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="valveCommand">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="Event">
+          <xs:sequence>
+            <xs:choice>
+              <xs:element name="open" type="xs:boolean"/>
+              <xs:element name="close" type="xs:boolean"/>
+              <xs:element name="setFlowLimit" type="xs:decimal"/>
+              <xs:element name="raw" type="xs:hexBinary"/>
+            </xs:choice>
+            <xs:element name="result" type="xs:unsignedShort" nillable="true"/>
+          </xs:sequence>
+          <xs:attribute name="by" type="xs:string"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="heartbeat">
+    <xs:complexType>
+      <xs:attribute name="at" type="xs:dateTime" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<heartbeat xmlns="urn:interop:homewater" at="2026-11-13T08:00:00Z"/>
+<leak xmlns="urn:interop:homewater" seq="4711">
+  <time>2026-11-13T08:15:02Z</time>
+  <device id="leak-2" room="Küche" channel="floor"/>
+  <severity>alert</severity>
+  <text>Water on the floor under the sink</text>
+  <acknowledged>false</acknowledged>
+</leak>
+<meterReport xmlns="urn:interop:homewater" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" seq="4712">
+  <time>2026-11-13T08:15:03.125Z</time>
+  <device id="meter-main" room="Basement"/>
+  <reading unit="bar">
+    <value>3.15</value>
+    <flags>ok</flags>
+  </reading>
+  <reading xsi:type="FlowReading" unit="L/min">
+    <value>12.4</value>
+    <flags>ok estimated</flags>
+    <total>183402.75</total>
+  </reading>
+</meterReport>
+<reading xmlns="urn:interop:homewater" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FlowReading" unit="L/min">
+  <value>11.9</value>
+  <flags>frozen lowBattery</flags>
+  <total>183403.125</total>
+</reading>
+<device xmlns="urn:interop:homewater" id="valve-main" room="Basement"/>
+<valveCommand xmlns="urn:interop:homewater" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" seq="4713" by="app-phone">
+  <time>2026-11-13T08:16:40Z</time>
+  <device id="valve-main" room="Basement" channel="main"/>
+  <setFlowLimit>12.5</setFlowLimit>
+  <result xsi:nil="true"/>
+</valveCommand>
+<valveCommand xmlns="urn:interop:homewater" seq="4714">
+  <time>2026-11-13T08:16:41Z</time>
+  <device id="pump-1" room="Garage"/>
+  <raw>0A1BFF</raw>
+  <result>0</result>
+</valveCommand>
+<leak xmlns="urn:interop:homewater" seq="4715">
+  <time>2026-11-13T08:17:00Z</time>
+  <device id="leak-5" room="Waschküche"/>
+  <severity>critical</severity>
+  <text>Wasser am Boden: Feuchte 98 %, Rohrtemperatur 4 °C</text>
+</leak>
