@@ -22,7 +22,7 @@ import org.xml.sax.InputSource;
 
 /**
  * An implementation driven through its own benchmark program: rexi's
- * `rexi bench`, jexi's `jexi bench` (the same command line), the exip driver or
+ * `rexi bench`, EXIFormat's `exiformat bench` (the same command line), the exip driver or
  * the Nagasena for .NET driver. The program times itself in-process and
  * prints one JSON object; process start-up is never in the numbers.
  */
@@ -152,15 +152,15 @@ abstract class DriverCodec implements Codec {
         }
     }
 
-    // --------------------------------------------------------------- jexi
+    // ---------------------------------------------------------- EXIFormat
 
     /**
-     * jexi, the Julia implementation: `bin/jexi` takes rexi's command line and
+     * EXIFormat, the Julia implementation: `bin/exiformat` takes rexi's command line and
      * prints the same JSON, and it supports the same profiles.
      */
-    static final class Jexi extends Rexi {
-        Jexi(Path binary, Path work) {
-            super(binary, work, "jexi");
+    static final class ExiFormat extends Rexi {
+        ExiFormat(Path binary, Path work) {
+            super(binary, work, "EXIFormat");
         }
 
         @Override

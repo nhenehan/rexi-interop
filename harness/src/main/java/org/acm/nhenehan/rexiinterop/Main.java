@@ -19,7 +19,7 @@ import org.acm.nhenehan.rexiinterop.Model.Status;
  *
  * <pre>
  *   java -jar rexi-interop-harness.jar --fixtures fixtures --rexi BIN --exip-driver BIN
- *        [--nagasena-cs-driver BIN] [--jexi BIN] --work DIR --out reports [--warmup N] [--warmup-ms MS] [--iterations N] [--cases S1,R2]
+ *        [--nagasena-cs-driver BIN] [--exiformat BIN] --work DIR --out reports [--warmup N] [--warmup-ms MS] [--iterations N] [--cases S1,R2]
  *        [--profiles P0,P2] [--no-timing] [--meta key=value ...]
  * </pre>
  */
@@ -73,8 +73,8 @@ public final class Main {
         }
         codecs.add(new DriverCodec.Exip(Path.of(require(a, "--exip-driver")), work));
         codecs.add(new DriverCodec.Rexi(Path.of(require(a, "--rexi")), work));
-        if (a.containsKey("--jexi")) {
-            codecs.add(new DriverCodec.Jexi(Path.of(a.get("--jexi")), work));
+        if (a.containsKey("--exiformat")) {
+            codecs.add(new DriverCodec.ExiFormat(Path.of(a.get("--exiformat")), work));
         }
 
         List<CaseRun> runs = new ArrayList<>();

@@ -4,7 +4,7 @@
 #
 #   scripts/fetch-third-party.sh                 check out every pin (a commit or a tag)
 #   scripts/fetch-third-party.sh --build         ... and build: exip (Release),
-#                                                rexi (release), jexi (Julia
+#                                                rexi (release), EXIFormat (Julia
 #                                                packages and precompile, when
 #                                                julia is found), Nagasena jars
 #                                                installed into ~/.m2 (the C#
@@ -233,10 +233,10 @@ build() {
         --target-dir "$DIR/rexi-target" -p rexi-xml --bin rexi
 
     if command -v julia >/dev/null; then
-        echo "instantiating and precompiling jexi in $DIR/jexi"
-        julia --startup-file=no --project="$DIR/jexi" -e 'using Pkg; Pkg.instantiate(); using JExi' >/dev/null
+        echo "instantiating and precompiling EXIFormat in $DIR/exiformat"
+        julia --startup-file=no --project="$DIR/exiformat" -e 'using Pkg; Pkg.instantiate(); using EXIFormat' >/dev/null
     else
-        echo "warning: julia not found; jexi is not built (its column is left out)" >&2
+        echo "warning: julia not found; EXIFormat is not built (its column is left out)" >&2
     fi
 
     local lib="$DIR/exi-testsuite/candidates/openexi/lib"

@@ -9,8 +9,8 @@
 # exip:          C implementation (libexip for the exip driver; exipd).
 # exi-testsuite: W3C EXI test suite; only Nagasena's jar is used.
 # rexi:          the Rust implementation (rexi CLI with `rexi bench`).
-# jexi:          the Julia implementation (bin/jexi, `jexi bench` with rexi's
-#                command line). Needs julia.
+# exiformat:     EXIFormat.jl, the Julia implementation (bin/exiformat,
+#                `exiformat bench` with rexi's command line). Needs julia.
 # nagasenacs:    Nagasena for .NET, the C# port of OpenEXI (Subversion only, on
 #                SourceForge). r1188 is its last change, version 0000.0002.0056.1.
 #                drivers/nagasena-cs builds it with the .NET SDK.
@@ -18,6 +18,6 @@
 
 exip https://github.com/nhenehan/exip.git b2870c106f0cc88fd199208f724ce575df150444
 exi-testsuite https://github.com/w3c/exi-testsuite.git 23d5f587ba3ec281f1a6a8182c1450cb870b469e candidates/openexi/lib
-rexi https://github.com/nhenehan/rexi.git v0.2.0
-jexi https://github.com/nhenehan/jexi.git v0.2.0
+rexi https://github.com/nhenehan/rexi.git v0.3.1
+exiformat https://github.com/nhenehan/EXIFormat.jl.git v0.1.0
 nagasenacs svn:https://svn.code.sf.net/p/openexi/code 1188 trunk/nagasenacs
