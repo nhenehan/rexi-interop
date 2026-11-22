@@ -81,7 +81,8 @@ final class Report {
         for (Case c : cases) {
             b.append("- ").append(c.id()).append(": `").append(c.xml().getFileName()).append("` against `")
                     .append(c.mainXsd().getFileName()).append('`')
-                    .append(c.importXsds().isEmpty() ? "" : " + imports").append(" — ").append(c.origin())
+                    .append(c.importXsds().isEmpty() ? "" : " + imports")
+                    .append(c.fragment() ? ", as a fragment (fragment option set)" : "").append(" — ").append(c.origin())
                     .append('\n');
         }
         b.append("\nAll profiles carry the options out of band: no options document, no cookie.\n");
@@ -136,8 +137,8 @@ final class Report {
             if (timing) {
                 b.append("\n### Timing: median µs (p10–p90)\n\n");
                 b.append("Encoders time their natural input: XML (parsing included) for EXIficient, ")
-                        .append("Nagasena (Java and .NET), rexi and jexi; a pre-parsed event stream for exip and for the ")
-                        .append("`events` rows of rexi and jexi. Decoders all decode EXIficient's stream. Schema compilation ")
+                        .append("Nagasena (Java and .NET), rexi and EXIFormat; a pre-parsed event stream for exip and for the ")
+                        .append("`events` rows of rexi and EXIFormat. Decoders all decode EXIficient's stream. Schema compilation ")
                         .append("is excluded.\n\n| implementation | op |");
                 for (CaseRun r : pr) {
                     b.append(' ').append(r.c().id()).append(" |");

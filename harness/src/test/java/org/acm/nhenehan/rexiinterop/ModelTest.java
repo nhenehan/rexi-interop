@@ -55,4 +55,13 @@ class ModelTest {
                 new Ev("SE", "{urn:x}c", null), new Ev("CH", null, "v"), Ev.of("EE"), Ev.of("EE"),
                 Ev.of("ED")), ev);
     }
+
+    @Test
+    void fragmentHasSeveralRootsAndNoWrapper() throws Exception {
+        String xml = "<a xmlns='urn:x'>1</a>\n<b xmlns='urn:y'/>\n";
+        Codec.SaxEvents h = new Codec.SaxEvents();
+        Codec.parseXml(true, xml.getBytes(StandardCharsets.UTF_8), h);
+        assertEquals(List.of(Ev.of("SD"), new Ev("SE", "{urn:x}a", null), new Ev("CH", null, "1"), Ev.of("EE"),
+                new Ev("SE", "{urn:y}b", null), Ev.of("EE"), Ev.of("ED")), h.events);
+    }
 }

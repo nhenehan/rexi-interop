@@ -4,7 +4,9 @@
 //   nagasena-cs-driver encode --xsc schema.xsc [stream options] [bench] --out out.exi in.xml
 //   nagasena-cs-driver decode --xsc schema.xsc [stream options] [bench] --events-out out.events in.exi
 //
-// stream options: --strict, --alignment bit-packed|byte-aligned|compression
+// stream options: --strict, --fragment, --alignment bit-packed|byte-aligned|compression
+// (--fragment: the input is an XML fragment, several root elements, and the EXI
+// body is a fragment, https://www.w3.org/TR/exi/#informedFragGrammars)
 // bench: --warmup N (default 20), --warmup-ms MS (default 0), --iterations N (default 200)
 //
 // Warm-up runs at least N times and for at least MS milliseconds. .NET's tiered
@@ -55,9 +57,12 @@ internal static class Driver {
         var opts = new Dictionary<string, string>();
         string? input = null;
         bool strict = false;
+        bool fragment = false;
         for (int i = 1; i < argv.Length; i++) {
             if (argv[i] == "--strict") {
                 strict = true;
+            } else if (argv[i] == "--fragment") {
+                fragment = true;
             } else if (argv[i].StartsWith("--", StringComparison.Ordinal) && i + 1 < argv.Length) {
                 opts[argv[i]] = argv[++i];
             } else if (input == null) {
@@ -94,20 +99,36 @@ internal static class Driver {
                 AlignmentType = alignment,
                 OutputOptions = HeaderOptionsOutputType.none,
                 OutputCookie = false,
+                Fragment = fragment,
             };
             long setup = Elapsed(t0);
             var buffer = new MemoryStream(1024);
             void Encode() {
                 buffer.SetLength(0);
                 t.OutputStream = buffer;
-                t.encode(new InputSource<Stream>(new MemoryStream(data, false)));
+                if (fragment) {
+                    // The port's own parser wants one root element: read the
+                    // fragment with an XmlReader that allows several, and pass its
+                    // events through the port's SAX adapter. Whitespace-only text is
+                    // skipped, as the harness compares without it.
+                    var settings = new System.Xml.XmlReaderSettings {
+                        ConformanceLevel = System.Xml.ConformanceLevel.Fragment,
+                        ValidationType = System.Xml.ValidationType.None,
+                        IgnoreWhitespace = true,
+                    };
+                    var handler = t.SAXTransmogrifier;
+                    var sax = new SaxAdapter { ContentHandler = handler, LexicalHandler = handler };
+                    sax.Parse(System.Xml.XmlReader.Create(new MemoryStream(data, false), settings), "");
+                } else {
+                    t.encode(new InputSource<Stream>(new MemoryStream(data, false)));
+                }
             }
             Encode();
             File.WriteAllBytes(output, buffer.ToArray());
             Report("xml", setup, Time(warmup, warmupMs, iterations, Encode));
         } else {
             string output = opts.GetValueOrDefault("--events-out") ?? throw new ArgumentException("--events-out is required");
-            var d = new EXIDecoder { GrammarCache = grammars, AlignmentType = alignment };
+            var d = new EXIDecoder { GrammarCache = grammars, AlignmentType = alignment, Fragment = fragment };
             long setup = Elapsed(t0);
             File.WriteAllText(output, Events(d, data), new UTF8Encoding(false));
             Report("exi", setup, Time(warmup, warmupMs, iterations, () => {

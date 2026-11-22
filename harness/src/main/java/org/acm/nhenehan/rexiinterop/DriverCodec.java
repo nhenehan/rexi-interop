@@ -22,7 +22,7 @@ import org.xml.sax.InputSource;
 
 /**
  * An implementation driven through its own benchmark program: rexi's
- * `rexi bench`, jexi's `jexi bench` (the same command line), the exip driver or
+ * `rexi bench`, EXIFormat's `exiformat bench` (the same command line), the exip driver or
  * the Nagasena for .NET driver. The program times itself in-process and
  * prints one JSON object; process start-up is never in the numbers.
  */
@@ -114,6 +114,9 @@ abstract class DriverCodec implements Codec {
             List<String> cmd = new ArrayList<>(List.of(binary.toString(), "bench", op, "--xsd",
                     c.xsds().stream().map(Path::toString).collect(Collectors.joining(",")), "--strict",
                     "--alignment", p.alignment == Model.Alignment.BYTE_ALIGNED ? "byte-aligned" : "bit-packed"));
+            if (c.fragment()) {
+                cmd.add("--fragment");
+            }
             return cmd;
         }
 
@@ -149,15 +152,20 @@ abstract class DriverCodec implements Codec {
         }
     }
 
-    // --------------------------------------------------------------- jexi
+    // ---------------------------------------------------------- EXIFormat
 
     /**
-     * jexi, the Julia implementation: `bin/jexi` takes rexi's command line and
+     * EXIFormat, the Julia implementation: `bin/exiformat` takes rexi's command line and
      * prints the same JSON, and it supports the same profiles.
      */
-    static final class Jexi extends Rexi {
-        Jexi(Path binary, Path work) {
-            super(binary, work, "jexi");
+    static final class ExiFormat extends Rexi {
+        ExiFormat(Path binary, Path work) {
+            super(binary, work, "EXIFormat");
+        }
+
+        @Override
+        public String unsupported(Case c, Profile p) {
+            return c.fragment() ? "fragments not implemented" : unsupported(p);
         }
     }
 
@@ -185,6 +193,16 @@ abstract class DriverCodec implements Codec {
             return null;
         }
 
+        /**
+         * exip builds no schema-informed fragment grammar: its parser and serializer
+         * return EXIP_NOT_IMPLEMENTED_YET ("TODO: create a Schema-informed Fragment
+         * Grammar", src/contentIO/src/EXIParser.c line 146, EXISerializer.c line 174).
+         */
+        @Override
+        public String unsupported(Case c, Profile p) {
+            return c.fragment() ? "schema-informed fragments not implemented" : unsupported(p);
+        }
+
         private List<String> base(String op, Case c, Profile p) throws Exception {
             List<String> schemas = new ArrayList<>();
             for (Path xsd : c.xsds()) {
@@ -204,13 +222,16 @@ abstract class DriverCodec implements Codec {
             if (p.strict) {
                 cmd.add("--strict");
             }
+            if (c.fragment()) {
+                cmd.add("--fragment");
+            }
             return cmd;
         }
 
         @Override
         public Outcome encode(Case c, Profile p, Bench bench) throws Exception {
             Path events = file(c, p, "in.events");
-            Files.writeString(events, Ev.dump(Codec.referenceEvents(Files.readAllBytes(c.xml()))));
+            Files.writeString(events, Ev.dump(Codec.referenceEvents(c)));
             Path out = file(c, p, "out.exi");
             List<String> cmd = base("encode", c, p);
             cmd.addAll(benchArgs(bench));
@@ -279,6 +300,9 @@ abstract class DriverCodec implements Codec {
                     }));
             if (p.strict) {
                 cmd.add("--strict");
+            }
+            if (c.fragment()) {
+                cmd.add("--fragment");
             }
             return cmd;
         }

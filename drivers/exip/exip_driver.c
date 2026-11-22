@@ -10,6 +10,8 @@
  *
  * stream options (always out of band: no options document, no cookie):
  *   --strict                strict schema-informed grammars
+ *   --fragment              the body is a fragment: any number of root elements
+ *                           (EXI 8.5.2, https://www.w3.org/TR/exi/#informedFragGrammars)
  *   --alignment bit-packed|byte-aligned|pre-compression|compression
  *   --block-size N          (pre-compression, compression; default 1000000)
  * bench options:
@@ -117,6 +119,7 @@ typedef struct {
     char *schemas;
     const char *events, *out, *exi, *events_out;
     int strict;
+    int fragment;
     const char *alignment;
     long block_size;
     long warmup, warmup_ms, iterations;
@@ -132,6 +135,8 @@ static void set_options(EXIOptions *opts, const Args *a) {
     makeDefaultOpts(opts);
     if (a->strict)
         SET_STRICT(opts->enumOpt);
+    if (a->fragment)
+        SET_FRAGMENT(opts->enumOpt);
     if (strcmp(a->alignment, "byte-aligned") == 0) {
         SET_ALIGNMENT(opts->enumOpt, BYTE_ALIGNMENT);
     } else if (strcmp(a->alignment, "pre-compression") == 0) {
@@ -1040,6 +1045,8 @@ int main(int argc, char **argv) {
             a.events_out = VALUE();
         else if (strcmp(f, "--strict") == 0)
             a.strict = 1;
+        else if (strcmp(f, "--fragment") == 0)
+            a.fragment = 1;
         else if (strcmp(f, "--alignment") == 0)
             a.alignment = VALUE();
         else if (strcmp(f, "--block-size") == 0)

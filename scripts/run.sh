@@ -7,7 +7,7 @@
 #
 # Needs: scripts/fetch-third-party.sh --build (exip, rexi, Nagasena), cmake, a C
 # compiler, Maven and Java 25. Extra arguments go to the harness.
-# jexi joins the matrix when julia is found and the pinned jexi checkout exists.
+# EXIFormat joins the matrix when julia is found and the pinned checkout exists.
 # Nagasena for .NET joins the matrix when the .NET SDK (10 or later) is found:
 # `dotnet` on PATH, or $DOTNET_ROOT/dotnet, or ~/.dotnet/dotnet. Without it the
 # column is left out, with a warning.
@@ -54,13 +54,13 @@ else
     echo "warning: no .NET SDK found; the Nagasena.NET column is left out" >&2
 fi
 
-JEXI_ARGS=()
-JEXI_META=()
-if command -v julia >/dev/null && [[ -x "$TP/jexi/bin/jexi" ]]; then
-    JEXI_ARGS=(--jexi "$TP/jexi/bin/jexi")
-    JEXI_META=(--meta "jexi=$(pin_label jexi), bin/jexi ($(julia --version))")
+EXIF_ARGS=()
+EXIF_META=()
+if command -v julia >/dev/null && [[ -x "$TP/exiformat/bin/exiformat" ]]; then
+    EXIF_ARGS=(--exiformat "$TP/exiformat/bin/exiformat")
+    EXIF_META=(--meta "EXIFormat=$(pin_label exiformat), bin/exiformat ($(julia --version))")
 else
-    echo "warning: julia or the jexi checkout not found; the jexi column is left out" >&2
+    echo "warning: julia or the EXIFormat checkout not found; the EXIFormat column is left out" >&2
 fi
 
 echo "building the harness" >&2
@@ -75,11 +75,11 @@ self="$(git -C "$ROOT" rev-parse --short=12 HEAD 2>/dev/null || echo uncommitted
 cd "$ROOT"
 java -jar harness/target/rexi-interop-harness.jar \
     --fixtures fixtures --work reports/work --out reports \
-    --rexi "$REXI" --exip-driver build/exip/exip-driver "${CS_ARGS[@]}" "${JEXI_ARGS[@]}" \
+    --rexi "$REXI" --exip-driver build/exip/exip-driver "${CS_ARGS[@]}" "${EXIF_ARGS[@]}" \
     --meta "rexi-interop=$self" \
     --meta "EXIficient=1.0.7 (Maven Central), in-process" \
     --meta "Nagasena=W3C exi-testsuite $(pin exi-testsuite | cut -c1-12) candidates/openexi/lib, in-process" \
     --meta "exip=nhenehan/exip $(pin exip | cut -c1-12), Release build, drivers/exip ($(cc --version | head -1))" \
     --meta "rexi=$(pin_label rexi), release build, rexi bench ($(rustc --version))" \
-    "${CS_META[@]}" "${JEXI_META[@]}" \
+    "${CS_META[@]}" "${EXIF_META[@]}" \
     "$@" 2> >(grep -v '^SLF4J' >&2)

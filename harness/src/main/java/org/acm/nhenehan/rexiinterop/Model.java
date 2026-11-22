@@ -13,8 +13,12 @@ import java.util.List;
 final class Model {
     private Model() {}
 
-    /** One row of fixtures/cases.tsv. */
-    record Case(String id, Path xml, Path mainXsd, List<Path> importXsds, String origin) {
+    /**
+     * One row of fixtures/cases.tsv. {@code fragment}: the XML is an EXI fragment
+     * (several root elements, no wrapper) and every stream sets the fragment
+     * option (EXI 8.5.2); the options column says "fragment".
+     */
+    record Case(String id, Path xml, Path mainXsd, List<Path> importXsds, String origin, boolean fragment) {
         List<Path> xsds() {
             List<Path> all = new ArrayList<>();
             all.add(mainXsd);
@@ -41,8 +45,9 @@ final class Model {
                         imports.add(dir.resolve(imp.trim()));
                     }
                 }
+                List<String> options = c.length > 6 ? Arrays.asList(c[6].split(",")) : List.of();
                 cases.add(new Case(c[0], dir.resolve(c[2]), dir.resolve(c[3]), imports,
-                        c.length > 5 ? c[5] : ""));
+                        c.length > 5 ? c[5] : "", options.contains("fragment")));
             }
             return cases;
         }

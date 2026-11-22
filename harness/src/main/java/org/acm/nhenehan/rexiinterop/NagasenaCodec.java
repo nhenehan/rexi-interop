@@ -56,13 +56,19 @@ final class NagasenaCodec implements Codec {
         t.setAlignmentType(alignment(p));
         t.setOutputOptions(HeaderOptionsOutputType.none);
         t.setOutputCookie(false);
+        t.setFragment(c.fragment());
         long setup = System.nanoTime() - t0;
         byte[] xml = Files.readAllBytes(c.xml());
         byte[][] last = new byte[1][];
         Codec.Op once = () -> {
             ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
             t.setOutputStream(out);
-            t.encode(new InputSource(new ByteArrayInputStream(xml)));
+            if (c.fragment()) {
+                // Its own parser would refuse several roots: feed it SAX events.
+                Codec.parseXml(c, xml, t.getSAXTransmogrifier());
+            } else {
+                t.encode(new InputSource(new ByteArrayInputStream(xml)));
+            }
             last[0] = out.toByteArray();
         };
         once.run();
@@ -77,6 +83,7 @@ final class NagasenaCodec implements Codec {
         EXIReader r = new EXIReader();
         r.setGrammarCache(grammars(c, p));
         r.setAlignmentType(alignment(p));
+        r.setFragment(c.fragment());
         long setup = System.nanoTime() - t0;
         Codec.SaxEvents events = new Codec.SaxEvents();
         r.setContentHandler(events);

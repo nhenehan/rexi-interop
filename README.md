@@ -14,7 +14,7 @@ The libraries:
 | [exip](https://github.com/nhenehan/exip) | C | `drivers/exip` (this repo), linked against libexip |
 | [Nagasena for .NET](https://sourceforge.net/projects/openexi/) (OpenEXI C# port) 0000.0002.0056.1 | C# | `drivers/nagasena-cs` (this repo), .NET 10 |
 | [rexi](https://github.com/nhenehan/rexi) | Rust | `rexi bench` (the rexi CLI) |
-| [jexi](https://github.com/nhenehan/jexi) | Julia | `bin/jexi bench` (the jexi CLI, rexi's command line) |
+| [EXIFormat](https://github.com/nhenehan/EXIFormat.jl) | Julia | `bin/exiformat bench` (the EXIFormat CLI, rexi's command line) |
 
 For every case and profile, every implementation encodes the document and every
 implementation decodes every encoding (encode-by-X / decode-by-Y). Decoded events
@@ -28,7 +28,7 @@ You need:
 - Java 25 and Maven
 - CMake and a C compiler
 - Rust (cargo)
-- Julia, for the jexi column (without it, `run.sh` leaves the column out and says so)
+- Julia, for the EXIFormat column (without it, `run.sh` leaves the column out and says so)
 - Subversion, for the Nagasena for .NET checkout
 - optional: the .NET SDK 10, for the Nagasena for .NET column (`dotnet` on `PATH`,
   `$DOTNET_ROOT` or `~/.dotnet`; without it, `run.sh` leaves the column out and says so)
@@ -64,7 +64,7 @@ profile (P0 to P3, see [Method](#method)), each with up to three tables:
   - ✓ means the decoder got back exactly the document's events.
   - ✗ means it did not. The number next to it points to a note at the end of the
     report that says what went wrong. "enc ✗" means the encoder itself failed.
-  - – means the library does not support that profile (for example, rexi and jexi
+  - – means the library does not support that profile (for example, rexi and EXIFormat
     have no compression).
 - **Bytes compared with EXIficient's** (strict profiles P0 and P2 only). `=` means
   the encoder wrote the same bytes as EXIficient; `≠ 51 B vs 50 B` means it did
@@ -83,7 +83,8 @@ profile (P0 to P3, see [Method](#method)), each with up to three tables:
 From the committed report (`reports/latest.md`, every cell and message).
 
 - **Interoperability.** On every profile each implementation takes part in, every
-  encoder→decoder pair decodes to the document's events, on all 14 cases, with
+  encoder→decoder pair decodes to the document's events, on all 15 cases
+  (14 for exip and EXIFormat, which take no part in the fragment case F1), with
   one exception: EXIficient drops `xsi:nil="false"` when encoding (X2), so its
   stream decodes without that attribute ("Note: in some cases we can simply skip
   the xsi:nil event",
@@ -91,7 +92,7 @@ From the committed report (`reports/latest.md`, every cell and message).
   v1.0.7). The other encoders keep the attribute and are byte-identical to each
   other there.
 - **Who takes part where.** EXIficient, Nagasena, Nagasena for .NET and exip run
-  all four profiles; rexi and jexi run P0 and P2 (they implement neither
+  all four profiles; rexi and EXIFormat run P0 and P2 (they implement neither
   non-strict nor compression).
 - **Byte equality.** On P0 and P2, every encoder's bytes equal EXIficient's on
   every case but X2.
@@ -115,19 +116,26 @@ What each library leaves out, as far as this matrix and the W3C test suite show
   and every decoder reads them.
 - **exip** has no XML front end. The harness drives it with an event stream
   parsed beforehand, converting each value to the type exip asks for (see
-  [The exip driver](#method)).
-- **rexi and jexi** implement strict mode only, without compression, so they
+  [The exip driver](#method)). It also builds no schema-informed fragment
+  grammar: with a schema and the fragment option, its parser and serializer
+  return `EXIP_NOT_IMPLEMENTED_YET` ("TODO: create a Schema-informed Fragment
+  Grammar", `src/contentIO/src/EXIParser.c` line 146 and `EXISerializer.c` line
+  174), so it takes no part in F1.
+- **rexi and EXIFormat** implement strict mode only, without compression, so they
   take no part in P1 and P3. They also refuse, with an error, schema-less
   streams (built-in grammars), wildcard content (`xs:any`, `xs:anyAttribute`),
-  fragments, `Preserve.lexicalValues`, datatype representation maps, and
-  restricted-character-set strings whose `xs:pattern` they cannot read. jexi is
-  a port of rexi and has the same gaps.
+  `Preserve.lexicalValues`, datatype representation maps, and
+  restricted-character-set strings whose `xs:pattern` they cannot read.
+  EXIFormat is a port of rexi and has the same gaps, and one more: rexi encodes
+  and decodes schema-informed fragments (case F1) since 0.3.1, EXIFormat does
+  not yet.
 
-### jexi
+### EXIFormat
 
-The Julia port of rexi, driven through `bin/jexi`, which takes rexi's command
-line and prints the same bench JSON (Julia 1.12.7, with a PrecompileTools
-workload). Same results as rexi in every cell it takes part in.
+The Julia port of rexi (called JExi up to its 0.2.0), driven through
+`bin/exiformat`, which takes rexi's command line and prints the same bench JSON
+(Julia 1.12.7, with a PrecompileTools workload). Same results as rexi in every
+cell it takes part in.
 
 ### Nagasena for .NET
 
@@ -135,8 +143,8 @@ svn r1188 (2016-08-22, version 0000.0002.0056.1, the port's last change), built
 for .NET 10.
 
 - **Interoperable on every profile.** It reads and is read by all other
-  implementations in P0–P3 (rexi and jexi only where they take part: P0, P2), on
-  all 14 cases. On P0 and P2 its bytes equal EXIficient's on every case but X2,
+  implementations in P0–P3 (rexi and EXIFormat only where they take part: P0,
+  P2), on all 15 cases (14 with exip and EXIFormat). On P0 and P2 its bytes equal EXIficient's on every case but X2,
   and so also Java Nagasena's and rexi's.
 - **X2** fails exactly as Java Nagasena does: EXIficient drops `xsi:nil="false"`, so
   its stream decodes without the attribute (see above). Its own X2 stream is the
@@ -154,17 +162,17 @@ Some files keep the license of the project they come from:
 - `fixtures/rexi/` (cases R1–R5) are copied from rexi's
   `crates/rexi-tests/fixtures/interop/` ([nhenehan/rexi](https://github.com/nhenehan/rexi)),
   under rexi's BSD 3-Clause license.
-- The other fixtures (X1, X2, U1, B1) were written for this repository.
+- The other fixtures (X1, X2, U1, B1, F1) were written for this repository.
 
 The third parties that the scripts and builds download (EXIficient from Maven
-Central, Nagasena and Nagasena for .NET, exip, rexi, jexi, the W3C exi-testsuite,
+Central, Nagasena and Nagasena for .NET, exip, rexi, EXIFormat, the W3C exi-testsuite,
 and the packages their builds pull in, such as SharpZipLib from NuGet) are not part
 of this repository and keep their own licenses.
 
 ## Thanks
 
 EXI is a W3C Recommendation, and it is a really good one: a careful design, written up clearly,
-with solid open libraries behind it. That work is what got this project started. rexi and JExi are
+with solid open libraries behind it. That work is what got this project started. rexi and EXIFormat are
 my effort to take EXI further, to more languages and more places, and this comparison exists to
 show how well all of these libraries work together.
 
@@ -192,14 +200,14 @@ Thank you.
 | exip | git clone of `https://github.com/nhenehan/exip.git`, built with CMake | the same checkout |
 | Nagasena for .NET 0000.0002.0056.1 | svn: `https://svn.code.sf.net/p/openexi/code/trunk/nagasenacs` r1188, built with the .NET SDK by `scripts/run.sh` | the same checkout |
 | rexi | git clone of `https://github.com/nhenehan/rexi.git`, built with cargo | the same checkout |
-| jexi | git clone of `https://github.com/nhenehan/jexi.git`, packages instantiated and precompiled with julia | the same checkout |
+| exiformat | git clone of `https://github.com/nhenehan/EXIFormat.jl.git`, packages instantiated and precompiled with julia | the same checkout |
 
 ### Third parties and pins
 
 Third parties live in
 `${REXI_INTEROP_THIRD_PARTY:-~/.cache/rexi-interop/third_party}`, never in this
 tree; `third-party.lock` pins them (`scripts/fetch-third-party.sh --check`,
-`--update NAME`). rexi and jexi are pinned by release tag, the others by commit.
+`--update NAME`). rexi and exiformat are pinned by release tag, the others by commit.
 `sources.lock` pins the upstream sources of the packaged Java builds; they are
 checked out only with `--sources` (Subversion is needed for Nagasena), into
 `<cache>/sources`, and are never built or run by the harness.
@@ -208,7 +216,7 @@ checked out only with `--sources` (Subversion is needed for Nagasena), into
 
 | path | contents |
 |---|---|
-| `fixtures/cases.tsv` | the cases: S1–S5 from exip's `interop-tests`, R1–R5 rexi's byte-exact fixtures, X1 `xsi:type` casts, X2 `xsi:nil`, U1 multilingual UTF-8 and B1 hexBinary / base64Binary (this repo) |
+| `fixtures/cases.tsv` | the cases: S1–S5 from exip's `interop-tests`, R1–R5 rexi's byte-exact fixtures, X1 `xsi:type` casts, X2 `xsi:nil`, U1 multilingual UTF-8, B1 hexBinary / base64Binary and F1 a home water system log sent as a fragment (this repo); the `options` column marks fragment cases |
 | `drivers/exip/` | `exip-driver`: encode from an event stream / decode to events, with timing loops (C, CMake) |
 | `drivers/nagasena-cs/` | `nagasena-cs-driver`: encode XML / decode to events with Nagasena for .NET, with timing loops (C#); `OpenEXI.Nagasena.csproj` builds the svn checkout with today's SDK (upstream used NAnt and .NET Framework 4.0) |
 | `harness/` | the matrix runner and report writer (Java 25, Maven; `mvn test` checks the comparison logic) |
@@ -220,6 +228,14 @@ checked out only with `--sources` (Subversion is needed for Nagasena), into
 - **Profiles.** P0 strict bit-packed, P1 non-strict bit-packed, P2 strict
   byte-aligned, P3 strict compression (the seed project's set). Options always
   travel out of band: no options document, no cookie.
+- **Fragments.** A case marked `fragment` in `cases.tsv` (F1) is an XML fragment:
+  several root elements with no wrapper, and every stream sets the EXI fragment
+  option ([EXI 8.5.2](https://www.w3.org/TR/exi/#informedFragGrammars)), so any
+  element the schema declares, global or local, may start it. A SAX parser
+  refuses several roots, so the harness parses the fragment inside a wrapper
+  element and hides the wrapper from EXIficient's and Nagasena's encoders.
+  Nagasena for .NET reads it with an `XmlReader` set to
+  `ConformanceLevel.Fragment`; rexi takes it as it is (`--fragment`).
 - **Correctness.** The reference is the XML's own event stream: `xsi:type` and
   `xsi:nil` first, other attributes sorted by local name then namespace, adjacent
   text merged, whitespace-only text dropped. Values compare as written, then as
@@ -229,8 +245,8 @@ checked out only with `--sources` (Subversion is needed for Nagasena), into
 - **Timing.** Every implementation times itself inside its own process; process
   start-up is never measured. Schema loading is done once and excluded.
   - Encoders time their natural input: XML bytes (parsing included) for
-    EXIficient, both Nagasenas, rexi and jexi; an event stream parsed beforehand for exip
-    (it has no XML front end). rexi and jexi are also timed from pre-parsed events,
+    EXIficient, both Nagasenas, rexi and EXIFormat; an event stream parsed beforehand for exip
+    (it has no XML front end). rexi and EXIFormat are also timed from pre-parsed events,
     the comparable rows for exip.
   - Decoders all decode EXIficient's stream for the profile, with handlers that
     only count events.
